@@ -7,6 +7,7 @@
             left: 0;
             top: 0;
             width: 280px;          /* Fixed width sidebar */
+            
             height: 100%;          /* Full viewport height */
             background: linear-gradient(135deg, var(--primary-darkest) 0%, var(--primary-dark) 100%);
             padding: 2rem 1.5rem;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Sidebar.css"; // optional if you want custom styles
+import "./Sidebar.css"; // to style the sidebar
 
 function Sidebar() {
   return (
@@ -23,7 +23,7 @@ function Sidebar() {
 
         <li>
           <Link to="/departements" className="sidebar-link">
-            <span>Departments</span>
+            <span>Departements</span>
           </Link>
         </li>
 

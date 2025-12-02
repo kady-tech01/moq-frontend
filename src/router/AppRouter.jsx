@@ -17,15 +17,15 @@ function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/About" element={<About />} />
       <Route path="/Departements" element={<Departements />} />
-      <Route path="/sponsors" element={<Sponsors />} />
-      <Route path="/achievements" element={<Achievements />} />
-      <Route path="/activities" element={<Activities />} />
-      <Route path="/news" element={<News />} />
-      <Route path="/events" element={<Events />} />
+      <Route path="/Sponsors" element={<Sponsors />} />
+      <Route path="/Achievements" element={<Achievements />} />
+      <Route path="/Activities" element={<Activities />} />
+      <Route path="/News" element={<News />} />
+      <Route path="/Events" element={<Events />} />
       <Route path="/Annouces" element={<Announces />} />
-      <Route path="/esm" element={<ESM />} />
+      <Route path="/Esm" element={<ESM />} />
     </Routes>
   );
 }
