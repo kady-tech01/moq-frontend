@@ -11,6 +11,8 @@ import News from "../pages/News";
 import Events from "../pages/Events";
 import Announces from "../pages/Announces";
 import ESM from "../pages/ESM";
+import Feedback from "../pages/Feedback";
+
 
 
 function AppRouter() {
@@ -26,6 +28,7 @@ function AppRouter() {
       <Route path="/Events" element={<Events />} />
       <Route path="/Annouces" element={<Announces />} />
       <Route path="/Esm" element={<ESM />} />
+      <Route path="/Feedback" element={<Feedback />} />
     </Routes>
   );
 }

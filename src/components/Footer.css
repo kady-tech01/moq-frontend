@@ -1,0 +1,154 @@
+   footer {
+            background: linear-gradient(135deg, var(--primary-darkest) 0%, var(--primary-dark) 100%);
+            color: var(--primary-light);
+            padding: 2rem 2rem 1rem;
+            margin-top: 3rem;
+            margin-left: 280px;              /* Align with main content */
+            max-width: calc(100% - 280px);   /* Match main content width */
+            transition: all 0.3s ease;       /* Smooth transition when sidebar toggles */
+        }
+
+  /* Container for footer sections */
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+.footer-section {
+  text-align: center;
+}
+
+  .footer-section h4 {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+     .footer-section ul {
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+
+ .footer-section ul li {
+            margin-bottom: 0.4rem;
+            list-style: none;
+        }
+
+ .footer-section ul li a {
+            font-size: 0.9rem;
+        }
+
+  .social-links {
+            display: flex;
+            gap: 1rem;                    /* Space between icons */
+            flex-wrap: wrap;              /* Wrap to next line on small screens */
+            justify-content: center;      /* Center icons horizontally */
+        }
+
+    /* Individual social media icon button */
+        .social-links a {
+            display: inline-flex;
+            align-items: center;          /* Center icon vertically */
+            justify-content: center;      /* Center icon horizontally */
+            width: 40px;                  /* Fixed width */
+            height: 40px;                 /* Fixed height (makes it square) */
+            background: var(--primary-medium);  /* Medium blue background */
+            color: white;                 /* White icon color */
+            border-radius: 50%;           /* Make it circular */
+            text-decoration: none;        /* Remove underline */
+            transition: all 0.3s ease;    /* Smooth transitions */
+            font-size: 1.1rem;            /* Icon size */
+            position: relative;           /* For positioning the ring effect */
+        }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid var(--primary-medium);
+  padding-top: 1rem;
+}
+
+.developer-credit a {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+ .sidebar-hidden footer {
+            margin-left: 0;
+            max-width: 100%;
+        }
+
+ .footer-section p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+
+          .social-links a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;                      /* Circular ring */
+            border: 2px solid var(--primary-light);  /* Light blue ring */
+            opacity: 0;                              /* Hidden by default */
+            transform: scale(0.8);                   /* Start smaller */
+            transition: all 0.3s ease;
+        }
+
+          .social-links a:hover {
+            background: var(--primary-light);        /* Light blue background */
+            color: var(--primary-dark);              /* Dark blue icon */
+            transform: translateY(-5px) scale(1.1);  /* Move up and grow */
+            animation: socialBounce 0.6s ease;       /* Bouncing animation */
+        }
+        
+         .social-links a:hover::after {
+            opacity: 1;                              /* Make ring visible */
+            transform: scale(1.3);                   /* Expand ring outward */
+        }
+
+
+        /* Animation: Bouncing effect for social icons */
+        @keyframes socialBounce {
+            0%, 100% {
+                transform: translateY(-5px) scale(1.1);   /* Normal hover state */
+            }
+            50% {
+                transform: translateY(-8px) scale(1.15);  /* Bounce higher */
+            }
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--primary-medium);
+            color: var(--primary-light);
+        }
+        
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .developer-credit {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .developer-credit a {
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .developer-credit a:hover {
+            color: white;
+        }

@@ -1,0 +1,19 @@
+      /* Focus state for all form inputs - highlights when user clicks in field */
+        #feedbackForm input:focus,
+        #feedbackForm select:focus,
+        #feedbackForm textarea:focus {
+            outline: none;                                      /* Remove default browser outline */
+            border-color: var(--primary-dark);                 /* Change border to dark blue */
+            box-shadow: 0 0 0 3px rgba(125, 160, 202, 0.2);   /* Add soft blue glow around field */
+        }
+
+        /* Submit button hover effect - lifts button up */
+        #feedbackForm button:hover {
+            transform: translateY(-2px);                       /* Move button up 2px */
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);        /* Increase shadow for depth */
+        }
+
+        /* Submit button active state - pressed down effect */
+        #feedbackForm button:active {
+            transform: translateY(0);                          /* Return to original position */
+        }

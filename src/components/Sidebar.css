@@ -1,13 +1,8 @@
- /* ===================================
-           SIDEBAR NAVIGATION
-           Fixed left sidebar with logo and page links
-           =================================== */
-        .sidebar {
+  .sidebar {
             position: fixed;        /* Stay in place when scrolling */
             left: 0;
             top: 0;
             width: 280px;          /* Fixed width sidebar */
-            
             height: 100%;          /* Full viewport height */
             background: linear-gradient(135deg, var(--primary-darkest) 0%, var(--primary-dark) 100%);
             padding: 2rem 1.5rem;
@@ -18,13 +13,7 @@
             transition: transform 0.3s ease; /* Smooth slide animation */
         }
 
-        /* Hidden sidebar state - slides out to the left */
-        .sidebar-hidden .sidebar {
-            transform: translateX(-100%);
-        }
-
-        /* Top section of sidebar - contains logo and club name */
-        .sidebar-top {
+ .sidebar-top {
             display: flex;
             flex-direction: column;  /* Stack logo and name vertically */
             align-items: center;     /* Center horizontally */
@@ -34,8 +23,7 @@
             border-bottom: 2px solid var(--primary-medium); /* Separator line */
         }
 
-        /* Logo placeholder box - displays "LOGO" text */
-        .logo-placeholder {
+ .logo-placeholder {
             width: 70px;
             height: 70px;
             background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-medium) 100%);
@@ -53,25 +41,7 @@
             position: relative;
         }
 
-        /* Animation: Logo pulsing glow effect */
-        @keyframes logoPulse {
-            0%, 100% {
-                box-shadow: 0 6px 16px rgba(193, 232, 255, 0.4); /* Normal glow */
-            }
-            50% {
-                box-shadow: 0 6px 24px rgba(193, 232, 255, 0.7); /* Brighter glow */
-            }
-        }
-
-        /* Logo hover effect - slight rotation and scale */
-        .logo-placeholder:hover {
-            transform: scale(1.05) rotate(5deg); /* Grow and tilt slightly */
-            box-shadow: 0 8px 20px rgba(193, 232, 255, 0.6);
-            animation: none; /* Stop pulsing on hover */
-        }
-
-        /* Club name styling - "MoQawill" text */
-        .club-name {
+    .club-name {
             color: white;
             font-size: 1.8rem;
             font-weight: 700;
@@ -80,6 +50,50 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
             text-align: center;
         }
+
+.page-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.page-link {
+  padding: 0.9rem 1rem;
+  color: var(--primary-light);
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.page-link:hover {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  transform: translateX(5px);
+}
+
+.page-link.active {
+  background: var(--primary-medium);
+  color: white;
+}
+
+   .logo-placeholder:hover {
+            transform: scale(1.05) rotate(5deg); /* Grow and tilt slightly */
+            box-shadow: 0 8px 20px rgba(193, 232, 255, 0.6);
+            animation: none; /* Stop pulsing on hover */
+        }
+
+      /* When sidebar is hidden, expand main content to full width */
+        .sidebar-hidden .main-content {
+            margin-left: 0;
+            max-width: 100%;
+        }
+
+        .sidebar-hidden .sidebar {
+            transform: translateX(-100%);
+        }
+
 
         /* Container for all navigation links */
         .page-links {
@@ -177,819 +191,12 @@
             opacity: 1;
         }
 
-        /* ===================================
-           MAIN CONTENT AREA
-           Content area to the right of sidebar
-           =================================== */
-        .main-content {
-            margin-left: 280px;              /* Offset by sidebar width */
-            padding: 2rem;
-            min-height: 100%;
-            max-width: calc(100% - 280px);   /* Prevent overlap with sidebar */
-            transition: all 0.3s ease;       /* Smooth transition when sidebar toggles */
-        }
-
-        /* When sidebar is hidden, expand main content to full width */
-        .sidebar-hidden .main-content {
-            margin-left: 0;
-            max-width: 100%;
-        }
-
-        /* ===================================
-           HERO SECTION
-           Large banner at top of each page
-           =================================== */
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
-            padding: 4rem 2rem;
-            border-radius: 20px;
-            text-align: center;
-            color: white;
-            margin-bottom: 3rem;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;                /* Hide rotating background effect overflow */
-            animation: heroFloat 3s ease-in-out infinite; /* Floating animation */
-        }
-
-        /* Rotating background effect behind hero content */
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(193, 232, 255, 0.1) 0%, transparent 70%);
-            animation: heroRotate 20s linear infinite; /* Slow continuous rotation */
-        }
-
-        /* Animation: Hero section floating up and down */
-        @keyframes heroFloat {
+/* Animation: Logo pulsing glow effect */
+        @keyframes logoPulse {
             0%, 100% {
-                transform: translateY(0px);    /* Starting position */
+                box-shadow: 0 6px 16px rgba(193, 232, 255, 0.4); /* Normal glow */
             }
             50% {
-                transform: translateY(-10px);  /* Float up 10px */
+                box-shadow: 0 6px 24px rgba(193, 232, 255, 0.7); /* Brighter glow */
             }
         }
-
-        /* Animation: Background rotating continuously */
-        @keyframes heroRotate {
-            from {
-                transform: rotate(0deg);   /* Start */
-            }
-            to {
-                transform: rotate(360deg); /* Full rotation */
-            }
-        }
-
-        /* Hero title styling - main heading */
-        .hero-section h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            position: relative;
-            z-index: 1;                        /* Appear above rotating background */
-            animation: titleSlideIn 0.8s ease-out; /* Slide in from top */
-        }
-
-        @keyframes titleSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-section p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            position: relative;
-            z-index: 1;
-            animation: subtitleSlideIn 0.8s ease-out 0.2s backwards;
-        }
-
-        @keyframes subtitleSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 0.95;
-                transform: translateY(0);
-            }
-        }
-
-        /* ===================================
-           CONTENT CARDS
-           White cards containing page content
-           =================================== */
-        .content-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-            animation: cardFadeIn 0.6s ease-out backwards; /* Fade in on page load */
-            position: relative;
-        }
-
-        /* Stagger animation delays for sequential card appearance */
-        .content-card:nth-child(1) { animation-delay: 0.1s; }
-        .content-card:nth-child(2) { animation-delay: 0.2s; }
-        .content-card:nth-child(3) { animation-delay: 0.3s; }
-        .content-card:nth-child(4) { animation-delay: 0.4s; }
-        .content-card:nth-child(5) { animation-delay: 0.5s; }
-
-        @keyframes cardFadeIn {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .content-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 4px;
-            background: linear-gradient(180deg, var(--primary-medium) 0%, var(--primary-dark) 100%);
-            border-radius: 15px 0 0 15px;
-            transform: scaleY(0);
-            transition: transform 0.3s ease;
-        }
-
-        .content-card:hover::before {
-            transform: scaleY(1);
-        }
-
-        .content-card:hover {
-            transform: translateY(-5px) translateX(5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-        }
-
-        .content-card h2 {
-            color: var(--primary-dark);
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 3px solid var(--primary-medium);
-        }
-
-        .content-card p {
-            color: #555;
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        /* ===================================
-           FEATURE GRID
-           Responsive grid for feature items
-           =================================== */
-        .feature-grid {
-            display: grid;
-            /* Auto-fit columns: minimum 280px, expand to fill space equally */
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;              /* Space between grid items */
-            margin-top: 2rem;
-        }
-
-        /* Individual feature item card */
-        .feature-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;     /* Center all content */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;       /* Hide shine effect overflow */
-        }
-
-        .feature-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(193, 232, 255, 0.3), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .feature-item:hover::before {
-            left: 100%;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 12px 32px rgba(125, 160, 202, 0.3);
-            border: 2px solid var(--primary-light);
-        }
-
-        .feature-item i {
-            font-size: 3rem;
-            color: var(--primary-medium);
-            margin-bottom: 1rem;
-            transition: all 0.4s ease;
-        }
-
-        .feature-item:hover i {
-            transform: rotateY(360deg) scale(1.1);
-            color: var(--primary-dark);
-        }
-
-        .feature-item h3 {
-            color: var(--primary-dark);
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .feature-item p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* ===================================
-           FOOTER
-           Bottom section with contact info and links
-           =================================== */
-        footer {
-            background: linear-gradient(135deg, var(--primary-darkest) 0%, var(--primary-dark) 100%);
-            color: var(--primary-light);
-            padding: 2rem 2rem 1rem;
-            margin-top: 3rem;
-            margin-left: 280px;              /* Align with main content */
-            max-width: calc(100% - 280px);   /* Match main content width */
-            transition: all 0.3s ease;       /* Smooth transition when sidebar toggles */
-        }
-
-        /* When sidebar is hidden, expand footer to full width */
-        .sidebar-hidden footer {
-            margin-left: 0;
-            max-width: 100%;
-        }
-
-        /* Container for footer sections */
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Individual footer section (About, Links, Social) */
-        .footer-section {
-            text-align: center;
-        }
-
-        .footer-section h4 {
-            color: white;
-            font-weight: bold;
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-        }
-        
-        .footer-section p {
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-section ul {
-            margin-bottom: 0;
-            padding-left: 0;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 0.4rem;
-            list-style: none;
-        }
-        
-        .footer-section ul li a {
-            font-size: 0.9rem;
-        }
-
-        /* Container for social media icons - centered row */
-        .social-links {
-            display: flex;
-            gap: 1rem;                    /* Space between icons */
-            flex-wrap: wrap;              /* Wrap to next line on small screens */
-            justify-content: center;      /* Center icons horizontally */
-        }
-
-        /* Individual social media icon button */
-        .social-links a {
-            display: inline-flex;
-            align-items: center;          /* Center icon vertically */
-            justify-content: center;      /* Center icon horizontally */
-            width: 40px;                  /* Fixed width */
-            height: 40px;                 /* Fixed height (makes it square) */
-            background: var(--primary-medium);  /* Medium blue background */
-            color: white;                 /* White icon color */
-            border-radius: 50%;           /* Make it circular */
-            text-decoration: none;        /* Remove underline */
-            transition: all 0.3s ease;    /* Smooth transitions */
-            font-size: 1.1rem;            /* Icon size */
-            position: relative;           /* For positioning the ring effect */
-        }
-
-        /* Expanding ring effect that appears on hover */
-        .social-links a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;                      /* Circular ring */
-            border: 2px solid var(--primary-light);  /* Light blue ring */
-            opacity: 0;                              /* Hidden by default */
-            transform: scale(0.8);                   /* Start smaller */
-            transition: all 0.3s ease;
-        }
-
-        /* Hover effect - change colors, lift up, and bounce */
-        .social-links a:hover {
-            background: var(--primary-light);        /* Light blue background */
-            color: var(--primary-dark);              /* Dark blue icon */
-            transform: translateY(-5px) scale(1.1);  /* Move up and grow */
-            animation: socialBounce 0.6s ease;       /* Bouncing animation */
-        }
-
-        /* Show and expand the ring on hover */
-        .social-links a:hover::after {
-            opacity: 1;                              /* Make ring visible */
-            transform: scale(1.3);                   /* Expand ring outward */
-        }
-
-        /* Animation: Bouncing effect for social icons */
-        @keyframes socialBounce {
-            0%, 100% {
-                transform: translateY(-5px) scale(1.1);   /* Normal hover state */
-            }
-            50% {
-                transform: translateY(-8px) scale(1.15);  /* Bounce higher */
-            }
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 2px solid var(--primary-medium);
-            color: var(--primary-light);
-        }
-        
-        .footer-bottom p {
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .developer-credit {
-            margin-top: 0.5rem;
-            font-size: 0.85rem;
-        }
-
-        .developer-credit a {
-            color: var(--primary-light);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .developer-credit a:hover {
-            color: white;
-        }
-
-        /* ===================================
-           PAGE CONTENT SECTIONS
-           Controls visibility and animation of different pages
-           =================================== */
-        
-        /* Hide all page content by default */
-        .page-content {
-            display: none;
-        }
-
-        /* Show active page with fade-in animation */
-        .page-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;  /* Smooth fade and slide in */
-        }
-
-        /* Animation: Fade in and slide up when page becomes active */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;                    /* Start invisible */
-                transform: translateY(20px);   /* Start 20px below */
-            }
-            to {
-                opacity: 1;                    /* End fully visible */
-                transform: translateY(0);      /* End at normal position */
-            }
-        }
-
-        /* ===================================
-           RESPONSIVE DESIGN
-           Adjustments for different screen sizes
-           =================================== */
-        
-        /* Tablet and smaller laptops (992px and below) */
-        @media (max-width: 992px) {
-            /* Reduce hero title size for medium screens */
-            .hero-section h1 {
-                font-size: 2rem;
-            }
-        }
-
-        /* Tablets (768px and below) */
-        @media (max-width: 768px) {
-            /* Narrow sidebar to save space */
-            .sidebar {
-                width: 200px;
-            }
-
-            /* Reduce club name size */
-            .club-name {
-                font-size: 1.4rem;
-            }
-
-            /* Smaller logo */
-            .logo-placeholder {
-                width: 55px;
-                height: 55px;
-                font-size: 1.1rem;
-            }
-
-            /* Stack feature grid items vertically */
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-
-            /* Smaller navigation links */
-            .page-link {
-                font-size: 0.85rem;
-                padding: 0.7rem 0.8rem;
-            }
-
-            /* Adjust main content for narrower sidebar */
-            .main-content {
-                margin-left: 200px;
-                max-width: calc(100% - 200px);
-                padding: 1.5rem;
-            }
-            
-            /* Adjust footer for narrower sidebar */
-            footer {
-                padding: 1.5rem 1.5rem 0.8rem;
-                margin-left: 200px;
-                max-width: calc(100% - 200px);
-            }
-        }
-
-        /* Mobile phones (576px and below) */
-        @media (max-width: 576px) {
-            /* Even narrower sidebar for mobile */
-            .sidebar {
-                width: 160px;
-                padding: 1.5rem 1rem;
-            }
-
-            /* Smaller club name for mobile */
-            .club-name {
-                font-size: 1.1rem;
-            }
-
-            /* Smallest logo size */
-            .logo-placeholder {
-                width: 45px;
-                height: 45px;
-                font-size: 0.9rem;
-            }
-
-            /* Compact navigation links */
-            .page-link {
-                font-size: 0.75rem;
-                padding: 0.6rem 0.7rem;
-                gap: 0.5rem;
-            }
-
-            /* Smaller icons on mobile */
-            .page-link i {
-                font-size: 0.95rem;
-            }
-
-            /* Adjust main content for mobile sidebar */
-            .main-content {
-                margin-left: 160px;
-                max-width: calc(100% - 160px);
-                padding: 1rem;
-            }
-
-            /* Tighter spacing in sidebar top section */
-            .sidebar-top {
-                gap: 0.7rem;
-                margin-bottom: 1.5rem;
-                padding-bottom: 1.5rem;
-            }
-            
-            /* Compact footer for mobile */
-            footer {
-                padding: 1.2rem 1rem 0.6rem;
-                margin-left: 160px;
-                max-width: calc(100% - 160px);
-            }
-            
-            /* Reduce gap between footer sections */
-            .footer-content {
-                gap: 1rem;
-            }
-        }
-
-        /* ===================================
-           TECH STACK SECTION
-           Technology badges on About page
-           =================================== */
-        
-        /* Container for technology badges - wraps to multiple lines */
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;              /* Allow badges to wrap to next line */
-            gap: 1rem;                    /* Space between badges */
-            margin-top: 1.5rem;
-        }
-
-        /* Individual technology badge (HTML, CSS, JavaScript, etc.) */
-        .tech-badge {
-            background: var(--primary-light);        /* Light blue background */
-            color: var(--primary-dark);              /* Dark blue text */
-            padding: 0.6rem 1.2rem;                  /* Padding inside badge */
-            border-radius: 25px;                     /* Fully rounded pill shape */
-            font-weight: 600;                        /* Bold text */
-            font-size: 0.95rem;
-            border: 2px solid var(--primary-medium); /* Medium blue border */
-        }
-
-        /* ===================================
-           FORM STYLES
-           Feedback form input and button styling
-           =================================== */
-        
-        /* Focus state for all form inputs - highlights when user clicks in field */
-        #feedbackForm input:focus,
-        #feedbackForm select:focus,
-        #feedbackForm textarea:focus {
-            outline: none;                                      /* Remove default browser outline */
-            border-color: var(--primary-dark);                 /* Change border to dark blue */
-            box-shadow: 0 0 0 3px rgba(125, 160, 202, 0.2);   /* Add soft blue glow around field */
-        }
-
-        /* Submit button hover effect - lifts button up */
-        #feedbackForm button:hover {
-            transform: translateY(-2px);                       /* Move button up 2px */
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);        /* Increase shadow for depth */
-        }
-
-        /* Submit button active state - pressed down effect */
-        #feedbackForm button:active {
-            transform: translateY(0);                          /* Return to original position */
-        }
-
-        /* ===================================
-           ANIMATED BACKGROUND SHAPES
-           Floating geometric shapes in background
-           =================================== */
-        .background-shapes {
-            position: fixed;        /* Stay in place while page scrolls */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;       /* Hide shapes that move outside viewport */
-            z-index: -1;           /* Behind all content */
-            pointer-events: none;  /* Don't block clicks on content */
-        }
-
-        /* Base styling for all shapes */
-        .shape {
-            position: absolute;
-            opacity: 0.15;         /* Semi-transparent */
-            filter: blur(1px);     /* Slight blur for softer look */
-        }
-
-        /* Circle shape - top left area */
-        .shape-circle {
-            width: 150px;
-            height: 150px;
-            background: linear-gradient(135deg, var(--primary-medium), var(--primary-dark));
-            border-radius: 50%;  /* Makes it circular */
-            top: 10%;
-            left: 15%;
-            animation: float1 20s ease-in-out infinite; /* Floating animation */
-        }
-
-        /* Square shape - bottom right area, rotated 45 degrees */
-        .shape-square {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
-            border-radius: 20px;
-            top: 60%;
-            left: 70%;
-            animation: float2 25s ease-in-out infinite;
-            transform: rotate(45deg); /* Diamond orientation */
-        }
-
-        /* Triangle shape - bottom left area */
-        .shape-triangle {
-            width: 0;
-            height: 0;
-            /* CSS triangle technique using borders */
-            border-left: 75px solid transparent;
-            border-right: 75px solid transparent;
-            border-bottom: 130px solid var(--primary-medium);
-            top: 80%;
-            left: 20%;
-            animation: float3 18s ease-in-out infinite;
-        }
-
-        .shape-circle-2 {
-            width: 200px;
-            height: 200px;
-            background: linear-gradient(135deg, var(--primary-light), var(--primary-medium));
-            border-radius: 50%;
-            top: 30%;
-            left: 80%;
-            animation: float4 22s ease-in-out infinite;
-        }
-
-        .shape-hexagon {
-            width: 100px;
-            height: 57.74px;
-            background: var(--primary-dark);
-            position: relative;
-            top: 50%;
-            left: 40%;
-            animation: float5 28s ease-in-out infinite;
-        }
-
-        .shape-hexagon::before {
-            content: "";
-            position: absolute;
-            top: -28.87px;
-            left: 0;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 28.87px solid var(--primary-dark);
-        }
-
-        .shape-hexagon::after {
-            content: "";
-            position: absolute;
-            bottom: -28.87px;
-            left: 0;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 28.87px solid var(--primary-dark);
-        }
-
-        .shape-diamond {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, var(--primary-medium), var(--primary-light));
-            top: 15%;
-            left: 50%;
-            animation: float6 24s ease-in-out infinite;
-            transform: rotate(45deg);
-            border-radius: 10px;
-        }
-
-        /* Animation: Circle floating and rotating */
-        @keyframes float1 {
-            0%, 100% {
-                transform: translate(0, 0) rotate(0deg);           /* Start/end position */
-            }
-            25% {
-                transform: translate(100px, -50px) rotate(90deg);  /* Move right and up */
-            }
-            50% {
-                transform: translate(200px, 50px) rotate(180deg);  /* Move right and down */
-            }
-            75% {
-                transform: translate(100px, 100px) rotate(270deg); /* Move back left */
-            }
-        }
-
-        /* Animation: Square floating diagonally */
-        @keyframes float2 {
-            0%, 100% {
-                transform: translate(0, 0) rotate(45deg);            /* Start/end at 45° */
-            }
-            33% {
-                transform: translate(-150px, 100px) rotate(135deg);  /* Move left and down */
-            }
-            66% {
-                transform: translate(-50px, -80px) rotate(225deg);   /* Move up */
-            }
-        }
-
-        /* Animation: Triangle floating and flipping */
-        @keyframes float3 {
-            0%, 100% {
-                transform: translate(0, 0) rotate(0deg);             /* Start/end */
-            }
-            50% {
-                transform: translate(150px, -100px) rotate(180deg);  /* Move and flip */
-            }
-        }
-
-        @keyframes float4 {
-            0%, 100% {
-                transform: translate(0, 0) scale(1);
-            }
-            25% {
-                transform: translate(-100px, 80px) scale(1.2);
-            }
-            50% {
-                transform: translate(-200px, -50px) scale(0.8);
-            }
-            75% {
-                transform: translate(-100px, -100px) scale(1.1);
-            }
-        }
-
-        @keyframes float5 {
-            0%, 100% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-            20% {
-                transform: translate(80px, -60px) rotate(60deg);
-            }
-            40% {
-                transform: translate(150px, 40px) rotate(120deg);
-            }
-            60% {
-                transform: translate(100px, 120px) rotate(180deg);
-            }
-            80% {
-                transform: translate(-50px, 80px) rotate(240deg);
-            }
-        }
-
-        @keyframes float6 {
-            0%, 100% {
-                transform: translate(0, 0) rotate(45deg) scale(1);
-            }
-            33% {
-                transform: translate(120px, 100px) rotate(135deg) scale(1.3);
-            }
-            66% {
-                transform: translate(-80px, 50px) rotate(225deg) scale(0.9);
-            }
-        }
-
-        /* Responsive adjustments for background shapes on tablets and mobile */
-        @media (max-width: 768px) {
-            /* Make shapes more subtle on smaller screens */
-            .shape {
-                opacity: 0.1;  /* Reduce opacity so they don't distract from content */
-            }
-            
-            /* Smaller circles for mobile */
-            .shape-circle,
-            .shape-circle-2 {
-                width: 100px;
-                height: 100px;
-            }
-            
-            /* Smaller squares and diamonds for mobile */
-            .shape-square,
-            .shape-diamond {
-                width: 80px;
-                height: 80px;
-            }
-            
-            /* Smaller hexagon for mobile */
-            .shape-hexagon {
-                width: 70px;
-                height: 40.42px;  /* Maintains hexagon proportions */
-            }
-        }
-    

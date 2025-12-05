@@ -1,0 +1,18 @@
+ /* Container for technology badges - wraps to multiple lines */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;              /* Allow badges to wrap to next line */
+            gap: 1rem;                    /* Space between badges */
+            margin-top: 1.5rem;
+        }
+
+        /* Individual technology badge (HTML, CSS, JavaScript, etc.) */
+        .tech-badge {
+            background: var(--primary-light);        /* Light blue background */
+            color: var(--primary-dark);              /* Dark blue text */
+            padding: 0.6rem 1.2rem;                  /* Padding inside badge */
+            border-radius: 25px;                     /* Fully rounded pill shape */
+            font-weight: 600;                        /* Bold text */
+            font-size: 0.95rem;
+            border: 2px solid var(--primary-medium); /* Medium blue border */
+        }
