@@ -11,7 +11,7 @@ function Toggle() {
     // Toggle CSS class on <body>
     document.body.classList.toggle("sidebar-hidden");
   };
-
+   
   return (
     <button id="sidebarToggle" className="toggle-btn" onClick={handleToggle}>
       <i className={isOpen ? "fas fa-bars" : "fas fa-chevron-right"}></i>
