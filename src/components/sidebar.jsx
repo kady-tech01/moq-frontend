@@ -1,12 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
+// استبدل logo.png بالمسار الفعلي لصورتك
+import logo from "../assets/styles/logo.webp"; 
 
 const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="sidebar-top">
-        <div className="logo-placeholder">LOGO</div>
+        <div className="logo-placeholder">
+          {/* تم وضع الصورة هنا مع كلاس مخصص */}
+          <img src={logo} alt="MoQawill Logo" className="sidebar-logo" />
+        </div>
         <h2 className="club-name">MoQawill</h2>
       </div>
 
@@ -18,7 +23,7 @@ const Sidebar = () => {
           <i className="fas fa-info-circle"></i> About
         </NavLink>
         <NavLink to="/announces" className="page-link">
-          <i className="fas fa-bullhorn"></i> Announces
+          <i className="fas fa-bullhorn"></i> Anouncements 
         </NavLink>
         <NavLink to="/achievements" className="page-link">
           <i className="fas fa-trophy"></i> Achievements

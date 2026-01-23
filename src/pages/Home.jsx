@@ -5,12 +5,12 @@ const Home = () => {
   return (
        <div class="page-content active" id="home">
     <div class="hero-section">
-     <h1 id="heroTitle">Welcome to MoQawill</h1>
-     <p id="heroSubtitle">Business Club of Excellence</p>
+     <h1 id="heroTitle">Welcome To MoQawill</h1>
+     <p id="heroSubtitle">Learn here, lead anywhere </p>
     </div>
     <div class="content-card">
-     <h2>About Our Club</h2>
-     <p>MoQawill is the premier business club at our university, dedicated to fostering entrepreneurship, leadership, and professional development among students. We provide a platform for aspiring business leaders to connect, learn, and grow together.</p>
+     <h2>About Our Club :</h2>
+     <p>MoQawill Club is a scientific and cultural club affiliated with the Higher School of Management in Tlemcen. Founded in 2020 by official decree No. 01, the club aims to foster the spirit of entrepreneurship, innovation, and scientific research within the field of management sciences.</p>
     </div>
     <div class="feature-grid">
      <div class="feature-item"><i class="fas fa-users"></i>

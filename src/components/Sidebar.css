@@ -11,21 +11,53 @@
     border-right: 3px solid var(--primary-medium);
     overflow-y: auto;
     z-index: 1000;
-    transition: transform 0.3s ease; /* Slide animation */
+    transition: transform 0.3s ease;
+}
+
+/* --- LOGO STYLES (تعديلات اللوقو الجديدة) --- */
+.logo-placeholder {
+    width: 90px;
+    height: 90px;
+    background: white; 
+    border-radius: 50%; /* جعل الإطار دائرياً تماماً */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* هذا يضمن أن أي جزء من الصورة يخرج عن الدائرة يتم قصه */
+    overflow: hidden; 
+    
+    box-shadow: 0 6px 16px rgba(193, 232, 255, 0.4);
+    transition: all 0.3s ease;
+    animation: logoPulse 2s ease-in-out infinite;
+    position: relative;
+}
+
+.sidebar-logo {
+    width: 100%;
+    height: 100%;
+    /* 'cover' تبدأ بملء المساحة */
+    object-fit: cover; 
+    /* التكبير (Zoom) لقطع الهوامش الزائدة - يمكنك زيادة الرقم 1.3 إذا احتجت زووم أكثر */
+    transform: scale(1); 
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* تأثير إضافي عند تمرير الماوس لجعل اللوقو يتفاعل */
+.logo-placeholder:hover .sidebar-logo {
+    transform: scale(1.337-=777-700-); /* زووم إضافي خفيف عند الحوم بالماوس */
 }
 
 /* --- MAIN CONTENT STYLES --- */
-/* This is the part that was missing to make the content fit the remaining space */
 .main-content {
-    margin-left: 280px; /* Pushes content to the right of the sidebar */
-    width: calc(100% - 280px); /* Ensures it only takes remaining space */
+    margin-left: 280px;
+    width: calc(100% - 280px);
     min-height: 100vh;
-    transition: margin-left 0.3s ease, width 0.3s ease; /* Matches sidebar slide speed */
-    padding: 20px; /* Optional: adds space inside your content area */
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    padding: 20px;
 }
 
-/* --- HIDDEN STATE LOGIC --- */
-/* When the sidebar is hidden (via a class on a parent container) */
+/* --- HIDDEN STATE --- */
 .sidebar-hidden .sidebar {
     transform: translateX(-100%);
 }
@@ -35,7 +67,6 @@
     width: 100%;
 }
 
-/* --- LOGO & LINKS (Kept from your original) --- */
 .sidebar-top {
     display: flex;
     flex-direction: column;
@@ -44,23 +75,6 @@
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 2px solid var(--primary-medium);
-}
-
-.logo-placeholder {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-medium) 100%);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: var(--primary-darkest);
-    font-size: 1.3rem;
-    border: 3px solid var(--primary-medium);
-    box-shadow: 0 6px 16px rgba(193, 232, 255, 0.4);
-    transition: all 0.3s ease;
-    animation: logoPulse 2s ease-in-out infinite;
 }
 
 .club-name {
@@ -90,6 +104,11 @@
     transition: all 0.3s ease;
 }
 
+.page-link i {
+    width: 20px;
+    text-align: center;
+}
+
 .page-link:hover {
     color: white;
     background: rgba(125, 160, 202, 0.3);
@@ -103,6 +122,6 @@
 }
 
 @keyframes logoPulse {
-    0%, 100% { box-shadow: 0 6px 16px rgba(193, 232, 255, 0.4); }
-    50% { box-shadow: 0 6px 24px rgba(193, 232, 255, 0.7); }
+    0%, 100% { transform: scale(1); box-shadow: 0 6px 16px rgba(193, 232, 255, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 6px 24px rgba(193, 232, 255, 0.7); }
 }
