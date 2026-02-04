@@ -26,7 +26,7 @@ function AppRouter() {
       <Route path="/Activities" element={<Activities />} />
       <Route path="/News" element={<News />} />
       <Route path="/Events" element={<Events />} />
-      <Route path="/Annouces" element={<Announces />} />
+      <Route path="/Announces" element={<Announces />} />
       <Route path="/Esm" element={<ESM />} />
       <Route path="/Feedback" element={<Feedback />} />
     </Routes>

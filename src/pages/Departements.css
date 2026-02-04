@@ -1,0 +1,132 @@
+/* استيراد خط عصري من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+#departments {
+    background-color: #ffffff;
+    padding-bottom: 120px;
+    font-family: 'Outfit', sans-serif; /* تطبيق الخط الجديد */
+}
+
+/* --- HEADER --- */
+.dept-header {
+    text-align: center;
+    padding: 120px 20px 100px;
+    background: radial-gradient(circle at top right, #f8fafc 0%, #ffffff 100%);
+    margin-bottom: 50px;
+    border-radius: 0 0 60px 60px;
+}
+
+.dept-header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: #0f172a;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+}
+
+/* --- CONTAINER --- */
+.dept-container-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* --- ROW EFFECTS --- */
+.dept-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* سنستخدمها مع أنيميشن الدخول */
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards ease-out;
+}
+
+/* تأثير ظهور القسم عند التحميل */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- LEADER PHOTO EFFECTS --- */
+.leader-circle-large {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden; 
+    border: 12px solid #ffffff;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dept-row:hover .leader-circle-large {
+    transform: scale(1.05) rotate(2deg); /* حركة بسيطة عند التمرير */
+    border-color: #3b82f6;
+    box-shadow: 0 35px 60px -15px rgba(59, 130, 246, 0.2);
+}
+
+.leader-circle-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%); /* تقليل الألوان قليلاً لزيادة الفخامة */
+    transition: all 0.5s ease;
+}
+
+.dept-row:hover img {
+    filter: grayscale(0%);
+}
+
+/* --- TEXT STYLING --- */
+.leader-title {
+    color: #3b82f6;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.leader-name-h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #64748b;
+    margin-bottom: 5px;
+}
+
+.dept-name-h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: #0f172a;
+    font-weight: 800;
+    margin: 5px 0 25px;
+    line-height: 1.1;
+}
+
+/* خط زينة تحت العنوان يتمدد عند الـ Hover */
+.dept-accent-line {
+    width: 40px;
+    height: 6px;
+    background: #3b82f6;
+    margin: 0 auto 30px;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.dept-row:hover .dept-accent-line {
+    width: 100px;
+}
+
+.dept-full-desc {
+    color: #475569;
+    line-height: 1.8;
+    font-size: 1.15rem;
+    font-weight: 300;
+    max-width: 700px;
+}

@@ -1,0 +1,317 @@
+/* استيراد الخط العصري */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+.esm-page {
+    font-family: 'Outfit', sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* --- 1. الهيدر الملكي مع تحسين موضع البطاقة --- */
+.esm-intro {
+    /* تقليل البادينج العلوي لرفع المحتوى للأعلى */
+    padding: 60px 20px 140px; 
+    background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%); 
+    text-align: center;
+    border-radius: 0 0 100px 100px;
+    position: relative;
+    overflow: visible; 
+    color: white;
+}
+
+/* توهج خلفي ناعم */
+.esm-intro::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 400px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.esm-intro-content {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.08); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    padding: 50px 40px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 950px;
+    margin: 0 auto;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    /* تقليل قيمة الـ Y لرفع البطاقة للأعلى */
+    transform: translateY(30px); 
+}
+
+.esm-logo-large {
+    width: 130px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.4));
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.esm-logo-large:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.esm-intro h1 {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #ffffff;
+    direction: rtl;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.esm-intro h2 {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    color: #60a5fa; 
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.intro-divider {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #3b82f6, #60a5fa, #3b82f6, transparent);
+    margin: 20px auto 30px;
+}
+
+.esm-description {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- 2. قسم هيكل الدراسات (Study Cycles) --- */
+.esm-studies {
+    /* تقليل المسافة العلوية لتقريب القسم من الهيدر */
+    padding: 80px 5% 80px; 
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.esm-section-title {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.studies-subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #64748b;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 35px;
+}
+
+.study-card {
+    background: #ffffff;
+    border-radius: 35px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+    border: 1px solid #f1f5f9;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.study-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f8fafc;
+    padding-bottom: 15px;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    font-weight: 800;
+    margin: 0;
+}
+
+.subjects-box {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.subjects-box h4 {
+    color: #3b82f6;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.subjects-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subjects-box ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    color: #334155;
+    position: relative;
+    padding-left: 22px;
+}
+
+.subjects-box ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+.card-footer-text {
+    margin-top: 25px;
+    font-style: italic;
+    font-weight: 600;
+    color: #1e293b;
+    border-top: 1px dashed #cbd5e1;
+    padding-top: 15px;
+    font-size: 0.95rem;
+}
+
+/* --- 3. قسم التواصل (Contact Section) --- */
+.esm-contact {
+    padding: 80px 5% 100px;
+}
+
+.contact-box {
+    background: #0f172a;
+    color: white;
+    padding: 70px 40px;
+    border-radius: 50px;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.3);
+}
+
+.contact-box h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+
+.contact-grid-layout {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-main-info {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.contact-info-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+.contact-info-row a {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-social-links {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.fb-link-btn {
+    display: block;
+    padding: 12px;
+    background: #1877f2;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.fb-link-btn:hover {
+    background: #166fe5;
+    transform: translateX(8px);
+}
+
+.contact-btn-link {
+    display: inline-block;
+    padding: 18px 45px;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-top: 50px;
+    transition: 0.3s;
+}
+
+.contact-btn-link:hover {
+    background: #2563eb;
+    transform: translateY(-5px);
+}
+
+/* --- 4. الاستجابة (Responsive) --- */
+@media (max-width: 992px) {
+    .contact-grid-layout { flex-direction: column; align-items: center; }
+    .contact-main-info, .contact-social-links { width: 100%; text-align: center; }
+    .contact-info-row { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+    .esm-intro { border-radius: 0 0 50px 50px; padding: 40px 15px 100px; }
+    .esm-intro-content { padding: 30px 20px; border-radius: 30px; transform: translateY(20px); }
+    .esm-section-title { font-size: 1.8rem; }
+    .studies-grid { grid-template-columns: 1fr; }
+    .contact-box { padding: 50px 20px; }
+}

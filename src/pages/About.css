@@ -1,18 +1,253 @@
- /* Container for technology badges - wraps to multiple lines */
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;              /* Allow badges to wrap to next line */
-            gap: 1rem;                    /* Space between badges */
-            margin-top: 1.5rem;
-        }
+/* --- إعدادات عامة للصفحة --- */
+#about {
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
 
-        /* Individual technology badge (HTML, CSS, JavaScript, etc.) */
-        .tech-badge {
-            background: var(--primary-light);        /* Light blue background */
-            color: var(--primary-dark);              /* Dark blue text */
-            padding: 0.6rem 1.2rem;                  /* Padding inside badge */
-            border-radius: 25px;                     /* Fully rounded pill shape */
-            font-weight: 600;                        /* Bold text */
-            font-size: 0.95rem;
-            border: 2px solid var(--primary-medium); /* Medium blue border */
-        }
+/* --- HERO SECTION --- */
+.about-hero {
+    height: 50vh;
+    min-height: 350px;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+                url('../assets/about/clubHistory.webp') no-repeat;
+    background-size: cover;
+    background-position: center 80%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 0 0 40px 40px;
+    padding: 20px;
+}
+
+.about-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+/* --- SPLIT SECTION (History & Mission) --- */
+.about-split-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 10%;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px #3b82f6;
+    object-fit: cover;
+}
+
+.about-text-content {
+    flex: 1.2;
+    min-width: 300px;
+}
+
+.subtitle {
+    color: #3b82f6;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.about-text-content h2 {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-text-content p {
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+/* --- ORG CHART (Structure) --- */
+.org-section {
+    background: #f8fafc;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section-intro {
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.org-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.org-node.main-node {
+    display: inline-block;
+    padding: 18px 50px;
+    background: #1e293b;
+    color: white;
+    border-radius: 12px;
+    font-weight: 700;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+}
+
+.org-line {
+    width: 2px;
+    height: 40px;
+    background: #cbd5e1;
+}
+
+.org-departments {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin-top: 10px;
+}
+
+.dept-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: #334155;
+    font-weight: 600;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+.dept-tag:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+    transform: translateY(-3px);
+}
+
+/* --- BOARD MEMBERS (المجلس التنفيذي في سطر واحد) --- */
+.board-section {
+    padding: 100px 8%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #0f172a;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+/* التعديل الجوهري هنا لضمان وجود الصور في سطر واحد */
+.board-grid {
+    display: flex; /* تحويل لـ Flex */
+    justify-content: center; /* توسيط العناصر */
+    gap: 30px; /* المسافة بين الكروت */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member-card {
+    flex: 1; /* جعل كل الكروت تأخذ مساحة متساوية */
+    min-width: 0; /* منع الكروت من تجاوز حدود الـ flex */
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: #3b82f6;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.member-info {
+    padding: 25px;
+    border-top: 4px solid #3b82f6;
+    flex-grow: 1;
+}
+
+.member-info h3 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    color: #1e293b;
+}
+
+.role {
+    color: #3b82f6;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.member-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* عند الشاشات المتوسطة (مثل التابلت) قد تضطر الصور للنزول لسطر جديد للحفاظ على وضوحها */
+@media (max-width: 1024px) {
+    .board-grid {
+        gap: 15px;
+    }
+}
+
+/* في الجوال فقط نجعلهم تحت بعض */
+@media (max-width: 850px) {
+    .board-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .member-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
