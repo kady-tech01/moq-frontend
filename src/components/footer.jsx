@@ -2,12 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
-const Footer = ({ developerName, developerEmail }) => {
+const Footer = () => {
+  // هنا نضع العناوين مباشرة
+  const clubEmail = "moqawillesmt@gmail.com"; // بريد النادي
+  const developerEmail = "mecharakhadidja05@gmail.com"; 
+
   return (
     <footer className="footer">
       <div className="footer-content">
-
-        {/* Section 1 – club description */}
+        {/* Section 1 – Club Description */}
         <div className="footer-section">
           <h4 id="clubName">MoQawill</h4>
           <p>
@@ -16,7 +19,7 @@ const Footer = ({ developerName, developerEmail }) => {
           </p>
         </div>
 
-        {/* Section 2 – internal links */}
+        {/* Section 2 – Quick Links */}
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
@@ -27,39 +30,41 @@ const Footer = ({ developerName, developerEmail }) => {
           </ul>
         </div>
 
-        {/* Section 3 – external social links */}
+        {/* Section 3 – Connect (Club Contacts) */}
         <div className="footer-section">
           <h4>Connect With Us</h4>
           <div className="social-links">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/moqawill_club_tlemcen?igsh=MWtweDZueHp5anJmeA==" target="_blank" rel="noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
             <a href="https://tiktok.com" target="_blank" rel="noreferrer">
               <i className="fab fa-tiktok"></i>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/moqawillesm" target="_blank" rel="noreferrer">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a id="developerContact" href={`mailto:${developerEmail}`}>
+            {/* 📧 Club Email - التواصل مع النادي */}
+            <a href={`mailto:${clubEmail}`} title="Club Email">
               <i className="fas fa-envelope"></i>
             </a>
-            <a href="tel:+1234567890">
+            <a href="tel:0662373488">
               <i className="fas fa-phone"></i>
             </a>
           </div>
         </div>
       </div>
 
-      {/* footer bottom */}
       <div className="footer-bottom">
-        <p>© 2025 MoQawill Business Club. All rights reserved.</p>
+        <p>© 2026 MoQawill Business Club. All rights reserved.</p>
 
-        <p className="developer-credit">
-          Developed by{" "}
-          <a id="developerEmail" href={`mailto:${developerEmail}`}>
-            {developerName}
+        {/* ❤️ Developer Credit - التواصل معكِ كمطورة */}
+        <div className="developer-credit">
+          <span>Developed with ❤️ by</span>
+          <a href={`mailto:${developerEmail}`} className="developer-link">
+            <i className="fas fa-code dev-icon"></i>
+            <span className="dev-name">Khadidja Mechara</span>
           </a>
-        </p>
+        </div>
       </div>
     </footer>
   );

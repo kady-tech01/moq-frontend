@@ -10,7 +10,7 @@
 /* الهيدر */
 .events-header {
     text-align: center;
-    padding: 100px 20px 60px;
+    padding: 120px 20px 60px;
     background: linear-gradient(to bottom, #f8fafc, #ffffff);
 }
 
@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     gap: 60px;
-    margin-bottom: 120px; /* مساحة واسعة بين كل حدث وآخر */
+    margin-bottom: 120px;
     opacity: 0;
     animation: fadeInUp 0.8s forwards;
 }
@@ -48,7 +48,6 @@
     flex-direction: row-reverse;
 }
 
-/* معلومات الحدث */
 .event-info {
     flex: 1;
 }
@@ -77,9 +76,9 @@
     font-weight: 300;
 }
 
-/* جيري الصور (Grid مرن حسب عدد الصور) */
+/* جيري الصور (الشبكة) */
 .event-gallery {
-    flex: 1.5;
+    flex: 1.5; /* القيمة الافتراضية للصور المتعددة */
     display: grid;
     gap: 15px;
 }
@@ -88,11 +87,7 @@
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-}
-
-.event-img-wrapper:hover {
-    transform: scale(1.02);
+    transition: transform 0.4s ease;
 }
 
 .event-img-wrapper img {
@@ -102,8 +97,23 @@
     display: block;
 }
 
-/* تنسيقات مختلفة حسب عدد الصور */
-.img-count-1 { grid-template-columns: 1fr; }
+/* --- تعديل الحجم للفعاليات ذات الصورة الواحدة (CineVibes/Scienofia) --- */
+.img-count-1 {
+    flex: 0.8; /* جعل الحاوية أصغر بكثير من النص */
+    display: block; /* إلغاء الـ grid للصورة الواحدة */
+    max-width: 380px; /* تحديد عرض أقصى لعدم تضخم الصورة */
+}
+
+.img-count-1 .event-img-wrapper {
+    aspect-ratio: 4 / 5; /* شكل طولي احترافي */
+    border: 10px solid #f8fafc;
+}
+
+/* ضبط التموضع للصورة الواحدة */
+.event-block.reverse .img-count-1 { margin-right: auto; margin-left: 0; }
+.event-block:not(.reverse) .img-count-1 { margin-left: auto; margin-right: 0; }
+
+/* تنسيقات الصور المتعددة */
 .img-count-2 { grid-template-columns: 1fr 1fr; }
 .img-count-3 { grid-template-columns: 1.5fr 1fr; }
 .img-count-3 .event-img-wrapper:first-child { grid-row: span 2; }
@@ -115,13 +125,16 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* التجاوب للهواتف */
+/* التجاوب */
 @media (max-width: 992px) {
     .event-block, .event-block.reverse {
         flex-direction: column;
-        gap: 30px;
+        gap: 40px;
         text-align: center;
     }
-    .event-info h2 { font-size: 1.8rem; }
+    .img-count-1 {
+        max-width: 300px;
+        margin: 0 auto !important;
+    }
     .event-gallery { width: 100%; }
 }

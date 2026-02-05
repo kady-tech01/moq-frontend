@@ -30,11 +30,11 @@
     border-radius: 10px;
 }
 
-/* --- Event Title Style (Above VIP) --- */
+/* --- Event Title Style --- */
 .event-main-title {
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    margin-top: 80px;  /* زيادة المسافة العلوية */
+    margin-bottom: 80px; /* زيادة المسافة السفلية قبل أول فئة */
 }
 
 .event-main-title h3 {
@@ -45,7 +45,6 @@
     display: inline-block;
 }
 
-/* تأثير الخط تحت عنوان بلو نوفمبر */
 .event-main-title h3::after {
     content: '';
     position: absolute;
@@ -59,11 +58,20 @@
     opacity: 0.6;
 }
 
-/* --- Section Headers --- */
+/* --- Section Containers --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* التباعد بين الفئات */
+.sponsor-section {
+    margin-bottom: 120px; /* هذه هي المسافة بين VIP و Facebook وبين Facebook و Instagram */
+}
+
+.sponsor-section:last-child {
+    margin-bottom: 0;
 }
 
 .section-header {
@@ -71,7 +79,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 50px; /* المسافة بين عنوان الفئة والبطاقات */
 }
 
 .section-header h2 {
@@ -88,23 +96,13 @@
     max-width: 100px;
 }
 
-/* --- Grids & Cards --- */
+/* --- Improved Grids for Centering --- */
 .sponsors-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 25px;
     justify-content: center;
-}
-
-.vip-tier .sponsors-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    max-width: 800px;
-    margin: 0 auto 100px;
-}
-
-.fb-tier .sponsors-grid, 
-.ig-tier .sponsors-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin-bottom: 80px;
+    margin: 0 auto;
 }
 
 .sponsor-card {
@@ -117,6 +115,19 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.03);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: block;
+    width: calc(25% - 25px);
+    min-width: 250px; 
+}
+
+.vip-tier .sponsor-card {
+    width: calc(45% - 25px);
+    max-width: 400px;
+}
+
+.fb-tier .sponsor-card, 
+.ig-tier .sponsor-card {
+    width: calc(20% - 25px);
+    min-width: 200px;
 }
 
 .image-container { width: 100%; height: 100%; }
@@ -134,14 +145,30 @@
 }
 
 .sponsor-card:hover .card-overlay { opacity: 1; }
-.card-overlay span { color: white; font-weight: 600; padding: 10px 20px; border: 2px solid white; border-radius: 50px; }
+.card-overlay span { 
+    color: white; 
+    font-weight: 600; 
+    padding: 10px 20px; 
+    border: 2px solid white; 
+    border-radius: 50px; 
+}
 
 /* Tier Colors */
 .vip-tier .section-header h2 { color: #b45309; }
 .fb-tier .section-header h2 { color: #1877f2; }
 .ig-tier .section-header h2 { color: #d62976; }
 
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .sponsor-section { margin-bottom: 80px; } /* تقليل المسافة قليلاً في الشاشات المتوسطة */
+    .sponsor-card { width: calc(45% - 20px); }
+}
+
 @media (max-width: 600px) {
+    .event-main-title { margin-top: 40px; margin-bottom: 40px; }
     .event-main-title h3 { font-size: 1.6rem; }
-    .sponsors-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important; }
+    .sponsor-card { 
+        width: calc(100% - 20px);
+        max-width: 280px;
+    }
 }

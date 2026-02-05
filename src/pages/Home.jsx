@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css"; // تأكد من إنشاء هذا الملف
+import "./Home.css"; 
 
 // استيراد الصور بصيغة WebP
 import collectiveHero from "../assets/home/collectiveHero.webp";
@@ -74,7 +74,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4. CONTACT SECTION */}
+      {/* 4. COLLABORATION SECTION (Cleaned) */}
       <section className="contact-footer">
         <div className="contact-container">
           <h2>Ready to Collaborate?</h2>
@@ -82,18 +82,14 @@ const Home = () => {
           <div className="contact-details">
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
-              <span>contact@moqawill.com</span>
+              <span>moqawillesmt@gmail.com</span>
             </div>
             <div className="contact-item">
               <i className="fas fa-map-marker-alt"></i>
               <span>ESM, Tlemcen, Algeria</span>
             </div>
           </div>
-          <div className="social-links">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-linkedin"></i></a>
-          </div>
+          {/* تم حذف روابط السوشيال ميديا من هنا للاكتفاء بوجودها في الـ Footer */}
         </div>
       </section>
 

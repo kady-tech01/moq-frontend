@@ -1,7 +1,7 @@
 import React from 'react';
 import './Events.css';
 
-// استيراد الصور (تأكدي من تطابق المسارات في مجلد assets)
+// استيراد الصور
 import blue1 from '../assets/events/blue1.webp';
 import blue2 from '../assets/events/blue2.webp';
 import blue3 from '../assets/events/blue3.webp';
@@ -23,7 +23,7 @@ const Events = () => {
       id: 1,
       title: "Blue November",
       date: "November",
-      script: "Raising awareness about men's health and diabetes. A month-long campaign filled with sports activities, medical check-ups, and informative sessions to promote a healthier lifestyle.",
+      script: "Raising awareness about men's health. A month-long campaign filled with men's health awareness, medical check-ups, and informative sessions to promote a healthier lifestyle.",
       images: [blue1, blue2, blue3, blue4],
     },
     {
@@ -75,7 +75,6 @@ const Events = () => {
       <div className="events-timeline">
         {eventsList.map((event, index) => (
           <section key={event.id} className={`event-block ${index % 2 !== 0 ? 'reverse' : ''}`}>
-            {/* الجزء الخاص بالنص */}
             <div className="event-info">
               <span className="event-date">{event.date}</span>
               <h2>{event.title}</h2>
@@ -83,7 +82,7 @@ const Events = () => {
               <p>{event.script}</p>
             </div>
 
-            {/* الجزء الخاص بالصور بتنسيق شبكي ذكي */}
+            {/* تم إضافة الكلاس img-count-X هنا للتحكم في الحجم */}
             <div className={`event-gallery img-count-${event.images.length}`}>
               {event.images.map((img, i) => (
                 <div key={i} className="event-img-wrapper">
