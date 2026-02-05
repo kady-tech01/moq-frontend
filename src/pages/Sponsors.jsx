@@ -29,8 +29,8 @@ import ig11 from '../assets/sponsors/ig11.webp';
 const Sponsors = () => {
   const sponsorsData = {
     vip: [
-      { id: 1, name: "VIP 1", img: vip1, link: "#", imgStyle: { transform: 'scale(1.2) translateY(3%)', objectPosition: 'center' } },
-      { id: 2, name: "VIP 2", img: vip2, link: "#", imgStyle: { transform: 'scale(1.1) translateY(-2%) ', objectPosition: 'center' } },
+      { id: 1, name: "VIP 1", img: vip1, link: "https://www.instagram.com/mansourah.algerie?igsh=MWp3NHprdjBmZWVzNQ==", imgStyle: { transform: 'scale(1.2) translateY(3%)', objectPosition: 'center' } },
+      { id: 2, name: "VIP 2", img: vip2, link: "https://www.instagram.com/lexquise_algerie?igsh=MTR3YnM4YW42eHFubA==", imgStyle: { transform: 'scale(1.1) translateY(-2%) ', objectPosition: 'center' } },
     ],
     facebook: [
       { id: 3, name: "FB 1", img: fb1, link: "#", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
@@ -46,16 +46,16 @@ const Sponsors = () => {
     ],
     instagram: [
       { id: 13, name: "IG 1", img: ig1, link: "#", imgStyle: { transform: 'scale(1.1) translateX(5%) translateY(2%)', objectPosition: 'center' } },
-      { id: 14, name: "IG 2", img: ig2, link: "#", imgStyle: { transform: 'scale(1.1) translateX(2%) translateY(3%)', objectPosition: 'center' } },
-      { id: 15, name: "IG 3", img: ig3, link: "#", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
-      { id: 16, name: "IG 4", img: ig4, link: "#", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
-      { id: 17, name: "IG 5", img: ig5, link: "#", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
-      { id: 18, name: "IG 6", img: ig6, link: "#", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
-      { id: 19, name: "IG 7", img: ig7, link: "#", imgStyle: { transform: 'scale(1.0) ', objectPosition: 'center' } },
-      { id: 20, name: "IG 8", img: ig8, link: "#", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
+      { id: 14, name: "IG 2", img: ig2, link: "https://www.instagram.com/monde_du_sucre1300?igsh=MXRyb2k5ZmxkdXIwZA==", imgStyle: { transform: 'scale(1.1) translateX(2%) translateY(3%)', objectPosition: 'center' } },
+      { id: 15, name: "IG 3", img: ig3, link: "https://www.instagram.com/dalinova13?igsh=a2JybjE1ODNsemhh", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
+      { id: 16, name: "IG 4", img: ig4, link: "https://www.instagram.com/arabasta.13?igsh=MXAxM3gzMGRzd3Rs", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
+      { id: 17, name: "IG 5", img: ig5, link: "https://www.instagram.com/bouquet_de_fleur_au_chocolat_?igsh=MXUwd2pybGx1bWp0ag==", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
+      { id: 18, name: "IG 6", img: ig6, link: "https://www.instagram.com/bissenparfum?igsh=cnExZ3hnOWc4Njlo", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
+      { id: 19, name: "IG 7", img: ig7, link: "https://www.instagram.com/delicesbysisters_?igsh=dGFka29lMWZkbmN0", imgStyle: { transform: 'scale(1.0) ', objectPosition: 'center' } },
+      { id: 20, name: "IG 8", img: ig8, link: "https://www.instagram.com/lebonchoix_chezghania?igsh=MmgweGN0a3h4emtw", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
       { id: 21, name: "IG 9", img: ig9, link: "#", imgStyle: { transform: 'scale(1.0)', objectPosition: 'center' } },
-      { id: 22, name: "IG 10", img: ig10, link: "#", imgStyle: { transform: 'scale(1.3) translateY(1%)', objectPosition: 'center' } },
-      { id: 23, name: "IG 11", img: ig11, link: "#", imgStyle: { transform: 'scale(1.0)  translateY(3%)', objectPosition: 'center' } },
+      { id: 22, name: "IG 10", img: ig10, link: "https://www.instagram.com/narcisia?igsh=NWt6ODMzdDltOGE4", imgStyle: { transform: 'scale(1.3) translateY(1%)', objectPosition: 'center' } },
+      { id: 23, name: "IG 11", img: ig11, link: "https://www.instagram.com/chocolat_by_s?igsh=eXc3ZGFnaGltcmJ3", imgStyle: { transform: 'scale(1.0)  translateY(3%)', objectPosition: 'center' } },
     ]
   };
 
