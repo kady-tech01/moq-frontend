@@ -11,6 +11,7 @@ const Home = () => {
   return (
     <div className="page-content active" id="home">
       
+
       {/* 1. HERO SECTION */}
       <section 
         className="hero-section" 
@@ -19,7 +20,7 @@ const Home = () => {
         <div className="hero-content">
           <h1 id="heroTitle">Welcome To MoQawill</h1>
           <p id="heroSubtitle">
-            <span className="hero-symbol">★</span> Learn here, lead anywhere
+            <span className="hero-symbol">★</span> Learn here, lead anywhere  <span className="hero-symbol">★</span>
           </p>
           <a href="#about" className="cta-button">Explore Our World</a>
         </div>
