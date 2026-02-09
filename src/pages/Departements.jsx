@@ -12,45 +12,6 @@ import scientificImg from '../assets/departements/activities.webp';
 const Departements = () => {
   const departmentsData = [
     {
-      id: 1,
-      name: "Human Resources (HR)",
-      leader: "Houda Zaidi",
-      description: "Managing club members, recruitment strategy, and fostering a productive internal environment.",
-      image: hrImg,
-      imgStyle: { transform: 'scale(2) translateX(4%)' } // زوم للصورة
-    },
-    {
-      id: 2,
-      name: "External Relations",
-      leader: "Inchirah Habbib Zahmani",
-      description: "Building bridges with partners, sponsors, and maintaining professional relationships.",
-      image: erImg,
-      imgStyle: { objectPosition: 'center 10%' } // تحريك الصورة للأسفل (إظهار الجزء العلوي)
-    },
-    {
-      id: 3,
-      name: "Organization",
-      leader: "Hania Chihane",
-      description: "The logistics engine. Planning and executing the physical setup of all events.",
-      image: orgImg,
-      imgStyle: {transform: 'scale(1.2) translateX(3%)'} 
-    },{
-      id: 7,
-      name: "Scientific & Cultural Activities",
-      leader: "Samah Chergui",
-      description: "Focusing on academic growth, research workshops, and enriching cultural life.",
-      image: scientificImg,
-      imgStyle: { transform: 'scale(1.9) translateX(-3%) translateY(-2%)' } // زوم للصورة
-    },
-    {
-      id: 4,
-      name: "Planification",
-      leader: "Nour El-Houda Khadidja Nadour",
-      description: "Strategic roadmapping and monitoring the club’s long-term goals.",
-      image: planImg,
-      imgStyle: { transform: 'scale(2) translateX(5%)' } // زوم للصورة
-    },
-    {
       id: 5,
       name: "Media",
       leader: "Mokhtar Benyezli",
@@ -66,7 +27,46 @@ const Departements = () => {
       image: designImg,
       imgStyle: {}
     },
-    
+    {
+      id: 1,
+      name: "Human Resources (HR)",
+      leader: "Houda Zaidi",
+      description: "Managing club members, recruitment strategy, and fostering a productive internal environment.",
+      image: hrImg,
+      imgStyle: { transform: 'scale(2) translateX(4%)' }
+    },
+    {
+      id: 2,
+      name: "External Relations",
+      leader: "Inchirah Habbib Zahmani",
+      description: "Building bridges with partners, sponsors, and maintaining professional relationships.",
+      image: erImg,
+      imgStyle: { objectPosition: 'center 10%' }
+    },
+    {
+      id: 3,
+      name: "Organization",
+      leader: "Hania Chihane",
+      description: "The logistics engine. Planning and executing the physical setup of all events.",
+      image: orgImg,
+      imgStyle: {transform: 'scale(1.2) translateX(3%)'} 
+    },
+    {
+      id: 7,
+      name: "Scientific & Cultural Activities",
+      leader: "Samah Chergui",
+      description: "Focusing on academic growth, research workshops, and enriching cultural life.",
+      image: scientificImg,
+      imgStyle: { transform: 'scale(1.9) translateX(-3%) translateY(-2%)' }
+    },
+    {
+      id: 4,
+      name: "Planification",
+      leader: "Nour El-Houda Khadidja Nadour",
+      description: "Strategic roadmapping and monitoring the club’s long-term goals.",
+      image: planImg,
+      imgStyle: { transform: 'scale(2) translateX(5%)' }
+    }
   ];
 
   return (
@@ -80,11 +80,11 @@ const Departements = () => {
         {departmentsData.map((dept) => (
           <div key={dept.id} className="dept-row">
             <div className="leader-circle-large">
-              {/* تطبيق التعديلات الخاصة بكل صورة هنا */}
               <img 
                 src={dept.image} 
                 alt={dept.leader} 
                 style={dept.imgStyle} 
+                loading="lazy"
               />
             </div>
             <div className="dept-details-full">
