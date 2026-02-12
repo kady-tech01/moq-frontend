@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import EventAPIView
 
-urlpatterns =[
-    path('',views.events,name='events')
+urlpatterns = [
+    path('', EventAPIView.as_view(), name='events-api'),
 ]

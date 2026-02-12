@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import SponsorAPIView
 
 urlpatterns = [
-    path('',views.sponsors,name='sponsors')
+    path('', SponsorAPIView.as_view(), name='sponsors-api'),
 ]

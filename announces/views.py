@@ -1,5 +1,10 @@
-from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .models import Announcement
+from .serializers import AnnouncementSerializer
 
-# Create your views here.
-def announces(request):
-    return render(request,'announces/index.html')
+class AnnouncementAPIView(APIView):
+    def get(self, request):
+        announcements = Announcement.objects.all()
+        serializer = AnnouncementSerializer(announcements, many=True, context={'request': request})
+        return Response(serializer.data)

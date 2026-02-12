@@ -1,36 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Anouncements.css';
 
 const Announces = () => {
-  const announces = [
-    {
-      id: 1,
-      type: 'Recruitment',
-      title: 'Spring 2026 Membership Intake',
-      date: 'Jan 25, 2026',
-      status: 'Active',
-      content: 'We are looking for ambitious students to join our HR and Design departments. Apply before Feb 1st.',
-      link: '#',
-    },
-    {
-      id: 2,
-      type: 'Event',
-      title: 'Management Days Workshop Registration',
-      date: 'Jan 20, 2026',
-      status: 'Active',
-      content: 'Registration is now open for the Scientific Activities seminar. Limited seats available.',
-      link: '#',
-    },
-    {
-      id: 3,
-      type: 'Policy',
-      title: 'New Internal Regulation Decree',
-      date: 'Jan 10, 2026',
-      status: 'Archive',
-      content: 'The Executive Board has updated the attendance policy for weekly workshops.',
-      link: '#',
-    }
-  ];
+  const [announcements, setAnnouncements] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('http://127.0.0.1:8000/api/announces/')
+      .then(res => res.json())
+      .then(data => {
+        setAnnouncements(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.log('Error fetching announcements:', err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="page-content active" id="announcements">
+        <div style={{ textAlign: 'center', padding: '50px' }}>Loading announcements...</div>
+      </div>
+    );
+  }
+
+  const activeAnnouncements = announcements.filter(item => item.status === 'active');
+  const archivedAnnouncements = announcements.filter(item => item.status === 'archive');
 
   return (
     <div className="page-content active" id="announcements">
@@ -40,24 +37,63 @@ const Announces = () => {
       </div>
 
       <div className="announcements-list">
-        {announces.map((item) => (
-          <div key={item.id} className={`announcement-card ${item.status.toLowerCase()}`}>
-            <div className="announcement-meta">
-              <span className="announcement-type">{item.type}</span>
-              <span className="announcement-date">{item.date}</span>
-            </div>
-            <div className="announcement-body">
-              <h3>{item.title}</h3>
-              <p>{item.content}</p>
-              {item.status === 'Active' && (
-                <a href={item.link} className="announcement-link">Take Action →</a>
-              )}
-            </div>
-            <div className={`status-badge ${item.status.toLowerCase()}`}>
-              {item.status}
-            </div>
+        
+        {/* Active Announcements */}
+        {activeAnnouncements.length > 0 && (
+          <>
+            <h2 className="section-subtitle">Current Announcements</h2>
+            {activeAnnouncements.map((item) => (
+              <div key={item.id} className="announcement-card active">
+                <div className="announcement-meta">
+                  <span className="announcement-type">{item.type}</span>
+                  <span className="announcement-date">{item.date_display || item.date}</span>
+                </div>
+                <div className="announcement-body">
+                  <h3>{item.title}</h3>
+                  <p>{item.content}</p>
+                  {item.link && (
+                    <a href={item.link} className="announcement-link">
+                      {item.link_text || 'Take Action →'}
+                    </a>
+                  )}
+                </div>
+                <div className="status-badge active">
+                  Active
+                </div>
+              </div>
+            ))}
+          </>
+        )}
+
+        {/* Archived Announcements */}
+        {archivedAnnouncements.length > 0 && (
+          <>
+            <h2 className="section-subtitle archive-title">Archive</h2>
+            {archivedAnnouncements.map((item) => (
+              <div key={item.id} className="announcement-card archive">
+                <div className="announcement-meta">
+                  <span className="announcement-type">{item.type}</span>
+                  <span className="announcement-date">{item.date_display || item.date}</span>
+                </div>
+                <div className="announcement-body">
+                  <h3>{item.title}</h3>
+                  <p>{item.content}</p>
+                </div>
+                <div className="status-badge archive">
+                  Archive
+                </div>
+              </div>
+            ))}
+          </>
+        )}
+
+        {/* No Announcements */}
+        {announcements.length === 0 && (
+          <div className="no-announcements">
+            <p>No announcements at this time.</p>
           </div>
-        ))}
+        )}
+
       </div>
     </div>
   );

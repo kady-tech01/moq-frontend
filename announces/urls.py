@@ -1,6 +1,6 @@
 from django.urls import path
-from .import views
+from .views import AnnouncementAPIView
 
-urlpatterns =[
-    path('',views.announces,name='announces')
+urlpatterns = [
+    path('', AnnouncementAPIView.as_view(), name='announcements-api'),
 ]

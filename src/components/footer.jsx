@@ -37,7 +37,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/moqawill_club_tlemcen?igsh=MWtweDZueHp5anJmeA==" target="_blank" rel="noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noreferrer">
+            <a href="https://www.tiktok.com/@moqawill.club?_r=1&_t=ZS-93rxwfgC8zB" target="_blank" rel="noreferrer">
               <i className="fab fa-tiktok"></i>
             </a>
             <a href="https://www.facebook.com/moqawillesm" target="_blank" rel="noreferrer">

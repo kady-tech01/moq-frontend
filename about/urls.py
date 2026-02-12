@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import AboutAPIView
 
 urlpatterns = [
-    path('',views.about_page, name='about'),
+    path('', AboutAPIView.as_view(), name='about-api'),
 ]

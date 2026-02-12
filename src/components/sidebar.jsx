@@ -25,14 +25,18 @@ const Sidebar = () => {
         <NavLink to="/announces" className="page-link">
           <i className="fas fa-bullhorn"></i> Anouncements 
         </NavLink>
+        
+        {/* ✅ مخفيين مؤقتاً - نشيل الـ comments وقت ما نحتاجهم 
         <NavLink to="/achievements" className="page-link">
           <i className="fas fa-trophy"></i> Achievements
         </NavLink>
-        <NavLink to="/activities" className="page-link">
-          <i className="fas fa-running"></i> Activities
-        </NavLink>
         <NavLink to="/news" className="page-link">
           <i className="fas fa-newspaper"></i> News
+        </NavLink>
+        */}
+        
+        <NavLink to="/activities" className="page-link">
+          <i className="fas fa-running"></i> Activities
         </NavLink>
         <NavLink to="/events" className="page-link">
           <i className="fas fa-calendar-alt"></i> Events

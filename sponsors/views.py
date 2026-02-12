@@ -1,5 +1,10 @@
-from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .models import Sponsor
+from .serializers import SponsorSerializer
 
-# Create your views here.
-def sponsors(request):
-    return render(request,'sponsors/index.html')
+class SponsorAPIView(APIView):
+    def get(self, request):
+        sponsors = Sponsor.objects.all()
+        serializer = SponsorSerializer(sponsors, many=True, context={'request': request})
+        return Response(serializer.data)
