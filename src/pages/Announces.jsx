@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Anouncements.css';
+import './anouncements.css';
 
 const Announces = () => {
   const [announcements, setAnnouncements] = useState([]);

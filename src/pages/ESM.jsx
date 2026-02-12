@@ -1,6 +1,6 @@
 import React from 'react';
 import './ESM.css';
-import esmLogo from '../assets/ESM/esmlogo.webp'; 
+import esmLogo from '../assets/esm/esmlogo.webp'; 
 
 const ESM = () => {
   return (
