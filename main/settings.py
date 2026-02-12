@@ -23,9 +23,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x$dzwzp(%r_mn&uq(ohe5egtr^59tdryfv1gl9ynkypm=htc7y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '.vercel.app',      # For Vercel
+    '.railway.app',     # For Railway
+    '.onrender.com',    # For Render
+]
+]
 
 
 # Application definition
@@ -139,4 +146,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-CORS_ALLOW_ALL_ORIGINS = True  
+CORS_ALLOW_ALL_ORIGINS = 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+    'http://localhost:3000',
+    'https://*.vercel.app',
+    'https://*.railway.app',
+]  

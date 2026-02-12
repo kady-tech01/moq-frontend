@@ -29,7 +29,7 @@ const Activities = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/activities/')
+    fetch('/api/activities/')
       .then(res => res.json())
       .then(data => {
         setActivities(data);

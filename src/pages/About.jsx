@@ -10,7 +10,7 @@ const About = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/about/')
+    fetch('/api/about/')
       .then(res => res.json())
       .then(data => {
         setContent(data);
