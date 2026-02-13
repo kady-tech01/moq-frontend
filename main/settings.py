@@ -172,8 +172,20 @@ if not DEBUG:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-RENDER = 'RENDER' in os.environ
+RENDER = os.environ.get('RENDER', False)
+
 if RENDER:
-    ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'localhost')]
+    ALLOWED_HOSTS = [
+        os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moq-jbco.onrender.com'),
+        'localhost',
+        '127.0.0.1'
+    ]
 else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+
+if RENDER:
+    CSRF_TRUSTED_ORIGINS = [
+        'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moq-jbco.onrender.com'),
+        'https://*.onrender.com'
+    ]
