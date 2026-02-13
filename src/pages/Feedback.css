@@ -1,0 +1,147 @@
+/* Container to center the card on the page */
+.feedback-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    perspective: 1000px; /* Adds 3D depth for the hover effect */
+}
+
+/* The White Card */
+.feedback-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px; /* Slightly softer corners */
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    /* Smooth Animation Settings */
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); /* Ultra-smooth "soft" curve */
+    border: 1px solid rgba(220, 228, 236, 0.5);
+    
+    /* Entrance Animation */
+    animation: slideUpFade 0.8s ease-out forwards;
+}
+
+/* --- THE SOFT HOVER EFFECT --- */
+.feedback-card:hover {
+    transform: translateY(-10px) scale(1.01); /* Gentle lift and grow */
+    box-shadow: 0 20px 50px rgba(75, 108, 183, 0.15); /* Soft blue-tinted glow */
+    border-color: rgba(75, 108, 183, 0.2);
+}
+
+/* Form Group (Label + Input) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.3s ease;
+}
+
+/* Lift labels slightly when focusing fields */
+.form-group:focus-within label {
+    color: #4b6cb7;
+    transform: translateX(4px);
+}
+
+.form-group label {
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+/* Input, Select, and Textarea styling */
+.feedback-card input, 
+.feedback-card select, 
+.feedback-card textarea {
+    padding: 1rem;
+    border: 2px solid #edf2f7;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fcfdfe;
+    transition: all 0.4s ease;
+}
+
+.feedback-card textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Soft Focus state */
+.feedback-card input:focus, 
+.feedback-card select:focus, 
+.feedback-card textarea:focus {
+    outline: none;
+    border-color: #4b6cb7;
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgba(75, 108, 183, 0.1); /* Very soft blue halo */
+}
+
+/* Submit Button styling */
+.submit-btn {
+    align-self: flex-start;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(24, 40, 72, 0.25);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(24, 40, 72, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* Keyframes for animations */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Success Message Animation */
+.success-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f0fff4;
+    color: #2f855a;
+    border: 1px solid #c6f6d5;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

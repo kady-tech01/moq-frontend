@@ -1,0 +1,165 @@
+/* =========================
+   ROOT & GLOBAL FIXES
+   ========================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   APP LAYOUT
+   ========================= */
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* This is the key layout wrapper */
+.app-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  transition: width 0.3s ease;
+}
+
+/* Sidebar closed state */
+.sidebar.closed {
+  width: 0;
+  overflow: hidden;
+}
+
+/* =========================
+   MAIN CONTENT (FIXED)
+   ========================= */
+
+.main-content {
+  flex: 1;                 /* ✅ takes remaining space */
+  min-height: 100vh;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   PAGE CONTAINER
+   ========================= */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+/* =========================
+   CONTENT CARDS
+   ========================= */
+
+.content-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   FEATURE GRID
+   ========================= */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* =========================
+   BACKGROUND SHAPES
+   ========================= */
+
+.background-shapes {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.15;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar.closed {
+    width: 0;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 160px;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}

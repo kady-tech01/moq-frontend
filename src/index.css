@@ -1,0 +1,66 @@
+  @import "@fortawesome/fontawesome-free/css/all.min.css";
+
+  
+  /* ===================================
+           COLOR PALETTE
+           Define all colors used throughout the site
+           =================================== */
+
+ /* Ensure full height for proper layout */
+        html, body {
+            height: 100%;
+        }          
+:root {
+  --primary-light: #c1e8ff;
+  --primary-medium: #7da0ca;
+  --primary-dark: #052659;
+  --primary-darkest: #021024;
+
+  --font-main: "Poppins", sans-serif;
+}
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+ * {
+            box-sizing: border-box;
+        }
+
+/* =========================================
+   GLOBAL BODY SETTINGS
+========================================= */
+  body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #c1e8ff; /* Light blue background */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+/* Scrollbar styling (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-medium);
+  border-radius: 10px;
+}
+
+/* =========================================
+   GLOBAL LINKS
+========================================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   GLOBAL LAYOUT
+========================================= */
+.page-container {
+  padding: 2rem;
+}
+
+

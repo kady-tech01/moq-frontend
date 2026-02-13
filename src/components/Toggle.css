@@ -1,0 +1,75 @@
+  /* ===================================
+           SIDEBAR TOGGLE BUTTON
+           Floating button to show/hide sidebar
+           =================================== */
+        .sidebar-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            width: 35px;
+            height: 35px;
+            background: rgba(125, 160, 202, 0.3);
+            border: none;
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            cursor: pointer;
+            z-index: 1001;         /* Above sidebar */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .sidebar-toggle:hover {
+            background: rgba(125, 160, 202, 0.5);
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 3px 12px rgba(125, 160, 202, 0.2);
+        }
+
+        .sidebar-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-toggle:hover i {
+            transform: rotate(90deg);
+        }
+
+        /* When sidebar is hidden, move toggle button to show it's clickable */
+        .sidebar-hidden .sidebar-toggle {
+            background: rgba(193, 232, 255, 0.4);
+            color: var(--primary-dark);
+            animation: togglePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes togglePulse {
+            0%, 100% {
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                box-shadow: 0 6px 24px rgba(125, 160, 202, 0.6);
+            }
+        }
+ 
+.toggle-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;          /* smaller size */
+  background: rgba(255, 255, 255, 0.4); 
+  border: none;
+  padding: 6px 10px;        /* smaller padding */
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* When sidebar is open → transparent background */
+.toggle-btn.open {
+  background: rgba(255, 255, 255, 0.35); 
+  backdrop-filter: blur(4px);
+}
