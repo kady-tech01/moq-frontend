@@ -182,7 +182,7 @@ if RENDER:
         '127.0.0.1'
     ]
 else:
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.vercel.app']
 
 
 if RENDER:
