@@ -32,7 +32,7 @@ ALLOWED_HOSTS = [
     '.railway.app',     # For Railway
     '.onrender.com',    # For Render
 ]
-]
+
 
 
 # Application definition
