@@ -154,3 +154,11 @@ CORS_ALLOWED_ORIGINS = [
     'https://*.vercel.app',
     'https://*.railway.app',
 ]  
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # ✅ ADD THIS LINE
+
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
