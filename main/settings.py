@@ -156,7 +156,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://*.vercel.app',
     'https://*.railway.app',
-    'https://moq-ashy.vercel.app/',
+    'https://moq-ashy.vercel.app',
 ]  
 
 # Static files (CSS, JavaScript, Images)
@@ -189,5 +189,5 @@ if RENDER:
     CSRF_TRUSTED_ORIGINS = [
         'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moq-jbco.onrender.com'),
         'https://*.onrender.com',
-        'https://moq-ashy.vercel.app/',
+        'https://moq-ashy.vercel.app',
     ]
