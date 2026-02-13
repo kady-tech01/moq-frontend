@@ -1,8 +1,8 @@
 // src/App.jsx
 import "./App.css";
 import AppRouter from "./router/AppRouter";
-import Sidebar from "./components/sidebar";
-import Footer from "./components/footer";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 import Toggle from "./components/Toggle";
 import { useState } from "react";
 
