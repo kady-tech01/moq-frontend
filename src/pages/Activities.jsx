@@ -29,7 +29,7 @@ const Activities = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/activities/')
+    fetch('https://moq-jbco.onrender.com/api/activities/')
       .then(res => res.json())
       .then(data => {
         setActivities(data);

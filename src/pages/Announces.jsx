@@ -6,7 +6,7 @@ const Announces = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/announces/')
+    fetch('https://moq-jbco.onrender.com/api/announces/')
       .then(res => res.json())
       .then(data => {
         setAnnouncements(data);

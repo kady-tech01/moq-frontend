@@ -10,7 +10,7 @@ const About = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/about/')
+    fetch('https://moq-jbco.onrender.com/api/about/')
       .then(res => res.json())
       .then(data => {
         setContent(data);
