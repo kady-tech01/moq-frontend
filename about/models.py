@@ -1,10 +1,9 @@
 from django.db import models
-from cloudinary.models import CloudinaryField  # ✅ أضيفي هذا السطر
 
 class AboutHero(models.Model):
     title = models.CharField(max_length=200, default='Driven by Ambition')
     subtitle = models.CharField(max_length=300, default='Shaping the next generation of ESM leaders since 2020.')
-    image = CloudinaryField('image', blank=True, null=True)  # ✅ تغيير هنا
+    image = models.ImageField(upload_to='about/hero/', blank=True, null=True)
     
     def __str__(self):
         return "About Hero Section"
@@ -14,7 +13,7 @@ class AboutHistory(models.Model):
     title = models.CharField(max_length=200, default='The Legacy of MoQawill')
     paragraph1 = models.TextField()
     paragraph2 = models.TextField(blank=True)
-    image = CloudinaryField('image', blank=True, null=True)  # ✅ تغيير هنا
+    image = models.ImageField(upload_to='about/history/', blank=True, null=True)
     
     def __str__(self):
         return "About History Section"
@@ -29,9 +28,9 @@ class BoardMember(models.Model):
     
     position = models.CharField(max_length=20, choices=POSITION_CHOICES, unique=True)
     name = models.CharField(max_length=200)
-    role_title = models.CharField(max_length=100)
+    role_title = models.CharField(max_length=100)  # President, Vice President, etc.
     description = models.TextField()
-    image = CloudinaryField('image')  # ✅ تغيير هنا (حذف upload_to)
+    image = models.ImageField(upload_to='about/board/')
     order = models.IntegerField(default=0)
     
     class Meta:
