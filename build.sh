@@ -22,3 +22,5 @@ else:
 EOF
 
 python manage.py loaddata data.json || echo "No data.json file found, skipping..."
+
+python manage.py loaddata full_data.json || echo "No full_data.json found, skipping..."
