@@ -1,0 +1,631 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$4QoB9na02yxRKqtpfjhGDF$7cs2hez2rmM5sOPMsxxgkK6fAgDvJugB/3KuDws3px4=",
+        "last_login": "2026-02-12T00:30:41Z",
+        "is_superuser": true,
+        "username": "khadidja",
+        "first_name": "",
+        "last_name": "",
+        "email": "mecharakhadidja05@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-12T00:25:57Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "home.homecontent",
+    "pk": 1,
+    "fields": {
+        "hero_title": "Welcome To MoQawill",
+        "hero_subtitle": "earn here, lead anywhere",
+        "hero_image": "",
+        "about_text": "",
+        "contact_email": "moqawillesmt@gmail.com",
+        "contact_location": "ESM, Tlemcen, Algeria"
+    }
+},
+{
+    "model": "home.homeactivity",
+    "pk": 1,
+    "fields": {
+        "title": "Opening Day",
+        "description": "A new chapter begins at MoQawill. Welcome to 2026!",
+        "image": "home/activities/openingDay_h5KOmdG.webp",
+        "order": 1
+    }
+},
+{
+    "model": "home.homeactivity",
+    "pk": 2,
+    "fields": {
+        "title": "Blue November",
+        "description": "Blue November: Health first, awareness always.",
+        "image": "home/activities/blueNovember.webp",
+        "order": 2
+    }
+},
+{
+    "model": "home.homeactivity",
+    "pk": 3,
+    "fields": {
+        "title": "Alger Book Expo",
+        "description": "Books, ideas, and inspiration at SILA 2026.",
+        "image": "home/activities/book.webp",
+        "order": 3
+    }
+},
+{
+    "model": "about.abouthero",
+    "pk": 1,
+    "fields": {
+        "title": "Driven by Ambition",
+        "subtitle": "Shaping the next generation of ESM leaders since 2020.",
+        "image": "about/hero/clubHistory.webp"
+    }
+},
+{
+    "model": "about.abouthistory",
+    "pk": 1,
+    "fields": {
+        "subtitle": "Our Journey",
+        "title": "The Legacy of MoQawill",
+        "paragraph1": "Founded in 2020 by official decree No. 01 at the <strong>Higher School of Management (ESM)</strong>, MoQawill emerged from a vision to bridge the gap between academic theory and operational excellence.",
+        "paragraph2": "Our mission is simple yet bold: To foster an entrepreneurial spirit and provide a platform for scientific research that transforms students into industry-ready leaders.",
+        "image": "about/history/clubHistory.webp"
+    }
+},
+{
+    "model": "about.boardmember",
+    "pk": 1,
+    "fields": {
+        "position": "president",
+        "name": "Ibrahim Kaddouri",
+        "role_title": "President",
+        "description": "Strategic lead focused on operational excellence and club growth.",
+        "image": "about/board/president.webp",
+        "order": 1
+    }
+},
+{
+    "model": "about.boardmember",
+    "pk": 2,
+    "fields": {
+        "position": "vice_president",
+        "name": "Mohammed Chettouane",
+        "role_title": "Vice President",
+        "description": "Overseeing departmental synergy and internal management.",
+        "image": "about/board/vicePresident.webp",
+        "order": 2
+    }
+},
+{
+    "model": "about.boardmember",
+    "pk": 3,
+    "fields": {
+        "position": "supervisor",
+        "name": "Mohammed Sami Bouderoua",
+        "role_title": "General Supervisor",
+        "description": "Ensuring formal compliance and administrative efficiency.",
+        "image": "about/board/supervisor.webp",
+        "order": 3
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 1,
+    "fields": {
+        "title": "Paradox of Choice",
+        "trainer": "Ali Charif Bensalm",
+        "script": "A deep dive into decision-making psychology. This session analyzed how having too many options can lead to anxiety and paralysis, providing strategies to make more confident and efficient choices.",
+        "layout": "one-photo",
+        "date": "2025-02-23",
+        "location": "ESMT",
+        "order": 3,
+        "created_at": "2026-02-12T17:10:12.608Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 2,
+    "fields": {
+        "title": "English Workshop",
+        "trainer": "Club team",
+        "script": "An intensive session designed to boost the communication skills of our members. Focus was placed on business English vocabulary and public presentation techniques in a global context.",
+        "layout": "one-photo",
+        "date": "2025-11-13",
+        "location": "ESMT",
+        "order": 5,
+        "created_at": "2026-02-12T17:14:41.484Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 3,
+    "fields": {
+        "title": "Algiers Trip: SILA Book Expo",
+        "trainer": null,
+        "script": "A cultural journey to the International Book Fair (SILA) in Algiers. Members expanded their horizons, explored the latest business and management literature, and engaged with global publishers.",
+        "layout": "three-photos",
+        "date": "2025-11-08",
+        "location": "Alger",
+        "order": 4,
+        "created_at": "2026-02-12T17:16:41.640Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 4,
+    "fields": {
+        "title": "Photography Open Workshop",
+        "trainer": "C. Chihab Eddine",
+        "script": "Learning the fundamentals of lighting, composition, and visual storytelling. This hands-on session helped members capture the club's essence through the lens of a professional camera.",
+        "layout": "two-photos",
+        "date": "2025-11-12",
+        "location": "ESMT",
+        "order": 6,
+        "created_at": "2026-02-12T17:18:24.808Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 5,
+    "fields": {
+        "title": "Public Speaking Workshop",
+        "trainer": "Benhamed Nadir",
+        "script": "Conquering the stage! This workshop focused on body language, vocal variety, and overcoming stage fright, allowing members to practice delivering powerful and persuasive speeches.",
+        "layout": "two-photos",
+        "date": "2025-11-17",
+        "location": "ESMT",
+        "order": 7,
+        "created_at": "2026-02-12T17:20:44.487Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 6,
+    "fields": {
+        "title": "Content Creation Workshop",
+        "trainer": "Laouari Soheib",
+        "script": "A hands-on workshop covering digital content creation, storytelling, and social media branding. Members learned how to craft engaging visuals and narratives for the digital age.",
+        "layout": "two-photos",
+        "date": "2026-02-19",
+        "location": "ESMT",
+        "order": 8,
+        "created_at": "2026-02-12T17:22:25.863Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 7,
+    "fields": {
+        "title": "Self Development Workshop",
+        "trainer": "Salah Eddine Benamar",
+        "script": "A transformative session focused on personal growth, emotional intelligence, and building the mindset of a leader. Members explored techniques to enhance self-awareness and professional discipline.",
+        "layout": "two-photos",
+        "date": "2023-12-06",
+        "location": "ESMT",
+        "order": 1,
+        "created_at": "2026-02-12T18:32:22.970Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 8,
+    "fields": {
+        "title": "Project Management Workshop",
+        "trainer": "Faycel Zammour",
+        "script": "Mastering the art of planning, executing, and monitoring projects. This workshop provided our members with practical tools to manage resources and time effectively in a professional environment.",
+        "layout": "circle-photo",
+        "date": null,
+        "location": "ESMT",
+        "order": 2,
+        "created_at": "2026-02-12T18:34:26.781Z"
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 1,
+    "fields": {
+        "activity": 1,
+        "image": "activities/paradox1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 2,
+    "fields": {
+        "activity": 2,
+        "image": "activities/english1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 3,
+    "fields": {
+        "activity": 3,
+        "image": "activities/alger1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 4,
+    "fields": {
+        "activity": 3,
+        "image": "activities/alger2.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 5,
+    "fields": {
+        "activity": 3,
+        "image": "activities/alger3.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 6,
+    "fields": {
+        "activity": 4,
+        "image": "activities/photo1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 7,
+    "fields": {
+        "activity": 4,
+        "image": "activities/photo2.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 8,
+    "fields": {
+        "activity": 5,
+        "image": "activities/public1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 9,
+    "fields": {
+        "activity": 5,
+        "image": "activities/public2.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 10,
+    "fields": {
+        "activity": 6,
+        "image": "activities/media1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 11,
+    "fields": {
+        "activity": 6,
+        "image": "activities/media2.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 12,
+    "fields": {
+        "activity": 7,
+        "image": "activities/self2.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "contain",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 13,
+    "fields": {
+        "activity": 7,
+        "image": "activities/self1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "contain",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 15,
+    "fields": {
+        "activity": 8,
+        "image": "activities/IMG_20260212_200004.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "events.event",
+    "pk": 1,
+    "fields": {
+        "title": "Yennayer Celebration (يناير)",
+        "date": "January 12",
+        "script": "Celebrating our rich Amazigh heritage. The event features traditional costumes, authentic food, and cultural activities that bring the ESM community together.",
+        "order": 1,
+        "created_at": "2026-02-12T20:08:19.692Z"
+    }
+},
+{
+    "model": "events.event",
+    "pk": 2,
+    "fields": {
+        "title": "International Women's Day",
+        "date": "March 08",
+        "script": "A special tribute to the achievements of women. Featuring inspirational talks, creative workshops, and honoring the female leaders within our university.",
+        "order": 2,
+        "created_at": "2026-02-12T20:09:55.462Z"
+    }
+},
+{
+    "model": "events.event",
+    "pk": 3,
+    "fields": {
+        "title": "CineVibes",
+        "date": "Periodic",
+        "script": "Our signature movie night. A gathering for film enthusiasts to watch, analyze, and discuss masterpieces of cinema in a cozy and artistic atmosphere.",
+        "order": 3,
+        "created_at": "2026-02-12T20:11:15.887Z"
+    }
+},
+{
+    "model": "events.event",
+    "pk": 4,
+    "fields": {
+        "title": "Scienofia",
+        "date": "Annual Event",
+        "script": "Where science meets curiosity. An interactive event dedicated to exploring scientific wonders through live experiments, intellectual games, and engaging presentations.",
+        "order": 4,
+        "created_at": "2026-02-12T20:12:17.555Z"
+    }
+},
+{
+    "model": "events.event",
+    "pk": 5,
+    "fields": {
+        "title": "Open Day",
+        "date": "Orientation Period",
+        "script": "Welcoming the new generation of ESM students! We showcase our club's values, diverse departments, and the exciting journey that awaits our future members.",
+        "order": 5,
+        "created_at": "2026-02-12T20:13:30.896Z"
+    }
+},
+{
+    "model": "events.event",
+    "pk": 6,
+    "fields": {
+        "title": "Blue November",
+        "date": "November",
+        "script": "Raising awareness about men's health. A month-long campaign filled with men's health awareness, medical check-ups, and informative sessions to promote a healthier lifestyle.",
+        "order": 6,
+        "created_at": "2026-02-12T20:14:43.890Z"
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 1,
+    "fields": {
+        "event": 1,
+        "image": "events/yan2.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 2,
+    "fields": {
+        "event": 1,
+        "image": "events/yan1.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 3,
+    "fields": {
+        "event": 1,
+        "image": "events/yan3.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 4,
+    "fields": {
+        "event": 2,
+        "image": "events/women1_A59jPNo.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 5,
+    "fields": {
+        "event": 2,
+        "image": "events/women2.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 6,
+    "fields": {
+        "event": 2,
+        "image": "events/women3_vJjSWkL.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 7,
+    "fields": {
+        "event": 3,
+        "image": "events/cine1.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 8,
+    "fields": {
+        "event": 4,
+        "image": "events/scieno1.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 9,
+    "fields": {
+        "event": 5,
+        "image": "events/open1.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 10,
+    "fields": {
+        "event": 5,
+        "image": "events/open2.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 11,
+    "fields": {
+        "event": 6,
+        "image": "events/blue1.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 12,
+    "fields": {
+        "event": 6,
+        "image": "events/blue2.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 13,
+    "fields": {
+        "event": 6,
+        "image": "events/blue3.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 14,
+    "fields": {
+        "event": 6,
+        "image": "events/blue4.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "feedback.feedback",
+    "pk": 1,
+    "fields": {
+        "name": "khadidja mechara",
+        "email": "mecharakhadidja05@gmail.com",
+        "type": "General",
+        "message": "i have a feedback",
+        "created_at": "2026-02-12T21:04:29.858Z",
+        "is_read": false,
+        "ip_address": "127.0.0.1"
+    }
+}
+]
