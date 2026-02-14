@@ -43,7 +43,7 @@ const Home = () => {
         }}
       >
         <div className="hero-content">
-          <h1 id="heroTitle">{content?.hero?.title || "Welcome To MoQawill"}</h1>
+          <h1 id="heroTitle">{content?.hero?.title || "elcome To MoQawill"}</h1>
           <p id="heroSubtitle">
             <span className="hero-symbol">★</span> 
             {content?.hero?.subtitle || "Learn here, lead anywhere"} 
