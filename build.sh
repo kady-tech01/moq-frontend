@@ -20,3 +20,5 @@ if not User.objects.filter(is_superuser=True).exists():
 else:
     print("✅ Superuser already exists.")
 EOF
+
+python manage.py loaddata data.json || echo "No data.json file found, skipping..."
