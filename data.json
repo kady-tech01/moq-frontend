@@ -1,0 +1,2512 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2026-02-12T00:53:22.737Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "hakathone",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2026-02-12T00:56:06.468Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "hakathone",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2026-02-12T00:58:33.147Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Home Page Content",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2026-02-12T00:59:10.312Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Home Page Content",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Hero title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2026-02-12T01:18:11.792Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Opening Day",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2026-02-12T01:19:42.312Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Blue November",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2026-02-12T01:20:12.424Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Alger Book Expo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2026-02-12T01:22:35.298Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "Home Page Content",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2026-02-12T01:23:45.748Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "Home Page Content",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2026-02-12T01:24:48.593Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Alger Book Expo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2026-02-12T01:24:48.597Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Blue November",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2026-02-12T01:24:48.599Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Opening Day",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2026-02-12T01:33:56.208Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Opening Day",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2026-02-12T01:34:50.231Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Blue November",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2026-02-12T01:35:40.187Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Alger Book Expo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2026-02-12T01:37:29.727Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Opening Day",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2026-02-12T01:37:37.750Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Blue November",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2026-02-12T01:38:29.346Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Alger Book Expo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2026-02-12T01:39:10.772Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Alger Book Expo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2026-02-12T01:58:22.965Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "About Hero Section",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2026-02-12T01:59:05.955Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "About Hero Section",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2026-02-12T02:03:42.634Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "1",
+        "object_repr": "Ibrahim Kaddouri - President",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2026-02-12T02:04:52.003Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "Mohammed Chettouane - Vice President",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2026-02-12T02:05:56.415Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "3",
+        "object_repr": "Mohammed Sami Bouderoua - General Supervisor",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2026-02-12T02:07:00.268Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "About History Section",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2026-02-12T02:07:17.465Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "About Hero Section",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2026-02-12T02:14:12.911Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "About History Section",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2026-02-12T02:35:13.626Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "About Hero Section",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2026-02-12T02:35:20.908Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "About Hero Section",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2026-02-12T03:06:26.623Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "1",
+        "object_repr": "Irahim Kaddouri - President",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2026-02-12T03:07:07.841Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "1",
+        "object_repr": "Ibrahim Kaddouri - President",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2026-02-12T03:40:13.738Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "1",
+        "object_repr": "Hiring - Active",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2026-02-12T03:41:07.260Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "1",
+        "object_repr": "Hiring - Active",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2026-02-12T13:38:21.177Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Home Page Content",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Hero subtitle\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2026-02-12T14:24:33.299Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Opening Day",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2026-02-12T14:25:59.007Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Opening Day",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2026-02-12T15:24:05.735Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "2",
+        "object_repr": "evnent - Active",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2026-02-12T15:24:39.282Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "2",
+        "object_repr": "evnent - Archive",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2026-02-12T15:25:10.594Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "2",
+        "object_repr": "evnent - Archive",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2026-02-12T15:26:41.585Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Home Page Content",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Hero title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2026-02-12T15:27:18.059Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Home Page Content",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Hero title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2026-02-12T17:10:13.451Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "1",
+        "object_repr": "Paradox of Choice",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Paradox of Choice\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2026-02-12T17:14:41.720Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "English Workshop",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for English Workshop\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2026-02-12T17:16:41.835Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "Algiers Trip: SILA Book Expo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Algiers Trip: SILA Book Expo\"}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Algiers Trip: SILA Book Expo\"}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Algiers Trip: SILA Book Expo\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2026-02-12T17:18:24.826Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Photography Open Workshop",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Photography Open Workshop\"}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Photography Open Workshop\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2026-02-12T17:20:44.530Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "5",
+        "object_repr": "Public Speaking Workshop",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Public Speaking Workshop\"}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Public Speaking Workshop\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2026-02-12T17:22:25.927Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "6",
+        "object_repr": "Content Creation Workshop",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Content Creation Workshop\"}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Content Creation Workshop\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2026-02-12T17:22:47.500Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "6",
+        "object_repr": "Content Creation Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2026-02-12T17:22:47.513Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "5",
+        "object_repr": "Public Speaking Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2026-02-12T17:22:47.517Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Photography Open Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2026-02-12T17:22:47.518Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "English Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2026-02-12T17:28:09.020Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "English Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2026-02-12T17:28:09.022Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "Photography Open Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2026-02-12T17:28:09.024Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "5",
+        "object_repr": "Public Speaking Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2026-02-12T17:28:09.027Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "6",
+        "object_repr": "Content Creation Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2026-02-12T18:32:23.135Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "7",
+        "object_repr": "Self Development Workshop",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Self Development Workshop\"}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Self Development Workshop\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2026-02-12T18:34:26.800Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "8",
+        "object_repr": "Project Management Workshop",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"activity image\", \"object\": \"Image for Project Management Workshop\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2026-02-12T18:34:35.562Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "7",
+        "object_repr": "Self Development Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2026-02-12T18:37:35.798Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "7",
+        "object_repr": "Self Development Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"activity image\", \"object\": \"Image for Self Development Workshop\", \"fields\": [\"Object fit\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2026-02-12T18:40:57.861Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "7",
+        "object_repr": "Self Development Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"activity image\", \"object\": \"Image for Self Development Workshop\", \"fields\": [\"Object fit\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2026-02-12T18:42:01.044Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "8",
+        "object_repr": "Project Management Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"activity image\", \"object\": \"Image for Project Management Workshop\", \"fields\": [\"Object fit\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2026-02-12T18:43:07.384Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "8",
+        "object_repr": "Project Management Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"activity image\", \"object\": \"Image for Project Management Workshop\", \"fields\": [\"Object fit\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2026-02-12T18:43:46.871Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "8",
+        "object_repr": "Project Management Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"activity image\", \"object\": \"Image for Project Management Workshop\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2026-02-12T19:09:40.235Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "8",
+        "object_repr": "Project Management Workshop",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"activity image\", \"object\": \"Image for Project Management Workshop\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2026-02-12T20:08:19.974Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "1",
+        "object_repr": "Yennayer Celebration (يناير)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for Yennayer Celebration (\\u064a\\u0646\\u0627\\u064a\\u0631)\"}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for Yennayer Celebration (\\u064a\\u0646\\u0627\\u064a\\u0631)\"}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for Yennayer Celebration (\\u064a\\u0646\\u0627\\u064a\\u0631)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2026-02-12T20:09:55.489Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "2",
+        "object_repr": "International Women's Day",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for International Women's Day\"}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for International Women's Day\"}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for International Women's Day\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2026-02-12T20:11:15.939Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "3",
+        "object_repr": "CineVibes",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for CineVibes\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2026-02-12T20:12:17.666Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "4",
+        "object_repr": "Scienofia",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for Scienofia\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2026-02-12T20:13:30.946Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "5",
+        "object_repr": "Open Day",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for Open Day\"}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for Open Day\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2026-02-12T20:14:43.938Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "6",
+        "object_repr": "Blue November",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for Blue November\"}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for Blue November\"}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for Blue November\"}}, {\"added\": {\"name\": \"event image\", \"object\": \"Image for Blue November\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2026-02-12T20:17:30.688Z",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "2",
+        "object_repr": "International Women's Day",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"event image\", \"object\": \"Image for International Women's Day\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"event image\", \"object\": \"Image for International Women's Day\", \"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2026-02-13T17:51:39.014Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "1",
+        "object_repr": "khadidja",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2026-02-13T17:53:11.417Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "1",
+        "object_repr": "khadidja",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add about section",
+        "content_type": 7,
+        "codename": "add_aboutsection"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change about section",
+        "content_type": 7,
+        "codename": "change_aboutsection"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete about section",
+        "content_type": 7,
+        "codename": "delete_aboutsection"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view about section",
+        "content_type": 7,
+        "codename": "view_aboutsection"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add activity",
+        "content_type": 8,
+        "codename": "add_activity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change activity",
+        "content_type": 8,
+        "codename": "change_activity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete activity",
+        "content_type": 8,
+        "codename": "delete_activity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view activity",
+        "content_type": 8,
+        "codename": "view_activity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add hero section",
+        "content_type": 9,
+        "codename": "add_herosection"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change hero section",
+        "content_type": 9,
+        "codename": "change_herosection"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete hero section",
+        "content_type": 9,
+        "codename": "delete_herosection"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view hero section",
+        "content_type": 9,
+        "codename": "view_herosection"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add home activity",
+        "content_type": 10,
+        "codename": "add_homeactivity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change home activity",
+        "content_type": 10,
+        "codename": "change_homeactivity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete home activity",
+        "content_type": 10,
+        "codename": "delete_homeactivity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view home activity",
+        "content_type": 10,
+        "codename": "view_homeactivity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add home content",
+        "content_type": 11,
+        "codename": "add_homecontent"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change home content",
+        "content_type": 11,
+        "codename": "change_homecontent"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete home content",
+        "content_type": 11,
+        "codename": "delete_homecontent"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view home content",
+        "content_type": 11,
+        "codename": "view_homecontent"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add about hero",
+        "content_type": 12,
+        "codename": "add_abouthero"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change about hero",
+        "content_type": 12,
+        "codename": "change_abouthero"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete about hero",
+        "content_type": 12,
+        "codename": "delete_abouthero"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view about hero",
+        "content_type": 12,
+        "codename": "view_abouthero"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add about history",
+        "content_type": 13,
+        "codename": "add_abouthistory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change about history",
+        "content_type": 13,
+        "codename": "change_abouthistory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete about history",
+        "content_type": 13,
+        "codename": "delete_abouthistory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view about history",
+        "content_type": 13,
+        "codename": "view_abouthistory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add board member",
+        "content_type": 14,
+        "codename": "add_boardmember"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change board member",
+        "content_type": 14,
+        "codename": "change_boardmember"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete board member",
+        "content_type": 14,
+        "codename": "delete_boardmember"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view board member",
+        "content_type": 14,
+        "codename": "view_boardmember"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add announcement",
+        "content_type": 15,
+        "codename": "add_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change announcement",
+        "content_type": 15,
+        "codename": "change_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete announcement",
+        "content_type": 15,
+        "codename": "delete_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view announcement",
+        "content_type": 15,
+        "codename": "view_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add activity",
+        "content_type": 16,
+        "codename": "add_activity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change activity",
+        "content_type": 16,
+        "codename": "change_activity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete activity",
+        "content_type": 16,
+        "codename": "delete_activity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view activity",
+        "content_type": 16,
+        "codename": "view_activity"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add activity image",
+        "content_type": 17,
+        "codename": "add_activityimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change activity image",
+        "content_type": 17,
+        "codename": "change_activityimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete activity image",
+        "content_type": 17,
+        "codename": "delete_activityimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view activity image",
+        "content_type": 17,
+        "codename": "view_activityimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add event",
+        "content_type": 18,
+        "codename": "add_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change event",
+        "content_type": 18,
+        "codename": "change_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete event",
+        "content_type": 18,
+        "codename": "delete_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view event",
+        "content_type": 18,
+        "codename": "view_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add event image",
+        "content_type": 19,
+        "codename": "add_eventimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change event image",
+        "content_type": 19,
+        "codename": "change_eventimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete event image",
+        "content_type": 19,
+        "codename": "delete_eventimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view event image",
+        "content_type": 19,
+        "codename": "view_eventimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can add feedback",
+        "content_type": 20,
+        "codename": "add_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can change feedback",
+        "content_type": 20,
+        "codename": "change_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can delete feedback",
+        "content_type": 20,
+        "codename": "delete_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can view feedback",
+        "content_type": 20,
+        "codename": "view_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+        "name": "Can add sponsor",
+        "content_type": 21,
+        "codename": "add_sponsor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+        "name": "Can change sponsor",
+        "content_type": 21,
+        "codename": "change_sponsor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+        "name": "Can delete sponsor",
+        "content_type": 21,
+        "codename": "delete_sponsor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+        "name": "Can view sponsor",
+        "content_type": 21,
+        "codename": "view_sponsor"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$4QoB9na02yxRKqtpfjhGDF$7cs2hez2rmM5sOPMsxxgkK6fAgDvJugB/3KuDws3px4=",
+        "last_login": "2026-02-12T00:30:41Z",
+        "is_superuser": true,
+        "username": "khadidja",
+        "first_name": "",
+        "last_name": "",
+        "email": "mecharakhadidja05@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-12T00:25:57Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "home",
+        "model": "aboutsection"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "home",
+        "model": "activity"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "home",
+        "model": "herosection"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "home",
+        "model": "homeactivity"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "home",
+        "model": "homecontent"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "about",
+        "model": "abouthero"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "about",
+        "model": "abouthistory"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "about",
+        "model": "boardmember"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "announces",
+        "model": "announcement"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "activities",
+        "model": "activity"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "activities",
+        "model": "activityimage"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "events",
+        "model": "event"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "events",
+        "model": "eventimage"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+        "app_label": "feedback",
+        "model": "feedback"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+        "app_label": "sponsors",
+        "model": "sponsor"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "naop0odnnc2fwo2yinwt0b2z6p5r8obb",
+    "fields": {
+        "session_data": ".eJxVjDEOwjAQBP9yNbLiOPZBSnreEJ19KxJAthQnFeLvyFIKaLaYGe2bJtm3edor1mlRGsnS6ZdFSU_kJvQh-V5MKnlbl2haYg5bza0oXtej_TuYpc40EuCdlxDATgbWM_oIuDa24wAdVJhVbUwXEXDP0kvXRXjlkKBKny8OIzl5:1vqxKO:UjI_0_AWcaIQlTi8SWd06LpXTkLDLeNiZwCkwriFDnM",
+        "expire_date": "2026-02-27T17:51:40.434Z"
+    }
+},
+{
+    "model": "home.homecontent",
+    "pk": 1,
+    "fields": {
+        "hero_title": "Welcome To MoQawill",
+        "hero_subtitle": "earn here, lead anywhere",
+        "hero_image": "",
+        "about_text": "",
+        "contact_email": "moqawillesmt@gmail.com",
+        "contact_location": "ESM, Tlemcen, Algeria"
+    }
+},
+{
+    "model": "home.homeactivity",
+    "pk": 1,
+    "fields": {
+        "title": "Opening Day",
+        "description": "A new chapter begins at MoQawill. Welcome to 2026!",
+        "image": "home/activities/openingDay_h5KOmdG.webp",
+        "order": 1
+    }
+},
+{
+    "model": "home.homeactivity",
+    "pk": 2,
+    "fields": {
+        "title": "Blue November",
+        "description": "Blue November: Health first, awareness always.",
+        "image": "home/activities/blueNovember.webp",
+        "order": 2
+    }
+},
+{
+    "model": "home.homeactivity",
+    "pk": 3,
+    "fields": {
+        "title": "Alger Book Expo",
+        "description": "Books, ideas, and inspiration at SILA 2026.",
+        "image": "home/activities/book.webp",
+        "order": 3
+    }
+},
+{
+    "model": "about.abouthero",
+    "pk": 1,
+    "fields": {
+        "title": "Driven by Ambition",
+        "subtitle": "Shaping the next generation of ESM leaders since 2020.",
+        "image": "about/hero/clubHistory.webp"
+    }
+},
+{
+    "model": "about.abouthistory",
+    "pk": 1,
+    "fields": {
+        "subtitle": "Our Journey",
+        "title": "The Legacy of MoQawill",
+        "paragraph1": "Founded in 2020 by official decree No. 01 at the <strong>Higher School of Management (ESM)</strong>, MoQawill emerged from a vision to bridge the gap between academic theory and operational excellence.",
+        "paragraph2": "Our mission is simple yet bold: To foster an entrepreneurial spirit and provide a platform for scientific research that transforms students into industry-ready leaders.",
+        "image": "about/history/clubHistory.webp"
+    }
+},
+{
+    "model": "about.boardmember",
+    "pk": 1,
+    "fields": {
+        "position": "president",
+        "name": "Ibrahim Kaddouri",
+        "role_title": "President",
+        "description": "Strategic lead focused on operational excellence and club growth.",
+        "image": "about/board/president.webp",
+        "order": 1
+    }
+},
+{
+    "model": "about.boardmember",
+    "pk": 2,
+    "fields": {
+        "position": "vice_president",
+        "name": "Mohammed Chettouane",
+        "role_title": "Vice President",
+        "description": "Overseeing departmental synergy and internal management.",
+        "image": "about/board/vicePresident.webp",
+        "order": 2
+    }
+},
+{
+    "model": "about.boardmember",
+    "pk": 3,
+    "fields": {
+        "position": "supervisor",
+        "name": "Mohammed Sami Bouderoua",
+        "role_title": "General Supervisor",
+        "description": "Ensuring formal compliance and administrative efficiency.",
+        "image": "about/board/supervisor.webp",
+        "order": 3
+    }
+},
+{
+    "model": "events.event",
+    "pk": 1,
+    "fields": {
+        "title": "Yennayer Celebration (يناير)",
+        "date": "January 12",
+        "script": "Celebrating our rich Amazigh heritage. The event features traditional costumes, authentic food, and cultural activities that bring the ESM community together.",
+        "order": 1,
+        "created_at": "2026-02-12T20:08:19.692Z"
+    }
+},
+{
+    "model": "events.event",
+    "pk": 2,
+    "fields": {
+        "title": "International Women's Day",
+        "date": "March 08",
+        "script": "A special tribute to the achievements of women. Featuring inspirational talks, creative workshops, and honoring the female leaders within our university.",
+        "order": 2,
+        "created_at": "2026-02-12T20:09:55.462Z"
+    }
+},
+{
+    "model": "events.event",
+    "pk": 3,
+    "fields": {
+        "title": "CineVibes",
+        "date": "Periodic",
+        "script": "Our signature movie night. A gathering for film enthusiasts to watch, analyze, and discuss masterpieces of cinema in a cozy and artistic atmosphere.",
+        "order": 3,
+        "created_at": "2026-02-12T20:11:15.887Z"
+    }
+},
+{
+    "model": "events.event",
+    "pk": 4,
+    "fields": {
+        "title": "Scienofia",
+        "date": "Annual Event",
+        "script": "Where science meets curiosity. An interactive event dedicated to exploring scientific wonders through live experiments, intellectual games, and engaging presentations.",
+        "order": 4,
+        "created_at": "2026-02-12T20:12:17.555Z"
+    }
+},
+{
+    "model": "events.event",
+    "pk": 5,
+    "fields": {
+        "title": "Open Day",
+        "date": "Orientation Period",
+        "script": "Welcoming the new generation of ESM students! We showcase our club's values, diverse departments, and the exciting journey that awaits our future members.",
+        "order": 5,
+        "created_at": "2026-02-12T20:13:30.896Z"
+    }
+},
+{
+    "model": "events.event",
+    "pk": 6,
+    "fields": {
+        "title": "Blue November",
+        "date": "November",
+        "script": "Raising awareness about men's health. A month-long campaign filled with men's health awareness, medical check-ups, and informative sessions to promote a healthier lifestyle.",
+        "order": 6,
+        "created_at": "2026-02-12T20:14:43.890Z"
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 1,
+    "fields": {
+        "event": 1,
+        "image": "events/yan2.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 2,
+    "fields": {
+        "event": 1,
+        "image": "events/yan1.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 3,
+    "fields": {
+        "event": 1,
+        "image": "events/yan3.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 4,
+    "fields": {
+        "event": 2,
+        "image": "events/women1_A59jPNo.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 5,
+    "fields": {
+        "event": 2,
+        "image": "events/women2.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 6,
+    "fields": {
+        "event": 2,
+        "image": "events/women3_vJjSWkL.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 7,
+    "fields": {
+        "event": 3,
+        "image": "events/cine1.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 8,
+    "fields": {
+        "event": 4,
+        "image": "events/scieno1.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 9,
+    "fields": {
+        "event": 5,
+        "image": "events/open1.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 10,
+    "fields": {
+        "event": 5,
+        "image": "events/open2.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 11,
+    "fields": {
+        "event": 6,
+        "image": "events/blue1.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 12,
+    "fields": {
+        "event": 6,
+        "image": "events/blue2.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 13,
+    "fields": {
+        "event": 6,
+        "image": "events/blue3.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "events.eventimage",
+    "pk": 14,
+    "fields": {
+        "event": 6,
+        "image": "events/blue4.webp",
+        "caption": "",
+        "order": 0
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 1,
+    "fields": {
+        "title": "Paradox of Choice",
+        "trainer": "Ali Charif Bensalm",
+        "script": "A deep dive into decision-making psychology. This session analyzed how having too many options can lead to anxiety and paralysis, providing strategies to make more confident and efficient choices.",
+        "layout": "one-photo",
+        "date": "2025-02-23",
+        "location": "ESMT",
+        "order": 3,
+        "created_at": "2026-02-12T17:10:12.608Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 2,
+    "fields": {
+        "title": "English Workshop",
+        "trainer": "Club team",
+        "script": "An intensive session designed to boost the communication skills of our members. Focus was placed on business English vocabulary and public presentation techniques in a global context.",
+        "layout": "one-photo",
+        "date": "2025-11-13",
+        "location": "ESMT",
+        "order": 5,
+        "created_at": "2026-02-12T17:14:41.484Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 3,
+    "fields": {
+        "title": "Algiers Trip: SILA Book Expo",
+        "trainer": null,
+        "script": "A cultural journey to the International Book Fair (SILA) in Algiers. Members expanded their horizons, explored the latest business and management literature, and engaged with global publishers.",
+        "layout": "three-photos",
+        "date": "2025-11-08",
+        "location": "Alger",
+        "order": 4,
+        "created_at": "2026-02-12T17:16:41.640Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 4,
+    "fields": {
+        "title": "Photography Open Workshop",
+        "trainer": "C. Chihab Eddine",
+        "script": "Learning the fundamentals of lighting, composition, and visual storytelling. This hands-on session helped members capture the club's essence through the lens of a professional camera.",
+        "layout": "two-photos",
+        "date": "2025-11-12",
+        "location": "ESMT",
+        "order": 6,
+        "created_at": "2026-02-12T17:18:24.808Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 5,
+    "fields": {
+        "title": "Public Speaking Workshop",
+        "trainer": "Benhamed Nadir",
+        "script": "Conquering the stage! This workshop focused on body language, vocal variety, and overcoming stage fright, allowing members to practice delivering powerful and persuasive speeches.",
+        "layout": "two-photos",
+        "date": "2025-11-17",
+        "location": "ESMT",
+        "order": 7,
+        "created_at": "2026-02-12T17:20:44.487Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 6,
+    "fields": {
+        "title": "Content Creation Workshop",
+        "trainer": "Laouari Soheib",
+        "script": "A hands-on workshop covering digital content creation, storytelling, and social media branding. Members learned how to craft engaging visuals and narratives for the digital age.",
+        "layout": "two-photos",
+        "date": "2026-02-19",
+        "location": "ESMT",
+        "order": 8,
+        "created_at": "2026-02-12T17:22:25.863Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 7,
+    "fields": {
+        "title": "Self Development Workshop",
+        "trainer": "Salah Eddine Benamar",
+        "script": "A transformative session focused on personal growth, emotional intelligence, and building the mindset of a leader. Members explored techniques to enhance self-awareness and professional discipline.",
+        "layout": "two-photos",
+        "date": "2023-12-06",
+        "location": "ESMT",
+        "order": 1,
+        "created_at": "2026-02-12T18:32:22.970Z"
+    }
+},
+{
+    "model": "activities.activity",
+    "pk": 8,
+    "fields": {
+        "title": "Project Management Workshop",
+        "trainer": "Faycel Zammour",
+        "script": "Mastering the art of planning, executing, and monitoring projects. This workshop provided our members with practical tools to manage resources and time effectively in a professional environment.",
+        "layout": "circle-photo",
+        "date": null,
+        "location": "ESMT",
+        "order": 2,
+        "created_at": "2026-02-12T18:34:26.781Z"
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 1,
+    "fields": {
+        "activity": 1,
+        "image": "activities/paradox1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 2,
+    "fields": {
+        "activity": 2,
+        "image": "activities/english1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 3,
+    "fields": {
+        "activity": 3,
+        "image": "activities/alger1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 4,
+    "fields": {
+        "activity": 3,
+        "image": "activities/alger2.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 5,
+    "fields": {
+        "activity": 3,
+        "image": "activities/alger3.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 6,
+    "fields": {
+        "activity": 4,
+        "image": "activities/photo1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 7,
+    "fields": {
+        "activity": 4,
+        "image": "activities/photo2.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 8,
+    "fields": {
+        "activity": 5,
+        "image": "activities/public1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 9,
+    "fields": {
+        "activity": 5,
+        "image": "activities/public2.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 10,
+    "fields": {
+        "activity": 6,
+        "image": "activities/media1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 11,
+    "fields": {
+        "activity": 6,
+        "image": "activities/media2.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 12,
+    "fields": {
+        "activity": 7,
+        "image": "activities/self2.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "contain",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 13,
+    "fields": {
+        "activity": 7,
+        "image": "activities/self1.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "contain",
+        "background_color": null
+    }
+},
+{
+    "model": "activities.activityimage",
+    "pk": 15,
+    "fields": {
+        "activity": 8,
+        "image": "activities/IMG_20260212_200004.webp",
+        "caption": "",
+        "order": 0,
+        "transform_style": null,
+        "object_fit": "cover",
+        "background_color": null
+    }
+},
+{
+    "model": "feedback.feedback",
+    "pk": 1,
+    "fields": {
+        "name": "khadidja mechara",
+        "email": "mecharakhadidja05@gmail.com",
+        "type": "General",
+        "message": "i have a feedback",
+        "created_at": "2026-02-12T21:04:29.858Z",
+        "is_read": false,
+        "ip_address": "127.0.0.1"
+    }
+}
+]
