@@ -29,7 +29,7 @@ const Events = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://moq-jbco.onrender.com/api/events/')
+    fetch(`${import.meta.env.VITE_API_URL}/api/esm/`)
       .then(res => res.json())
       .then(data => {
         setEvents(data);

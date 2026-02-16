@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     // جلب البيانات من Django
-    fetch('https://moq-jbco.onrender.com/api/home/')
+    fetch(`${import.meta.env.VITE_API_URL}/api/home/`)
       .then(res => res.json())
       .then(data => {
         setContent(data);

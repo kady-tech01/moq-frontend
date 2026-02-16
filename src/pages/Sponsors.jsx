@@ -38,7 +38,7 @@ const Sponsors = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://moq-jbco.onrender.com/api/sponsors/')
+    fetch(`${import.meta.env.VITE_API_URL}/api/sponsors/`)
       .then(res => res.json())
       .then(data => {
         setSponsors(data);

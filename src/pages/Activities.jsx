@@ -29,7 +29,7 @@ const Activities = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://moq-jbco.onrender.com/api/activities/')
+    fetch(`${import.meta.env.VITE_API_URL}/api/activities/`)
       .then(res => res.json())
       .then(data => {
         setActivities(data);

@@ -6,7 +6,7 @@ const Announces = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://moq-jbco.onrender.com/api/announces/')
+    fetch(`${import.meta.env.VITE_API_URL}/api/announces/`)
       .then(res => res.json())
       .then(data => {
         setAnnouncements(data);

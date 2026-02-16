@@ -10,7 +10,7 @@ const About = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://moq-jbco.onrender.com/api/about/')
+    fetch(`${import.meta.env.VITE_API_URL}/api/about/`)
       .then(res => res.json())
       .then(data => {
         setContent(data);

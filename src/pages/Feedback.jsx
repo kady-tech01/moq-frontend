@@ -22,7 +22,7 @@ const FeedbackForm = () => {
     setLoading(true);
     
     try {
-      const response = await fetch('https://moq-jbco.onrender.com/api/feedback/', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/feedback/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
