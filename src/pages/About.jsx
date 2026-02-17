@@ -10,6 +10,7 @@ const About = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("🔍 API Base URL from env:", import.meta.env.VITE_API_URL);
     fetch(`${import.meta.env.VITE_API_URL}/api/about/`)
       .then(res => res.json())
       .then(data => {
