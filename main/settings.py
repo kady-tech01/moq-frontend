@@ -16,7 +16,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x$dzwzp(%r_mn&uq(ohe5egtr^59tdryfv1gl9ynkypm=htc7y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False  # للـ Render
+DEBUG = True  # للبيئة المحلية - غيريها إلى False عند الرفع
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -109,9 +110,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Media files (will be handled by Cloudinary)
-
-
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True    
 CORS_ALLOWED_ORIGINS = [
@@ -127,22 +125,35 @@ RENDER = os.environ.get('RENDER', False)
 
 if RENDER:
     ALLOWED_HOSTS = [
-        os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moq-jbco.onrender.com'),
+        os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moqawill-api.onrender.com'),  # ✅ تم التعديل هنا
         'localhost',
         '127.0.0.1'
     ]
     
     CSRF_TRUSTED_ORIGINS = [
-        'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moq-jbco.onrender.com'),
+        'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moqawill-api.onrender.com'),  # ✅ تم التعديل هنا
         'https://*.onrender.com',
         'https://moq-ashy.vercel.app',
     ]
+    
+    # في الإنتاج، DEBUG = False
+    DEBUG = False
+else:
+    # في البيئة المحلية، DEBUG = True
+    DEBUG = True
 
-# Cloudinary settings - 🔴 **استبدلي هذه بالقيم الحقيقية من حسابك**
+# Cloudinary settings
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dym2lrtni',  # من حساب Cloudinary
-    'API_KEY': '416429984581657',         # من حساب Cloudinary
-    'API_SECRET': 'WgbMpUsVdyQ5y1QBdI5iB8qi-LM'    # من حساب Cloudinary
+    'CLOUD_NAME': 'dym2lrtni',
+    'API_KEY': '416429984581657',
+    'API_SECRET': 'WgbMpUsVdyQ5y1QBdI5iB8qi-LM'
 }
+
+# ✅ **هذا السطر مهم جداً - يهيئ Cloudinary مباشرة**
+cloudinary.config(
+    cloud_name='dym2lrtni',
+    api_key='416429984581657',
+    api_secret='WgbMpUsVdyQ5y1QBdI5iB8qi-LM'
+)
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
