@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './About.css';
 
-// ✅ استيراد صورة واحدة فقط كـ Fallback (اختياري)
+// استيراد الصور كـ FALLBACK فقط
 import clubHistory from '../assets/about/clubHistory.webp';
 
 const About = () => {
@@ -9,6 +9,7 @@ const About = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("🔍 API Base URL from env:", import.meta.env.VITE_API_URL);
     fetch(`${import.meta.env.VITE_API_URL}/api/about/`)
       .then(res => res.json())
       .then(data => {
@@ -37,7 +38,7 @@ const About = () => {
         className="about-hero" 
         style={{
           backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url(${
-            content?.hero?.image || clubHistory
+            content?.hero?.image_url || content?.hero?.image || clubHistory
           })`,
           backgroundSize: 'cover',
           backgroundPosition: 'center 80%'
@@ -53,7 +54,7 @@ const About = () => {
       <section className="about-split-section">
         <div className="about-image">
           <img 
-            src={content?.history?.image || clubHistory} 
+            src={content?.history?.image_url || content?.history?.image || clubHistory} 
             alt="MoQawill History" 
           />
         </div>
@@ -101,7 +102,7 @@ const About = () => {
           <div className="member-card">
             <div className="member-photo">
               <img 
-                src={content?.board?.president?.image || clubHistory} 
+                src={content?.board?.president?.image_url || content?.board?.president?.image || clubHistory} 
                 alt="President" 
               />
             </div>
@@ -116,7 +117,7 @@ const About = () => {
           <div className="member-card">
             <div className="member-photo">
               <img 
-                src={content?.board?.vicePresident?.image || clubHistory} 
+                src={content?.board?.vicePresident?.image_url || content?.board?.vicePresident?.image || clubHistory} 
                 alt="Vice President" 
               />
             </div>
@@ -131,7 +132,7 @@ const About = () => {
           <div className="member-card">
             <div className="member-photo">
               <img 
-                src={content?.board?.supervisor?.image || clubHistory} 
+                src={content?.board?.supervisor?.image_url || content?.board?.supervisor?.image || clubHistory} 
                 alt="Supervisor" 
               />
             </div>
