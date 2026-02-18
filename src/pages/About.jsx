@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './About.css';
 
-// استيراد الصور كـ FALLBACK فقط
+// ✅ استيراد صورة واحدة فقط كـ Fallback (اختياري)
 import clubHistory from '../assets/about/clubHistory.webp';
-
 
 const About = () => {
   const [content, setContent] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log("🔍 API Base URL from env:", import.meta.env.VITE_API_URL);
     fetch(`${import.meta.env.VITE_API_URL}/api/about/`)
       .then(res => res.json())
       .then(data => {
@@ -103,7 +101,7 @@ const About = () => {
           <div className="member-card">
             <div className="member-photo">
               <img 
-                src={content?.board?.president?.image || president} 
+                src={content?.board?.president?.image || clubHistory} 
                 alt="President" 
               />
             </div>
@@ -118,7 +116,7 @@ const About = () => {
           <div className="member-card">
             <div className="member-photo">
               <img 
-                src={content?.board?.vicePresident?.image || vicePresident} 
+                src={content?.board?.vicePresident?.image || clubHistory} 
                 alt="Vice President" 
               />
             </div>
@@ -133,7 +131,7 @@ const About = () => {
           <div className="member-card">
             <div className="member-photo">
               <img 
-                src={content?.board?.supervisor?.image || supervisor} 
+                src={content?.board?.supervisor?.image || clubHistory} 
                 alt="Supervisor" 
               />
             </div>

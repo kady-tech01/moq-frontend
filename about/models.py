@@ -2,7 +2,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 class AboutHero(models.Model):
-    title = models.CharField(max_length=200, default='riven by Ambition')
+    title = models.CharField(max_length=200, default='Driven by Ambition')
     subtitle = models.CharField(max_length=300, default='Shaping the next generation of ESM leaders since 2020.')
     image = CloudinaryField('image', blank=True, null=True)
     
@@ -38,4 +38,4 @@ class BoardMember(models.Model):
         ordering = ['order']
     
     def __str__(self):
-        return f"{self.name} - {self.role_title}"
+        return f"{self.name} - {self.role_title}"  # ✅ الآن صحيح
