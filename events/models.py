@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField  # ✅ أضيفي هذا السطر
 
 class Event(models.Model):
     title = models.CharField(max_length=200)
@@ -15,7 +16,7 @@ class Event(models.Model):
 
 class EventImage(models.Model):
     event = models.ForeignKey(Event, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='events/')
+    image = CloudinaryField('image')  # ✅ تغيير هنا (حذف upload_to)
     caption = models.CharField(max_length=200, blank=True)
     order = models.IntegerField(default=0)
     

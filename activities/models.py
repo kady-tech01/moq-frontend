@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField  # ✅ أضيفي هذا السطر
 
 class Activity(models.Model):
     LAYOUT_CHOICES = [
@@ -26,7 +27,7 @@ class Activity(models.Model):
 
 class ActivityImage(models.Model):
     activity = models.ForeignKey(Activity, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='activities/')
+    image = CloudinaryField('image')  # ✅ تغيير هنا
     caption = models.CharField(max_length=200, blank=True)
     order = models.IntegerField(default=0)
     transform_style = models.CharField(max_length=200, blank=True, null=True, 

@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField  # ✅ أضيفي هذا السطر
 
 class Sponsor(models.Model):
     SPONSOR_TYPE_CHOICES = [
@@ -10,7 +11,7 @@ class Sponsor(models.Model):
     name = models.CharField(max_length=200)
     type = models.CharField(max_length=50, choices=SPONSOR_TYPE_CHOICES, default='instagram')
     link = models.URLField(max_length=500, blank=True, null=True)
-    image = models.ImageField(upload_to='sponsors/')
+    image = CloudinaryField('image')  # ✅ تغيير هنا
     order = models.IntegerField(default=0)
     
     # Image styling fields
