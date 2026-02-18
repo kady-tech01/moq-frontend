@@ -29,7 +29,7 @@ const Events = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/esm/`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/events/`)
       .then(res => res.json())
       .then(data => {
         setEvents(data);
