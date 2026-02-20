@@ -130,3 +130,152 @@
     background: #f8fafc;
     border-style: dashed;
 }
+
+/* =========================
+   تحسينات للشاشات الصغيرة (الموبايل) - فقط للجوال
+   ========================= */
+
+@media (max-width: 768px) {
+    /* تحسين الهيدر للموبايل */
+    .announcements-header {
+        padding: 40px 15px;
+        margin-bottom: 25px;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    .announcements-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .announcements-header p {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+    
+    /* تحسين قائمة الإعلانات */
+    .announcements-list {
+        padding: 0 15px 60px;
+        max-width: 100%;
+    }
+    
+    /* تحسين بطاقة الإعلان */
+    .announcement-card {
+        padding: 20px;
+        margin-bottom: 20px;
+        gap: 12px;
+        border-radius: 12px;
+    }
+    
+    /* إلغاء تأثير hover للموبايل */
+    .announcement-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+    
+    /* تحسين البيانات الوصفية */
+    .announcement-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .announcement-type {
+        padding: 3px 12px;
+        font-size: 0.7rem;
+    }
+    
+    .announcement-date {
+        font-size: 0.75rem;
+    }
+    
+    /* تحسين نص الإعلان */
+    .announcement-body h3 {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+    
+    .announcement-body p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .announcement-link {
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+    
+    /* تحسين شارة الحالة */
+    .status-badge {
+        top: -10px;
+        right: 15px;
+        padding: 4px 12px;
+        font-size: 0.65rem;
+    }
+    
+    /* تحسين حالة الأرشيف */
+    .announcement-card.archive {
+        opacity: 0.6;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .announcements-header {
+        padding: 30px 12px;
+    }
+    
+    .announcements-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .announcements-header p {
+        font-size: 0.85rem;
+    }
+    
+    .announcements-list {
+        padding: 0 12px 50px;
+    }
+    
+    .announcement-card {
+        padding: 16px;
+        margin-bottom: 16px;
+        gap: 10px;
+        border-radius: 10px;
+    }
+    
+    .announcement-meta {
+        gap: 6px;
+    }
+    
+    .announcement-type {
+        padding: 2px 10px;
+        font-size: 0.65rem;
+    }
+    
+    .announcement-date {
+        font-size: 0.7rem;
+    }
+    
+    .announcement-body h3 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    
+    .announcement-body p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .announcement-link {
+        margin-top: 8px;
+        font-size: 0.85rem;
+    }
+    
+    .status-badge {
+        top: -8px;
+        right: 12px;
+        padding: 3px 10px;
+        font-size: 0.6rem;
+    }
+}

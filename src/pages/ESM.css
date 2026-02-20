@@ -320,18 +320,22 @@
     }
     
     .esm-intro-content {
-        padding: 30px 20px;
-        border-radius: 30px;
-        transform: translateY(20px);
+        padding: 25px 20px;
+        border-radius: 25px;
+        transform: translateY(15px);
+        width: calc(100% - 20px);
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .esm-logo-large {
-        width: 100px;
-        margin-bottom: 15px;
+        width: 90px;
+        margin-bottom: 12px;
     }
     
     .esm-intro h1 {
         font-size: 1.8rem;
+        margin-bottom: 5px;
     }
     
     .esm-intro h2 {
@@ -340,117 +344,137 @@
     }
     
     .intro-divider {
-        width: 80px;
-        margin: 15px auto 20px;
+        width: 70px;
+        margin: 12px auto 15px;
     }
     
     .esm-description {
-        font-size: 1rem;
-        line-height: 1.6;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0 10px;
     }
     
     /* تحسين قسم الدراسات للموبايل */
     .esm-studies {
-        padding: 50px 4% 50px;
+        padding: 40px 15px 40px;
     }
     
     .esm-section-title {
-        font-size: 2rem;
-        margin-bottom: 10px;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
     }
     
     .studies-subtitle {
-        font-size: 1rem;
-        margin-bottom: 30px;
-        padding: 0 15px;
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+        padding: 0 10px;
     }
     
     .studies-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 20px;
+        padding: 0 0;
     }
     
     .study-card {
-        padding: 25px;
-        border-radius: 25px;
+        padding: 20px;
+        border-radius: 20px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .card-header {
-        gap: 10px;
-        margin-bottom: 15px;
-        padding-bottom: 10px;
+        gap: 8px;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
     }
     
     .card-header h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
     .subjects-box {
-        padding: 20px;
-        border-radius: 15px;
-        margin-top: 15px;
+        padding: 15px;
+        border-radius: 12px;
+        margin-top: 12px;
     }
     
     .subjects-box h4 {
-        font-size: 1rem;
-        margin-bottom: 8px;
+        font-size: 0.95rem;
+        margin-bottom: 6px;
     }
     
     .subjects-box ul li {
-        padding: 6px 0;
-        font-size: 0.9rem;
-        padding-left: 20px;
+        padding: 5px 0;
+        font-size: 0.85rem;
+        padding-left: 18px;
     }
     
     .card-footer-text {
-        margin-top: 20px;
-        padding-top: 12px;
-        font-size: 0.9rem;
+        margin-top: 15px;
+        padding-top: 10px;
+        font-size: 0.85rem;
     }
     
     /* تحسين قسم التواصل للموبايل */
     .esm-contact {
-        padding: 50px 4% 60px;
+        padding: 40px 15px 50px;
     }
     
     .contact-box {
-        padding: 40px 20px;
-        border-radius: 30px;
+        padding: 30px 20px;
+        border-radius: 25px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .contact-box h2 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
     }
     
     .contact-grid-layout {
-        gap: 25px;
+        gap: 20px;
     }
     
     .contact-main-info {
         min-width: auto;
-        gap: 15px;
+        gap: 12px;
         text-align: center;
+        padding: 0 5px;
     }
     
     .contact-info-row {
         justify-content: center;
-        font-size: 0.95rem;
-        gap: 10px;
+        font-size: 0.9rem;
+        gap: 8px;
         flex-wrap: wrap;
+        padding: 5px 0;
+    }
+    
+    .contact-info-row i {
+        font-size: 1rem;
+    }
+    
+    .contact-info-row a {
+        font-size: 0.9rem;
+        word-break: break-word;
     }
     
     .contact-social-links {
         min-width: auto;
-        padding: 25px 20px;
-        border-radius: 25px;
-        gap: 10px;
+        padding: 20px 15px;
+        border-radius: 20px;
+        gap: 8px;
+        width: 100%;
     }
     
     .fb-link-btn {
         padding: 10px;
         font-size: 0.85rem;
-        border-radius: 12px;
+        border-radius: 10px;
     }
     
     .fb-link-btn:hover {
@@ -458,24 +482,28 @@
     }
     
     .contact-btn-link {
-        padding: 14px 35px;
-        font-size: 0.95rem;
-        margin-top: 30px;
+        padding: 12px 25px;
+        font-size: 0.9rem;
+        margin-top: 20px;
+        border-radius: 40px;
     }
 }
 
 /* للشاشات الصغيرة جداً */
 @media (max-width: 480px) {
     .esm-intro {
-        padding: 30px 12px 80px;
+        padding: 30px 10px 80px;
     }
     
     .esm-intro-content {
-        padding: 25px 15px;
+        padding: 20px 15px;
+        border-radius: 20px;
+        width: calc(100% - 10px);
     }
     
     .esm-logo-large {
-        width: 80px;
+        width: 70px;
+        margin-bottom: 10px;
     }
     
     .esm-intro h1 {
@@ -488,60 +516,78 @@
     }
     
     .esm-description {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        padding: 0 5px;
     }
     
     .esm-section-title {
-        font-size: 1.6rem;
-    }
-    
-    .studies-subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .study-card {
-        padding: 20px;
-    }
-    
-    .card-header h3 {
-        font-size: 1.2rem;
-    }
-    
-    .subjects-box {
-        padding: 15px;
-    }
-    
-    .subjects-box ul li {
-        font-size: 0.85rem;
-    }
-    
-    .contact-box h2 {
         font-size: 1.5rem;
     }
     
-    .contact-info-row {
+    .studies-subtitle {
         font-size: 0.85rem;
+        padding: 0 5px;
+    }
+    
+    .study-card {
+        padding: 15px;
+        border-radius: 15px;
+    }
+    
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .subjects-box {
+        padding: 12px;
+    }
+    
+    .subjects-box h4 {
+        font-size: 0.9rem;
+    }
+    
+    .subjects-box ul li {
+        font-size: 0.8rem;
+        padding: 4px 0 4px 16px;
+    }
+    
+    .card-footer-text {
+        font-size: 0.8rem;
+        margin-top: 12px;
+    }
+    
+    .contact-box {
+        padding: 20px 15px;
+    }
+    
+    .contact-box h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-info-row {
+        font-size: 0.8rem;
         flex-direction: column;
         gap: 5px;
     }
     
     .contact-info-row i {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .contact-social-links {
-        padding: 20px 15px;
+        padding: 15px 12px;
     }
     
     .fb-link-btn {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         padding: 8px;
     }
     
     .contact-btn-link {
-        padding: 12px 25px;
-        font-size: 0.85rem;
-        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 0.8rem;
+        margin-top: 15px;
     }
 }
 

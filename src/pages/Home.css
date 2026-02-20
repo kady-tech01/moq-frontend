@@ -232,21 +232,24 @@
         margin: 10px auto 0;
     }
     
-    /* توسيع قسم About مع حواف دائرية */
+    /* ===== تحسين توسيط "Who Are We" في شاشة الموبايل ===== */
     .content-card {
         margin: 0 auto 2.5rem auto;
         padding: 1.5rem;
-        width: calc(100% - 20px); /* ترك مسافة بسيطة من الجوانب */
-        max-width: 100%;
-        border-radius: 15px; /* حواف دائرية ناعمة */
-        margin-left: 10px;
-        margin-right: 10px;
+        width: 90%; /* عرض مناسب مع توسيط */
+        max-width: 400px; /* حد أقصى للعرض */
+        border-radius: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        box-sizing: border-box;
     }
     
     .about-text {
         font-size: 1rem;
         line-height: 1.6;
         width: 100%;
+        margin: 0 auto;
     }
     
     /* ===== توسيع هوامش HIGHLIGHTS (قسم الأنشطة) مع حواف دائرية ===== */
@@ -265,12 +268,12 @@
     .activities-grid {
         gap: 15px;
         margin-top: 1rem;
-        padding: 0 10px; /* إضافة padding بسيط للجوانب */
+        padding: 0 10px;
         width: 100%;
     }
     
     .activity-card {
-        border-radius: 12px; /* حواف دائرية للبطاقات */
+        border-radius: 12px;
         margin: 0;
         width: 100%;
         box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -305,7 +308,7 @@
     .contact-footer {
         padding: 2rem 15px;
         margin-top: 2rem;
-        border-radius: 20px 20px 0 0; /* حواف دائرية في الأعلى فقط */
+        border-radius: 20px 20px 0 0;
         width: 100%;
         left: 0;
         right: 0;
@@ -339,7 +342,7 @@
         justify-content: center;
         background: rgba(255,255,255,0.05);
         padding: 12px;
-        border-radius: 30px; /* حواف دائرية للعناصر */
+        border-radius: 30px;
         transition: all 0.3s ease;
     }
     
@@ -372,7 +375,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%; /* حواف دائرية كاملة للأيقونات */
+        border-radius: 50%;
         transition: all 0.3s ease;
     }
     
@@ -409,13 +412,15 @@
         margin-bottom: 1rem;
     }
     
+    /* تحسين توسيط "Who Are We" للشاشات الصغيرة جداً */
     .content-card {
         padding: 1.2rem;
         margin-bottom: 1.5rem;
         border-radius: 12px;
-        width: calc(100% - 16px);
-        margin-left: 8px;
-        margin-right: 8px;
+        width: 92%;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .about-text {

@@ -23,6 +23,7 @@
     max-width: 1300px; /* زيادة العرض الكلي للحاوية */
     margin: 0 auto;
     padding: 0 5%;
+    position: relative;
 }
 
 .activity-row {
@@ -31,10 +32,64 @@
     justify-content: space-between;
     gap: 40px; /* مسافة متوازنة بين النص والصورة */
     margin-bottom: 120px;
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .activity-row.reverse {
     flex-direction: row-reverse;
+}
+
+/* إضافة فاصل أنيق بين الأنشطة */
+.activity-row:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        #3b82f6 20%,
+        #60a5fa 40%,
+        #94a3b8 50%,
+        #60a5fa 60%,
+        #3b82f6 80%,
+        transparent 100%);
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    z-index: 5;
+}
+
+/* إضافة دائرة زخرفية في منتصف الفاصل */
+.activity-row:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    bottom: -68px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: #3b82f6;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    z-index: 10;
+    animation: pulse 2s infinite;
+}
+
+/* تأثير نبض للدائرة */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
 }
 
 /* --- تعديل المساحات هنا --- */
@@ -137,6 +192,19 @@
         width: 100%; 
         flex: none;
     }
+    
+    /* تعديل الفاصل للشاشات المتوسطة */
+    .activity-row:not(:last-child)::after {
+        width: 180px;
+        height: 4px;
+        bottom: -50px;
+    }
+    
+    .activity-row:not(:last-child)::before {
+        bottom: -58px;
+        width: 14px;
+        height: 14px;
+    }
 }
 
 /* =========================
@@ -175,6 +243,29 @@
     .activity-row {
         margin-bottom: 60px;
         gap: 20px;
+    }
+    
+    /* تعديل الفاصل للموبايل */
+    .activity-row:not(:last-child)::after {
+        width: 120px;
+        height: 3px;
+        bottom: -30px;
+        background: linear-gradient(90deg, 
+            transparent 0%,
+            #3b82f6 20%,
+            #60a5fa 40%,
+            #94a3b8 50%,
+            #60a5fa 60%,
+            #3b82f6 80%,
+            transparent 100%);
+    }
+    
+    .activity-row:not(:last-child)::before {
+        bottom: -35px;
+        width: 12px;
+        height: 12px;
+        border-width: 2px;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
     }
     
     /* توسيع النص لأخذ العرض الكامل */
@@ -251,6 +342,20 @@
     
     .activity-info p {
         font-size: 0.9rem;
+    }
+    
+    /* تعديل الفاصل للشاشات الصغيرة جداً */
+    .activity-row:not(:last-child)::after {
+        width: 100px;
+        height: 3px;
+        bottom: -25px;
+    }
+    
+    .activity-row:not(:last-child)::before {
+        bottom: -30px;
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
     }
     
     /* تقليل إضافي لارتفاعات الصور */

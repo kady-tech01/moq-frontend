@@ -1,15 +1,16 @@
-  @import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 
   
-  /* ===================================
-           COLOR PALETTE
-           Define all colors used throughout the site
-           =================================== */
+/* ===================================
+         COLOR PALETTE
+         Define all colors used throughout the site
+         =================================== */
 
- /* Ensure full height for proper layout */
-        html, body {
-            height: 100%;
-        }          
+/* Ensure full height for proper layout */
+html, body {
+    height: 100%;
+}          
+
 :root {
   --primary-light: #c1e8ff;
   --primary-medium: #7da0ca;
@@ -22,21 +23,21 @@
 /* =========================================
    GLOBAL RESET
 ========================================= */
- * {
-            box-sizing: border-box;
-        }
+* {
+    box-sizing: border-box;
+}
 
 /* =========================================
    GLOBAL BODY SETTINGS
 ========================================= */
-  body {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #c1e8ff; /* Light blue background */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #c1e8ff; /* Light blue background */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
 /* Scrollbar styling (optional) */
 ::-webkit-scrollbar {
@@ -63,4 +64,33 @@ a {
   padding: 2rem;
 }
 
+/* =========================
+   إخفاء شريط التمرير في شاشة الموبايل فقط
+   ========================= */
+@media (max-width: 768px) {
+    /* إخفاء شريط التمرير في جميع المتصفحات */
+    html, body {
+        -ms-overflow-style: none;  /* Internet Explorer و Edge */
+        scrollbar-width: none;      /* Firefox */
+    }
+    
+    /* إخفاء شريط التمرير في Chrome و Safari */
+    html::-webkit-scrollbar, 
+    body::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        background: transparent;
+    }
+    
+    /* تحسين المسافات للموبايل */
+    .page-container {
+        padding: 1rem;
+    }
+}
 
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .page-container {
+        padding: 0.75rem;
+    }
+}
