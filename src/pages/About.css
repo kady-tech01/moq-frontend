@@ -97,6 +97,7 @@
     color: #64748b;
     max-width: 700px;
     margin: 0 auto 40px;
+    text-align: center; /* تأكيد التوسيط */
 }
 
 .org-grid {
@@ -272,23 +273,35 @@
         margin-bottom: 12px;
     }
 
-    /* 4. الهيكل التنظيمي */
+    /* 4. الهيكل التنظيمي - توسيط النص */
     .org-section {
         padding: 40px 3%; /* توسيع العرض */
+    }
+    
+    .section-intro {
+        text-align: center; /* تأكيد توسيط النص */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        font-size: 0.95rem;
+        max-width: 90%;
     }
 
     .org-departments {
         gap: 8px; /* تقريب الأيقونات */
-        justify-content: space-evenly;
+        justify-content: center; /* توسيط العناصر */
+        align-items: center;
     }
 
     .dept-tag {
         padding: 8px 12px;
         font-size: 0.75rem;
         flex: 1 1 40%; /* جعل العناصر تأخذ مساحة أكبر في السطر */
+        text-align: center;
+        justify-content: center;
     }
 
-    /* 5. قسم المديرين (Board Members) */
+    /* 5. قسم المديرين (Board Members) - زيادة ارتفاع الصور */
     .board-section {
         padding: 50px 3%; /* تقليل الهامش الخارجي لأقصى حد */
     }
@@ -306,11 +319,26 @@
     }
 
     .member-photo img {
-        height: 260px;
+        height: 300px; /* زيادة ارتفاع الصور من 260px إلى 300px */
+        object-fit: cover;
     }
 
     .member-info {
         padding: 15px; /* تقليل البادينج الداخلي للكروت لتوفير مساحة */
+    }
+    
+    .member-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .role {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .member-info p {
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
 }
 
@@ -322,5 +350,36 @@
     
     .about-hero h1 {
         font-size: 1.7rem;
+    }
+    
+    /* تحسينات إضافية للشاشات الصغيرة جداً */
+    .org-departments {
+        gap: 6px;
+    }
+    
+    .dept-tag {
+        padding: 6px 10px;
+        font-size: 0.7rem;
+        flex: 1 1 45%;
+    }
+    
+    .member-photo img {
+        height: 280px; /* ارتفاع مناسب للشاشات الصغيرة جداً */
+    }
+    
+    .section-intro {
+        font-size: 0.9rem;
+        padding: 0 8px;
+    }
+}
+
+/* تحسين إضافي للشاشات المتوسطة */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .board-grid {
+        gap: 20px;
+    }
+    
+    .member-photo img {
+        height: 280px;
     }
 }
