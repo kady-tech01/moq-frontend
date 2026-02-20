@@ -149,8 +149,20 @@
     width: 0;
   }
 
+  /* ✅ التعديل هنا لضمان التصاق الـ Footer بالأسفل */
   .main-content {
     padding: 1.5rem;
+    display: flex;         /* تفعيل فليكس بوكس */
+    flex-direction: column; /* جعل العناصر تحت بعضها */
+    min-height: 100vh;
+  }
+
+  /* التأكد من أن حاوية الصفحة تملأ المساحة وتدفع الفوتر للأسفل */
+  .page-container {
+    flex: 1;               
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* يدفع الفوتر لأدنى نقطة */
   }
 }
 
@@ -160,6 +172,11 @@
   }
 
   .main-content {
+    padding: 0; /* إلغاء البادينج الجانبي في الهاتف ليظهر الفوتر بكامل العرض */
+  }
+  
+  /* الحفاظ على المسافات للعناصر الداخلية باستثناء الفوتر */
+  .main-content > *:not(footer) {
     padding: 1rem;
   }
 }

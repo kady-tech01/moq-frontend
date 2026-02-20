@@ -35,7 +35,7 @@
     max-width: 600px;
 }
 
-/* --- SPLIT SECTION (History & Mission) --- */
+/* --- SPLIT SECTION (History & Mission / Who We Are) --- */
 .about-split-section {
     display: flex;
     align-items: center;
@@ -152,7 +152,7 @@
     transform: translateY(-3px);
 }
 
-/* --- BOARD MEMBERS (المجلس التنفيذي في سطر واحد) --- */
+/* --- BOARD MEMBERS --- */
 .board-section {
     padding: 100px 8%;
     text-align: center;
@@ -167,19 +167,18 @@
     display: inline-block;
 }
 
-/* التعديل الجوهري هنا لضمان وجود الصور في سطر واحد */
 .board-grid {
-    display: flex; /* تحويل لـ Flex */
-    justify-content: center; /* توسيط العناصر */
-    gap: 30px; /* المسافة بين الكروت */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .member-card {
-    flex: 1; /* جعل كل الكروت تأخذ مساحة متساوية */
-    min-width: 0; /* منع الكروت من تجاوز حدود الـ flex */
+    flex: 1;
+    min-width: 0;
     background: white;
     border-radius: 20px;
     overflow: hidden;
@@ -230,24 +229,98 @@
     line-height: 1.5;
 }
 
-/* --- RESPONSIVENESS --- */
+/* ============================================================
+   RESPONSIVENESS (PHONE SCREEN ONLY - MAX WIDTH & MIN MARGIN)
+   ============================================================ */
 
-/* عند الشاشات المتوسطة (مثل التابلت) قد تضطر الصور للنزول لسطر جديد للحفاظ على وضوحها */
-@media (max-width: 1024px) {
-    .board-grid {
-        gap: 15px;
+@media (max-width: 768px) {
+    /* 1. تقليل الهوامش الجانبية لكل الصفحة */
+    #about {
+        width: 100%;
     }
-}
 
-/* في الجوال فقط نجعلهم تحت بعض */
-@media (max-width: 850px) {
+    /* 2. الـ Hero يأخذ عرضاً أكبر */
+    .about-hero {
+        height: 35vh;
+        min-height: 250px;
+        border-radius: 0; /* إلغاء الحواف ليعطي شعوراً بالعرض الكامل */
+        padding: 10px;
+    }
+
+    /* 3. تعديل قسم "Who We Are" (History) ليمتد بالعرض مع وجود بادينج داخلي */
+    .about-split-section {
+        padding: 30px 4%; /* تقليل الهوامش الجانبية من 10% إلى 4% فقط لتوسيع العناصر */
+        gap: 25px;
+    }
+
+    .about-image {
+        min-width: 100%;
+    }
+
+    .about-image img {
+        box-shadow: 8px 8px 0px #3b82f6; /* تصغير الظل ليناسب العرض الأكبر */
+        border-radius: 10px;
+    }
+
+    .about-text-content {
+        min-width: 100%;
+        padding: 0 5px; /* إضافة بادينج بسيط جداً للنص ليلامس الحواف تقريباً */
+    }
+
+    .about-text-content h2 {
+        font-size: 1.9rem;
+        margin-bottom: 12px;
+    }
+
+    /* 4. الهيكل التنظيمي */
+    .org-section {
+        padding: 40px 3%; /* توسيع العرض */
+    }
+
+    .org-departments {
+        gap: 8px; /* تقريب الأيقونات */
+        justify-content: space-evenly;
+    }
+
+    .dept-tag {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        flex: 1 1 40%; /* جعل العناصر تأخذ مساحة أكبر في السطر */
+    }
+
+    /* 5. قسم المديرين (Board Members) */
+    .board-section {
+        padding: 50px 3%; /* تقليل الهامش الخارجي لأقصى حد */
+    }
+
     .board-grid {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
-    
+
     .member-card {
         width: 100%;
-        max-width: 350px;
+        max-width: 100%; /* العرض الكامل للجوال */
+        border-radius: 12px;
+    }
+
+    .member-photo img {
+        height: 260px;
+    }
+
+    .member-info {
+        padding: 15px; /* تقليل البادينج الداخلي للكروت لتوفير مساحة */
+    }
+}
+
+/* شاشات الجوال الصغيرة جداً */
+@media (max-width: 480px) {
+    .about-split-section {
+        padding: 20px 2%; /* هوامش خارجية تكاد تنعدم */
+    }
+    
+    .about-hero h1 {
+        font-size: 1.7rem;
     }
 }

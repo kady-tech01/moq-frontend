@@ -73,6 +73,7 @@
     margin: 0 auto 5rem auto;
     padding: 2rem;
     text-align: center;
+    border-radius: 20px;
 }
 
 .about-text {
@@ -81,7 +82,7 @@
     color: #475569;
 }
 
-/* --- ACTIVITIES GRID --- */
+/* --- ACTIVITIES GRID (HIGHLIGHTS) --- */
 .latest-activities {
     padding: 2rem;
     max-width: 1200px;
@@ -139,7 +140,7 @@
     font-size: 0.95rem;
 }
 
-/* --- CONTACT FOOTER --- */
+/* --- CONTACT FOOTER (COLLABORATION) --- */
 .contact-footer {
     background: #0f172a;
     color: white;
@@ -176,8 +177,334 @@
     color: #3b82f6;
 }
 
-/* --- RESPONSIVENESS --- */
+/* =========================
+   تحسينات للشاشات الصغيرة (الموبايل) - تقليل المسافات وتوسيع العرض مع حواف دائرية
+   ========================= */
+
 @media (max-width: 768px) {
-    .hero-section { height: 60vh; }
-    .contact-details { flex-direction: column; gap: 15px; }
+    /* تقليل المسافات في الهيرو */
+    .hero-section {
+        height: 50vh;
+        min-height: 300px;
+        margin-bottom: 1.5rem;
+        border-radius: 0 0 20px 20px;
+        background-attachment: scroll; /* إلغاء parallax للموبايل */
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        padding: 0 15px;
+        width: 100%;
+    }
+    
+    .cta-button {
+        margin-top: 1.5rem;
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    /* توسيع عناوين الأقسام مع حواف دائرية */
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .section-title::after {
+        width: 50px;
+        height: 3px;
+        margin: 10px auto 0;
+    }
+    
+    /* توسيع قسم About مع حواف دائرية */
+    .content-card {
+        margin: 0 auto 2.5rem auto;
+        padding: 1.5rem;
+        width: calc(100% - 20px); /* ترك مسافة بسيطة من الجوانب */
+        max-width: 100%;
+        border-radius: 15px; /* حواف دائرية ناعمة */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        width: 100%;
+    }
+    
+    /* ===== توسيع هوامش HIGHLIGHTS (قسم الأنشطة) مع حواف دائرية ===== */
+    .latest-activities {
+        padding: 0;
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .latest-activities .section-title {
+        margin-bottom: 1rem;
+        padding: 0 15px;
+    }
+    
+    .activities-grid {
+        gap: 15px;
+        margin-top: 1rem;
+        padding: 0 10px; /* إضافة padding بسيط للجوانب */
+        width: 100%;
+    }
+    
+    .activity-card {
+        border-radius: 12px; /* حواف دائرية للبطاقات */
+        margin: 0;
+        width: 100%;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    
+    .activity-img-wrapper {
+        height: 180px;
+        width: 100%;
+    }
+    
+    .activity-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .activity-info {
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .activity-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .activity-info p {
+        font-size: 0.9rem;
+    }
+    
+    /* ===== توسيع هوامش COLLABORATION (قسم التواصل) مع حواف دائرية ===== */
+    .contact-footer {
+        padding: 2rem 15px;
+        margin-top: 2rem;
+        border-radius: 20px 20px 0 0; /* حواف دائرية في الأعلى فقط */
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    
+    .contact-footer h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        padding: 0;
+    }
+    
+    .contact-footer p {
+        font-size: 0.95rem;
+        padding: 0 10px;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+    
+    .contact-details {
+        gap: 15px;
+        margin: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .contact-item {
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+        background: rgba(255,255,255,0.05);
+        padding: 12px;
+        border-radius: 30px; /* حواف دائرية للعناصر */
+        transition: all 0.3s ease;
+    }
+    
+    .contact-item:hover {
+        background: rgba(255,255,255,0.1);
+    }
+    
+    .contact-item i {
+        font-size: 1.2rem;
+    }
+    
+    .contact-item span {
+        font-size: 0.95rem;
+    }
+    
+    .social-links {
+        margin-top: 1.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .social-links a {
+        font-size: 1.5rem;
+        margin: 0;
+        background: rgba(255,255,255,0.05);
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; /* حواف دائرية كاملة للأيقونات */
+        transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+        background: rgba(255,255,255,0.15);
+        transform: translateY(-3px);
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .hero-section {
+        height: 40vh;
+        min-height: 250px;
+        border-radius: 0 0 15px 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+        margin-top: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .content-card {
+        padding: 1.2rem;
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+        width: calc(100% - 16px);
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    
+    .about-text {
+        font-size: 0.9rem;
+    }
+    
+    /* توسيع إضافي لهوامش HIGHLIGHTS مع حواف دائرية */
+    .latest-activities {
+        padding: 0;
+    }
+    
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 0.75rem;
+        padding: 0 8px;
+    }
+    
+    .activity-card {
+        border-radius: 10px;
+    }
+    
+    .activity-img-wrapper {
+        height: 200px;
+    }
+    
+    .activity-info {
+        padding: 0.8rem;
+    }
+    
+    .activity-info h3 {
+        font-size: 1rem;
+    }
+    
+    .activity-info p {
+        font-size: 0.85rem;
+    }
+    
+    /* توسيع إضافي لهوامش COLLABORATION مع حواف دائرية */
+    .contact-footer {
+        padding: 1.5rem 12px;
+        margin-top: 1.5rem;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    .contact-footer h2 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-footer p {
+        font-size: 0.85rem;
+        padding: 0 8px;
+    }
+    
+    .contact-item {
+        padding: 10px;
+        border-radius: 25px;
+    }
+    
+    .contact-item i {
+        font-size: 1.1rem;
+    }
+    
+    .contact-item span {
+        font-size: 0.85rem;
+    }
+    
+    .social-links {
+        gap: 15px;
+    }
+    
+    .social-links a {
+        font-size: 1.3rem;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* تحسين إضافي للشاشات المتوسطة */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .latest-activities {
+        padding: 1.5rem;
+    }
 }

@@ -125,7 +125,7 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* التجاوب */
+/* التجاوب الأساسي (للتابلت) */
 @media (max-width: 992px) {
     .event-block, .event-block.reverse {
         flex-direction: column;
@@ -137,4 +137,172 @@
         margin: 0 auto !important;
     }
     .event-gallery { width: 100%; }
+}
+
+/* =========================
+   تحسينات محسنة للشاشات الصغيرة (الموبايل) - فقط للجوال
+   ========================= */
+
+@media (max-width: 768px) {
+    /* تحسين الهيدر للموبايل */
+    .events-header {
+        padding: 80px 15px 40px;
+    }
+    
+    .events-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .title-underline {
+        width: 60px;
+        height: 4px;
+        margin-bottom: 15px;
+    }
+    
+    /* تقليل هوامش التايم لاين */
+    .events-timeline {
+        padding: 0 15px 60px;
+    }
+    
+    /* تقليل المسافة بين الأحداث */
+    .event-block {
+        margin-bottom: 80px;
+        gap: 30px;
+    }
+    
+    /* تحسين معلومات الحدث */
+    .event-info h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .event-info p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .event-date {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+    
+    /* تحسين معرض الصور */
+    .event-gallery {
+        gap: 10px;
+        width: 100%;
+    }
+    
+    /* تحسين الصورة الواحدة - تقليل الارتفاع فقط */
+    .img-count-1 {
+        max-width: 280px;
+    }
+    
+    .img-count-1 .event-img-wrapper {
+        border-width: 6px;
+        border-radius: 15px;
+        height: 300px; /* تقليل ارتفاع الصورة الواحدة */
+        aspect-ratio: auto; /* إلغاء aspect-ratio */
+    }
+    
+    /* تحسين الصور المتعددة */
+    .img-count-2 .event-img-wrapper,
+    .img-count-3 .event-img-wrapper,
+    .img-count-4 .event-img-wrapper {
+        height: 150px;
+    }
+    
+    /* تنسيق خاص للثلاث صور */
+    .img-count-3 {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 8px;
+    }
+    
+    .img-count-3 .event-img-wrapper:first-child {
+        height: 310px; /* ارتفاع الصورة الكبيرة */
+    }
+    
+    .img-count-3 .event-img-wrapper:not(:first-child) {
+        height: 150px;
+    }
+    
+    /* تحسين الصور الأربع */
+    .img-count-4 {
+        gap: 8px;
+    }
+    
+    .img-count-4 .event-img-wrapper {
+        height: 130px;
+    }
+    
+    /* تحسين حواف الصور */
+    .event-img-wrapper {
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .events-header {
+        padding: 60px 12px 30px;
+    }
+    
+    .events-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .event-info h2 {
+        font-size: 1.5rem;
+    }
+    
+    .event-info p {
+        font-size: 0.95rem;
+    }
+    
+    .events-timeline {
+        padding: 0 12px 50px;
+    }
+    
+    .event-block {
+        margin-bottom: 60px;
+        gap: 25px;
+    }
+    
+    /* تحسين الصور للشاشات الصغيرة جداً - تقليل ارتفاع الصورة الواحدة أكثر */
+    .img-count-1 {
+        max-width: 240px;
+    }
+    
+    .img-count-1 .event-img-wrapper {
+        height: 250px; /* تقليل أكثر للشاشات الصغيرة جداً */
+    }
+    
+    .img-count-2 .event-img-wrapper {
+        height: 130px;
+    }
+    
+    .img-count-3 {
+        grid-template-columns: 1.1fr 1fr;
+    }
+    
+    .img-count-3 .event-img-wrapper:first-child {
+        height: 270px;
+    }
+    
+    .img-count-3 .event-img-wrapper:not(:first-child) {
+        height: 130px;
+    }
+    
+    .img-count-4 .event-img-wrapper {
+        height: 110px;
+    }
+    
+    /* تقليل الحواف */
+    .event-img-wrapper {
+        border-radius: 12px;
+    }
+    
+    .img-count-1 .event-img-wrapper {
+        border-width: 4px;
+    }
 }

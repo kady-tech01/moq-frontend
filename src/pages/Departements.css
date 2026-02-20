@@ -32,6 +32,7 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 0 5%;
+    position: relative;
 }
 
 /* --- ROW EFFECTS --- */
@@ -43,6 +44,61 @@
     opacity: 0; /* سنستخدمها مع أنيميشن الدخول */
     transform: translateY(30px);
     animation: fadeInUp 0.8s forwards ease-out;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* إضافة فاصل محسن بين الأقسام - أكثر وضوحاً */
+.dept-row:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #3b82f6 15%, 
+        #2563eb 30%, 
+        #1e293b 50%, 
+        #2563eb 70%, 
+        #3b82f6 85%, 
+        transparent 100%);
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    opacity: 0.8;
+    z-index: 5;
+}
+
+/* إضافة دائرة زخرفية في منتصف الفاصل */
+.dept-row:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    bottom: -68px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #3b82f6;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    z-index: 10;
+    animation: pulse 2s infinite;
+}
+
+/* تأثير نبض للدائرة */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
 }
 
 /* تأثير ظهور القسم عند التحميل */
@@ -129,4 +185,175 @@
     font-size: 1.15rem;
     font-weight: 300;
     max-width: 700px;
+}
+
+/* =========================
+   تحسينات للشاشات الصغيرة (الموبايل) - فقط للجوال
+   ========================= */
+
+@media (max-width: 768px) {
+    /* تقليل المسافات العامة */
+    #departments {
+        padding-bottom: 60px;
+    }
+    
+    /* تحسين الهيدر للموبايل */
+    .dept-header {
+        padding: 80px 15px 60px;
+        margin-bottom: 30px;
+        border-radius: 0 0 30px 30px;
+    }
+    
+    .dept-header h1 {
+        font-size: 2rem;
+    }
+    
+    /* توسيع الحاوية لأخذ العرض الكامل */
+    .dept-container-vertical {
+        gap: 70px;
+        padding: 0 15px; /* تقليل padding الجانبي */
+        max-width: 100%;
+    }
+    
+    /* تقليل المسافة بين الصفوف */
+    .dept-row {
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+    
+    /* تحسين الصورة الدائرية للموبايل */
+    .leader-circle-large {
+        width: 200px;
+        height: 200px;
+        border-width: 8px;
+        margin-bottom: 25px;
+    }
+    
+    /* تقليل حجم النصوص */
+    .leader-title {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+    
+    .leader-name-h3 {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+    }
+    
+    .dept-name-h2 {
+        font-size: 1.8rem;
+        margin: 0 0 15px;
+    }
+    
+    /* تحسين الخط الزخرفي */
+    .dept-accent-line {
+        width: 30px;
+        height: 5px;
+        margin: 0 auto 20px;
+    }
+    
+    .dept-row:hover .dept-accent-line {
+        width: 70px;
+    }
+    
+    /* تحسين النص الوصفي */
+    .dept-full-desc {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+    
+    /* تحسين الفواصل بين الأقسام للموبايل - أكثر وضوحاً */
+    .dept-row:not(:last-child)::after {
+        bottom: -35px;
+        width: 150px;
+        height: 3px;
+    }
+    
+    .dept-row:not(:last-child)::before {
+        bottom: -41px;
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .dept-header {
+        padding: 60px 12px 40px;
+    }
+    
+    .dept-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .dept-container-vertical {
+        gap: 60px;
+        padding: 0 12px;
+    }
+    
+    /* تحسين إضافي للصورة الدائرية */
+    .leader-circle-large {
+        width: 160px;
+        height: 160px;
+        border-width: 6px;
+        margin-bottom: 20px;
+    }
+    
+    .leader-title {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .leader-name-h3 {
+        font-size: 1.1rem;
+    }
+    
+    .dept-name-h2 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+    
+    .dept-accent-line {
+        width: 25px;
+        height: 4px;
+        margin-bottom: 15px;
+    }
+    
+    .dept-row:hover .dept-accent-line {
+        width: 60px;
+    }
+    
+    .dept-full-desc {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* تحسين الفواصل للشاشات الصغيرة جداً - أكثر وضوحاً */
+    .dept-row:not(:last-child)::after {
+        bottom: -30px;
+        width: 120px;
+        height: 3px;
+    }
+    
+    .dept-row:not(:last-child)::before {
+        bottom: -36px;
+        width: 8px;
+        height: 8px;
+        border-width: 2px;
+    }
+}
+
+/* تحسين إضافي للشاشات المتوسطة */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dept-container-vertical {
+        padding: 0 3%;
+    }
+    
+    .leader-circle-large {
+        width: 240px;
+        height: 240px;
+    }
 }

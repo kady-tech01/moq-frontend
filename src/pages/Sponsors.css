@@ -158,17 +158,159 @@
 .fb-tier .section-header h2 { color: #1877f2; }
 .ig-tier .section-header h2 { color: #d62976; }
 
-/* Responsive Adjustments */
+/* =========================
+   تحسينات للشاشات المتوسطة (تابلت)
+   ========================= */
 @media (max-width: 900px) {
-    .sponsor-section { margin-bottom: 80px; } /* تقليل المسافة قليلاً في الشاشات المتوسطة */
+    .sponsor-section { margin-bottom: 80px; }
     .sponsor-card { width: calc(45% - 20px); }
 }
 
-@media (max-width: 600px) {
-    .event-main-title { margin-top: 40px; margin-bottom: 40px; }
-    .event-main-title h3 { font-size: 1.6rem; }
-    .sponsor-card { 
-        width: calc(100% - 20px);
-        max-width: 280px;
+/* =========================
+   تحسينات للشاشات الصغيرة (الموبايل) - 3 رعاة في كل صف
+   ========================= */
+@media (max-width: 768px) {
+    /* تحسين الهيدر للموبايل */
+    .sponsors-hero {
+        padding: 80px 15px 60px;
+        border-radius: 0 0 30px 30px;
+    }
+    
+    .sponsors-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-divider {
+        width: 50px;
+        height: 3px;
+    }
+    
+    /* تحسين العنوان الرئيسي */
+    .event-main-title {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .event-main-title h3 {
+        font-size: 1.6rem;
+    }
+    
+    .event-main-title h3::after {
+        height: 3px;
+        bottom: -8px;
+    }
+    
+    /* تقليل المسافات بين الأقسام */
+    .sponsor-section {
+        margin-bottom: 60px;
+    }
+    
+    /* تحسين رأس كل قسم */
+    .section-header {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.3rem;
+        white-space: nowrap;
+    }
+    
+    .section-header .line {
+        max-width: 50px;
+    }
+    
+    /* ===== 3 رعاة في كل صف للموبايل ===== */
+    .container {
+        padding: 0 12px;
+    }
+    
+    .sponsors-grid {
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    /* إلغاء التنسيقات الخاصة لشاشات PC وتوحيد العرض */
+    .vip-tier .sponsor-card,
+    .fb-tier .sponsor-card,
+    .ig-tier .sponsor-card {
+        width: calc(33.33% - 7px); /* 3 رعاة في كل صف مع مسافات صغيرة */
+        min-width: 0; /* إلغاء الحد الأدنى للعرض */
+        max-width: none;
+    }
+    
+    /* تحسين حجم البطاقات */
+    .sponsor-card {
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    }
+    
+    /* تحسين تأثير hover للموبايل */
+    .sponsor-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
+    }
+    
+    /* تحسين النص الذي يظهر عند التمرير */
+    .card-overlay span {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        border-width: 1px;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .sponsors-hero {
+        padding: 60px 12px 50px;
+    }
+    
+    .sponsors-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .event-main-title h3 {
+        font-size: 1.4rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.1rem;
+    }
+    
+    .section-header .line {
+        max-width: 30px;
+    }
+    
+    /* 3 رعاة في كل صف مع مسافات أصغر */
+    .vip-tier .sponsor-card,
+    .fb-tier .sponsor-card,
+    .ig-tier .sponsor-card {
+        width: calc(33.33% - 6px);
+    }
+    
+    .sponsors-grid {
+        gap: 8px;
+    }
+    
+    .sponsor-card {
+        border-radius: 12px;
+    }
+    
+    .card-overlay span {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+}
+
+/* للشاشات الصغيرة جداً جداً (أقل من 360px) */
+@media (max-width: 360px) {
+    .vip-tier .sponsor-card,
+    .fb-tier .sponsor-card,
+    .ig-tier .sponsor-card {
+        width: calc(50% - 5px); /* صورتين في كل صف للشاشات الضيقة جداً */
+    }
+    
+    .section-header h2 {
+        font-size: 1rem;
     }
 }

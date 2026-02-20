@@ -301,17 +301,262 @@
     transform: translateY(-5px);
 }
 
-/* --- 4. الاستجابة (Responsive) --- */
+/* --- 4. الاستجابة (Responsive) للشاشات المتوسطة --- */
 @media (max-width: 992px) {
     .contact-grid-layout { flex-direction: column; align-items: center; }
     .contact-main-info, .contact-social-links { width: 100%; text-align: center; }
     .contact-info-row { justify-content: center; }
 }
 
-@media (max-width: 600px) {
-    .esm-intro { border-radius: 0 0 50px 50px; padding: 40px 15px 100px; }
-    .esm-intro-content { padding: 30px 20px; border-radius: 30px; transform: translateY(20px); }
-    .esm-section-title { font-size: 1.8rem; }
-    .studies-grid { grid-template-columns: 1fr; }
-    .contact-box { padding: 50px 20px; }
+/* =========================
+   تحسينات ممتازة للشاشات الصغيرة (الموبايل) - فقط للجوال
+   ========================= */
+
+@media (max-width: 768px) {
+    /* تحسين الهيدر للموبايل */
+    .esm-intro {
+        padding: 40px 15px 100px;
+        border-radius: 0 0 50px 50px;
+    }
+    
+    .esm-intro-content {
+        padding: 30px 20px;
+        border-radius: 30px;
+        transform: translateY(20px);
+    }
+    
+    .esm-logo-large {
+        width: 100px;
+        margin-bottom: 15px;
+    }
+    
+    .esm-intro h1 {
+        font-size: 1.8rem;
+    }
+    
+    .esm-intro h2 {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    
+    .intro-divider {
+        width: 80px;
+        margin: 15px auto 20px;
+    }
+    
+    .esm-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* تحسين قسم الدراسات للموبايل */
+    .esm-studies {
+        padding: 50px 4% 50px;
+    }
+    
+    .esm-section-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .studies-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+    
+    .studies-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .study-card {
+        padding: 25px;
+        border-radius: 25px;
+    }
+    
+    .card-header {
+        gap: 10px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    
+    .card-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .subjects-box {
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 15px;
+    }
+    
+    .subjects-box h4 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .subjects-box ul li {
+        padding: 6px 0;
+        font-size: 0.9rem;
+        padding-left: 20px;
+    }
+    
+    .card-footer-text {
+        margin-top: 20px;
+        padding-top: 12px;
+        font-size: 0.9rem;
+    }
+    
+    /* تحسين قسم التواصل للموبايل */
+    .esm-contact {
+        padding: 50px 4% 60px;
+    }
+    
+    .contact-box {
+        padding: 40px 20px;
+        border-radius: 30px;
+    }
+    
+    .contact-box h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .contact-grid-layout {
+        gap: 25px;
+    }
+    
+    .contact-main-info {
+        min-width: auto;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .contact-info-row {
+        justify-content: center;
+        font-size: 0.95rem;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .contact-social-links {
+        min-width: auto;
+        padding: 25px 20px;
+        border-radius: 25px;
+        gap: 10px;
+    }
+    
+    .fb-link-btn {
+        padding: 10px;
+        font-size: 0.85rem;
+        border-radius: 12px;
+    }
+    
+    .fb-link-btn:hover {
+        transform: translateX(5px);
+    }
+    
+    .contact-btn-link {
+        padding: 14px 35px;
+        font-size: 0.95rem;
+        margin-top: 30px;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .esm-intro {
+        padding: 30px 12px 80px;
+    }
+    
+    .esm-intro-content {
+        padding: 25px 15px;
+    }
+    
+    .esm-logo-large {
+        width: 80px;
+    }
+    
+    .esm-intro h1 {
+        font-size: 1.5rem;
+    }
+    
+    .esm-intro h2 {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .esm-description {
+        font-size: 0.9rem;
+    }
+    
+    .esm-section-title {
+        font-size: 1.6rem;
+    }
+    
+    .studies-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .study-card {
+        padding: 20px;
+    }
+    
+    .card-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .subjects-box {
+        padding: 15px;
+    }
+    
+    .subjects-box ul li {
+        font-size: 0.85rem;
+    }
+    
+    .contact-box h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-info-row {
+        font-size: 0.85rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .contact-info-row i {
+        font-size: 1rem;
+    }
+    
+    .contact-social-links {
+        padding: 20px 15px;
+    }
+    
+    .fb-link-btn {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+    
+    .contact-btn-link {
+        padding: 12px 25px;
+        font-size: 0.85rem;
+        margin-top: 20px;
+    }
+}
+
+/* تحسين إضافي للشاشات المتوسطة */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .esm-intro-content {
+        max-width: 800px;
+    }
+    
+    .studies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .study-card {
+        padding: 30px;
+    }
 }
