@@ -65,7 +65,7 @@ const ESM = () => {
                 <ul>
                   <li>Management et stratégies d’entreprises.</li>
                   <li>Management financier.</li>
-                  <li>Maketing</li>
+                  <li>Marketing</li>
                   <li>Management des services de santé</li>
                   <li>Marketing Agroalimentaire.</li>
                   <li>Management des établissements touristiques. </li>
