@@ -13,6 +13,14 @@
     border-radius: 0 0 30px 30px;
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .hero-content h1 {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 800;
@@ -24,6 +32,10 @@
     font-size: 1.5rem;
     font-weight: 300;
     opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .hero-symbol {
@@ -46,6 +58,11 @@
 .cta-button:hover {
     background: #2563eb;
     transform: scale(1.05);
+}
+
+/* شعار الموبايل - مخفي في سطح المكتب */
+.mobile-logo {
+    display: none;
 }
 
 /* --- SECTION TITLES (مُحدث لضمان التوسيط في PC) --- */
@@ -190,11 +207,48 @@
     color: #3b82f6;
 }
 
+/* --- كلاس للعناصر التي تظهر فقط في سطح المكتب --- */
+.desktop-only {
+    display: inline-block;
+}
+
 /* =========================
-   تحسينات للشاشات الصغيرة (الموبايل) - تقليل المسافات وتوسيع العرض مع حواف دائرية
+   تحسينات للشاشات الصغيرة (الموبايل) 
    ========================= */
 
 @media (max-width: 768px) {
+    /* إظهار شعار الموبايل */
+    .mobile-logo {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+        animation: logoFadeIn 0.8s ease;
+    }
+    
+    /* إخفاء الزر في الموبايل */
+    .desktop-only {
+        display: none;
+    }
+    
+    /* جعل رمز النجمة في نفس السطر */
+    .hero-subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap; /* منع الالتفاف */
+        gap: 5px;
+        white-space: nowrap; /* منع كسر السطر */
+        font-size: 1rem; /* تصغير الخط قليلاً للموبايل */
+    }
+    
+    .hero-symbol {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+    
     /* تقليل المسافات في الهيرو */
     .hero-section {
         height: 50vh;
@@ -219,18 +273,6 @@
         width: 100%;
     }
     
-    .hero-subtitle {
-        font-size: 1.1rem;
-        padding: 0 15px;
-        width: 100%;
-    }
-    
-    .cta-button {
-        margin-top: 1.5rem;
-        padding: 10px 25px;
-        font-size: 0.9rem;
-    }
-    
     /* توسيع عناوين الأقسام مع حواف دائرية */
     .section-title {
         font-size: 1.8rem;
@@ -252,8 +294,8 @@
     .content-card {
         margin: 0 auto 2.5rem auto;
         padding: 1.5rem;
-        width: 90%; /* عرض مناسب مع توسيط */
-        max-width: 400px; /* حد أقصى للعرض */
+        width: 90%;
+        max-width: 400px;
         border-radius: 15px;
         margin-left: auto;
         margin-right: auto;
@@ -270,7 +312,7 @@
     
     /* ===== تحسينات قسم HIGHLIGHTS (الأنشطة) ===== */
     .latest-activities {
-        padding: 0 20px 0 20px; /* زيادة padding الجانبي */
+        padding: 0 20px 0 20px;
         margin-top: 1.5rem;
         width: 100%;
         max-width: 100%;
@@ -303,7 +345,7 @@
     
     /* زيادة ارتفاع الصور للأنشطة */
     .activity-img-wrapper {
-        height: 250px; /* زيادة الارتفاع من 180px إلى 250px */
+        height: 250px;
         width: 100%;
     }
     
@@ -329,7 +371,7 @@
     
     /* ===== توسيع هوامش COLLABORATION (قسم التواصل) مع حواف دائرية ===== */
     .contact-footer {
-        padding: 2rem 20px; /* زيادة padding الجانبي */
+        padding: 2rem 20px;
         margin-top: 2rem;
         border-radius: 20px 20px 0 0;
         width: 100%;
@@ -421,13 +463,17 @@
     }
     
     .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .hero-symbol {
         font-size: 1rem;
     }
     
-    .cta-button {
-        padding: 8px 20px;
-        font-size: 0.85rem;
-        margin-top: 1.2rem;
+    .mobile-logo {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
     }
     
     .section-title {
@@ -452,7 +498,7 @@
     
     /* تحسينات إضافية لقسم الأنشطة للشاشات الصغيرة جداً */
     .latest-activities {
-        padding: 0 15px 0 15px; /* تقليل padding للشاشات الصغيرة جداً */
+        padding: 0 15px 0 15px;
     }
     
     .latest-activities .section-title {
@@ -467,7 +513,7 @@
     }
     
     .activity-img-wrapper {
-        height: 220px; /* تقليل الارتفاع قليلاً للشاشات الصغيرة جداً */
+        height: 220px;
     }
     
     .activity-info {
@@ -534,5 +580,17 @@
     
     .latest-activities {
         padding: 1.5rem;
+    }
+}
+
+/* أنيميشن لظهور الشعار */
+@keyframes logoFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

@@ -1,58 +1,59 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 // استبدل logo.png بالمسار الفعلي لصورتك
 import logo from "../assets/styles/logo.webp"; 
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, setIsOpen }) => {
+  const navigate = useNavigate();
+
+  // دالة لإغلاق القائمة بعد النقر على رابط (للموبايل)
+  const handleLinkClick = (path) => {
+    if (window.innerWidth <= 768) {
+      setIsOpen(false);
+      document.body.classList.remove("sidebar-hidden");
+    }
+    navigate(path);
+  };
+
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
       <div className="sidebar-top">
         <div className="logo-placeholder">
-          {/* تم وضع الصورة هنا مع كلاس مخصص */}
           <img src={logo} alt="MoQawill Logo" className="sidebar-logo" />
         </div>
         <h2 className="club-name">MoQawill</h2>
       </div>
 
       <nav className="page-links">
-        <NavLink to="/" className="page-link">
+        <div className="page-link" onClick={() => handleLinkClick("/")}>
           <i className="fas fa-home"></i> Home
-        </NavLink>
-        <NavLink to="/about" className="page-link">
+        </div>
+        <div className="page-link" onClick={() => handleLinkClick("/about")}>
           <i className="fas fa-info-circle"></i> About
-        </NavLink>
-        <NavLink to="/announces" className="page-link">
-          <i className="fas fa-bullhorn"></i> Anouncements 
-        </NavLink>
+        </div>
+        <div className="page-link" onClick={() => handleLinkClick("/announces")}>
+          <i className="fas fa-bullhorn"></i> Announcements 
+        </div>
         
-        {/* ✅ مخفيين مؤقتاً - نشيل الـ comments وقت ما نحتاجهم 
-        <NavLink to="/achievements" className="page-link">
-          <i className="fas fa-trophy"></i> Achievements
-        </NavLink>
-        <NavLink to="/news" className="page-link">
-          <i className="fas fa-newspaper"></i> News
-        </NavLink>
-        */}
-        
-        <NavLink to="/activities" className="page-link">
+        <div className="page-link" onClick={() => handleLinkClick("/activities")}>
           <i className="fas fa-running"></i> Activities
-        </NavLink>
-        <NavLink to="/events" className="page-link">
+        </div>
+        <div className="page-link" onClick={() => handleLinkClick("/events")}>
           <i className="fas fa-calendar-alt"></i> Events
-        </NavLink>
-        <NavLink to="/departements" className="page-link">
+        </div>
+        <div className="page-link" onClick={() => handleLinkClick("/departements")}>
           <i className="fas fa-sitemap"></i> Departments
-        </NavLink>
-        <NavLink to="/sponsors" className="page-link">
+        </div>
+        <div className="page-link" onClick={() => handleLinkClick("/sponsors")}>
           <i className="fas fa-handshake"></i> Sponsors
-        </NavLink>
-        <NavLink to="/esm" className="page-link">
+        </div>
+        <div className="page-link" onClick={() => handleLinkClick("/esm")}>
           <i className="fas fa-star"></i> ESM
-        </NavLink>
-        <NavLink to="/feedback" className="page-link">
+        </div>
+        <div className="page-link" onClick={() => handleLinkClick("/feedback")}>
           <i className="fas fa-comment-dots"></i> Feedback
-        </NavLink>
+        </div>
       </nav>
     </aside>
   );

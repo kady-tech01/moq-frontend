@@ -4,10 +4,28 @@ import AppRouter from "./router/AppRouter";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Toggle from "./components/Toggle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true); // تبدأ مفتوحة على PC
+
+  // التحقق من حجم الشاشة عند التحميل
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setIsOpen(false); // على الموبايل تبدأ مغلقة
+        document.body.classList.add("sidebar-hidden");
+      } else {
+        setIsOpen(true); // على سطح المكتب تبدأ مفتوحة
+        document.body.classList.remove("sidebar-hidden");
+      }
+    };
+
+    handleResize(); // تنفيذ مرة واحدة عند التحميل
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="app-container">
@@ -24,7 +42,7 @@ function App() {
       {/* Layout wrapper */}
       <div className="app-layout">
         {/* Sidebar */}
-        <Sidebar isOpen={isOpen} />
+        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
         {/* Main content */}
         <div className="main-content">

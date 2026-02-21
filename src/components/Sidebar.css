@@ -14,18 +14,25 @@
     transition: transform 0.3s ease;
 }
 
-/* --- LOGO STYLES (تعديلات اللوقو الجديدة) --- */
+/* حالات الفتح والغلق */
+.sidebar.closed {
+    transform: translateX(-100%);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+/* --- LOGO STYLES --- */
 .logo-placeholder {
     width: 90px;
     height: 90px;
     background: white; 
-    border-radius: 50%; /* جعل الإطار دائرياً تماماً */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* هذا يضمن أن أي جزء من الصورة يخرج عن الدائرة يتم قصه */
     overflow: hidden; 
-    
     box-shadow: 0 6px 16px rgba(193, 232, 255, 0.4);
     transition: all 0.3s ease;
     animation: logoPulse 2s ease-in-out infinite;
@@ -35,17 +42,14 @@
 .sidebar-logo {
     width: 100%;
     height: 100%;
-    /* 'cover' تبدأ بملء المساحة */
     object-fit: cover; 
-    /* التكبير (Zoom) لقطع الهوامش الزائدة - يمكنك زيادة الرقم 1.3 إذا احتجت زووم أكثر */
     transform: scale(1); 
     display: block;
     transition: transform 0.3s ease;
 }
 
-/* تأثير إضافي عند تمرير الماوس لجعل اللوقو يتفاعل */
 .logo-placeholder:hover .sidebar-logo {
-    transform: scale(1.337-=777-700-); /* زووم إضافي خفيف عند الحوم بالماوس */
+    transform: scale(1.1);
 }
 
 /* --- MAIN CONTENT STYLES --- */
@@ -102,6 +106,7 @@
     gap: 0.8rem;
     background: rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .page-link i {
@@ -126,16 +131,87 @@
     50% { transform: scale(1.05); box-shadow: 0 6px 24px rgba(193, 232, 255, 0.7); }
 }
 
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 280px;
-    height: 100%;
-    transition: transform 0.3s ease;
+/* =========================
+   تحسينات للشاشات الصغيرة (الموبايل) - الكتابة في المنتصف
+   ========================= */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* القائمة تأخذ عرض الشاشة كاملاً */
+        max-width: 100%;
+        padding: 2rem 1rem;
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .sidebar.closed {
+        transform: translateX(-100%);
+    }
+    
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .sidebar-hidden .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    /* توسيط الروابط في الموبايل */
+    .page-link {
+        padding: 1rem 1.5rem; /* تكبير مساحة النقر للموبايل */
+        font-size: 1.1rem;
+        justify-content: center; /* توسيط المحتوى أفقياً */
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .page-link i {
+        width: auto; /* إلغاء العرض الثابت للأيقونة */
+        font-size: 1.2rem;
+    }
+    
+    /* توسيط اسم النادي */
+    .club-name {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    /* توسيط الشعار */
+    .sidebar-top {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo-placeholder {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-.sidebar.closed {
-    transform: translateX(-100%);
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    .page-link {
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .page-link i {
+        font-size: 1.1rem;
+    }
+    
+    .club-name {
+        font-size: 1.4rem;
+    }
+    
+    .logo-placeholder {
+        width: 80px;
+        height: 80px;
+    }
 }
-

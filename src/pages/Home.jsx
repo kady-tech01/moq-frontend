@@ -3,6 +3,7 @@ import "./Home.css";
 
 // استيراد الصور بصيغة WebP - FALLBACK ONLY
 import collectiveHero from "../assets/home/collectiveHero.webp";
+import logo from "../assets/styles/logo.webp"; // استيراد شعار النادي
 
 const Home = () => {
   const [content, setContent] = useState(null);
@@ -43,13 +44,17 @@ const Home = () => {
         }}
       >
         <div className="hero-content">
+          {/* شعار النادي - يظهر فقط في الموبايل */}
+          <img src={logo} alt="MoQawill Logo" className="mobile-logo" />
+          
           <h1 id="heroTitle">{content?.hero?.title || "Welcome To MoQawill"}</h1>
-          <p id="heroSubtitle">
+          <p id="heroSubtitle" className="hero-subtitle">
             <span className="hero-symbol">★</span> 
             {content?.hero?.subtitle || "Learn here, lead anywhere"} 
             <span className="hero-symbol">★</span>
           </p>
-          <a href="#about" className="cta-button">Explore Our World</a>
+          {/* الزر - يظهر فقط في سطح المكتب */}
+          <a href="#about" className="cta-button desktop-only">Explore Our World</a>
         </div>
       </section>
 

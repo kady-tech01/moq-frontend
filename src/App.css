@@ -37,13 +37,15 @@
 .sidebar {
   width: 280px;
   flex-shrink: 0;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease, transform 0.3s ease;
+  transform: translateX(0);
 }
 
 /* Sidebar closed state */
 .sidebar.closed {
   width: 0;
   overflow: hidden;
+  transform: translateX(-100%);
 }
 
 /* =========================
@@ -55,6 +57,7 @@
   min-height: 100vh;
   padding: 2rem;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 /* =========================
@@ -142,40 +145,44 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 200px;
+    width: 100%; /* القائمة تأخذ العرض الكامل */
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
   }
 
   .sidebar.closed {
-    width: 0;
+    transform: translateX(-100%);
+    width: 100%;
   }
 
-  /* ✅ التعديل هنا لضمان التصاق الـ Footer بالأسفل */
+  .sidebar.open {
+    transform: translateX(0);
+    width: 100%;
+  }
+
   .main-content {
     padding: 1.5rem;
-    display: flex;         /* تفعيل فليكس بوكس */
-    flex-direction: column; /* جعل العناصر تحت بعضها */
-    min-height: 100vh;
-  }
-
-  /* التأكد من أن حاوية الصفحة تملأ المساحة وتدفع الفوتر للأسفل */
-  .page-container {
-    flex: 1;               
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* يدفع الفوتر لأدنى نقطة */
+    min-height: 100vh;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .page-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
 @media (max-width: 576px) {
-  .sidebar {
-    width: 160px;
-  }
-
   .main-content {
-    padding: 0; /* إلغاء البادينج الجانبي في الهاتف ليظهر الفوتر بكامل العرض */
+    padding: 0;
   }
   
-  /* الحفاظ على المسافات للعناصر الداخلية باستثناء الفوتر */
   .main-content > *:not(footer) {
     padding: 1rem;
   }
