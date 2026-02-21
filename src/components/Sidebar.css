@@ -132,7 +132,7 @@
 }
 
 /* =========================
-   تحسينات للشاشات الصغيرة (الموبايل) - الكتابة في المنتصف
+   تحسينات للشاشات الصغيرة (الموبايل)
    ========================= */
 @media (max-width: 768px) {
     .sidebar {
@@ -161,25 +161,23 @@
     
     /* توسيط الروابط في الموبايل */
     .page-link {
-        padding: 1rem 1.5rem; /* تكبير مساحة النقر للموبايل */
+        padding: 1rem 1.5rem;
         font-size: 1.1rem;
-        justify-content: center; /* توسيط المحتوى أفقياً */
+        justify-content: center;
         text-align: center;
         gap: 0.5rem;
     }
     
     .page-link i {
-        width: auto; /* إلغاء العرض الثابت للأيقونة */
+        width: auto;
         font-size: 1.2rem;
     }
     
-    /* توسيط اسم النادي */
     .club-name {
         font-size: 1.6rem;
         text-align: center;
     }
     
-    /* توسيط الشعار */
     .sidebar-top {
         align-items: center;
         text-align: center;

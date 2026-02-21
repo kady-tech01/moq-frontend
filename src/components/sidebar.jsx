@@ -9,11 +9,12 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
   // دالة لإغلاق القائمة بعد النقر على رابط (للموبايل)
   const handleLinkClick = (path) => {
+    // التحقق من حجم الشاشة (إذا كان موبايل)
     if (window.innerWidth <= 768) {
-      setIsOpen(false);
-      document.body.classList.remove("sidebar-hidden");
+      setIsOpen(false); // إغلاق القائمة
+      document.body.classList.add("sidebar-hidden"); // إضافة الكلاس للإغلاق
     }
-    navigate(path);
+    navigate(path); // التنقل إلى الصفحة المطلوبة
   };
 
   return (

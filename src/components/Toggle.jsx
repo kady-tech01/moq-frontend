@@ -17,13 +17,20 @@ function Toggle({ isOpen, setIsOpen }) {
 
   // التأكد من أن القائمة مغلقة في البداية على الموبايل
   useEffect(() => {
-    if (window.innerWidth <= 768) {
-      setIsOpen(false);
-      document.body.classList.add("sidebar-hidden");
-    } else {
-      setIsOpen(true);
-      document.body.classList.remove("sidebar-hidden");
-    }
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setIsOpen(false);
+        document.body.classList.add("sidebar-hidden");
+      } else {
+        setIsOpen(true);
+        document.body.classList.remove("sidebar-hidden");
+      }
+    };
+
+    handleResize(); // تنفيذ مرة واحدة عند التحميل
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
   }, [setIsOpen]);
    
   return (
