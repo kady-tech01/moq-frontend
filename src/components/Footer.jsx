@@ -15,7 +15,7 @@ const Footer = () => {
           <h4 id="clubName">MoQawill</h4>
           <p>
             Empowering the next generation of business leaders through
-            innovation, collaboration, and excellence.
+            innovation, collaboration, and creativity.
           </p>
         </div>
 
