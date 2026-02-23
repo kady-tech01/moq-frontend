@@ -30,6 +30,20 @@
     margin: 0 auto;
 }
 
+/* --- SECTION SUBTITLE (Current Announcements & Archive) --- */
+.section-subtitle {
+    color: #1e293b;
+    font-size: 1.5rem;
+    margin: 40px 0 20px; /* زيادة المسافة السفلية من 0 إلى 20px */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.section-subtitle.archive-title {
+    color: #64748b;
+    border-bottom-color: #94a3b8;
+}
+
 /* --- LIST LAYOUT --- */
 .announcements-list {
     max-width: 850px; /* Slightly wider for better readability */
@@ -131,6 +145,16 @@
     border-style: dashed;
 }
 
+/* --- NO ANNOUNCEMENTS --- */
+.no-announcements {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8fafc;
+    border-radius: 15px;
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
 /* =========================
    تحسينات للشاشات الصغيرة (الموبايل) - فقط للجوال
    ========================= */
@@ -157,6 +181,13 @@
     .announcements-list {
         padding: 0 15px 60px;
         max-width: 100%;
+    }
+    
+    /* تحسين عنوان القسم للموبايل */
+    .section-subtitle {
+        font-size: 1.3rem;
+        margin: 30px 0 15px; /* تقليل المسافات قليلاً للموبايل */
+        padding-bottom: 8px;
     }
     
     /* تحسين بطاقة الإعلان */
@@ -217,6 +248,12 @@
     .announcement-card.archive {
         opacity: 0.6;
     }
+    
+    /* تحسين قسم "لا توجد إعلانات" */
+    .no-announcements {
+        padding: 40px 15px;
+        font-size: 1rem;
+    }
 }
 
 /* للشاشات الصغيرة جداً */
@@ -235,6 +272,13 @@
     
     .announcements-list {
         padding: 0 12px 50px;
+    }
+    
+    /* تحسين عنوان القسم للشاشات الصغيرة جداً */
+    .section-subtitle {
+        font-size: 1.2rem;
+        margin: 25px 0 12px;
+        padding-bottom: 6px;
     }
     
     .announcement-card {
@@ -277,5 +321,10 @@
         right: 12px;
         padding: 3px 10px;
         font-size: 0.6rem;
+    }
+    
+    .no-announcements {
+        padding: 30px 12px;
+        font-size: 0.9rem;
     }
 }

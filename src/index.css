@@ -94,3 +94,56 @@ a {
         padding: 0.75rem;
     }
 }
+
+/* =========================
+   تنسيق الأيقونة (Favicon) لتصبح دائرية
+   ========================= */
+link[rel="icon"] {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+/* دعم لأيقونة Apple */
+link[rel="apple-touch-icon"] {
+    border-radius: 50%;
+}
+
+/* تأثير hover للأيقونة */
+link[rel="icon"]:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* تنسيق إضافي لمتصفحات WebKit (Chrome, Safari, Edge) */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    link[rel="icon"] {
+        mask-image: radial-gradient(circle, white, black);
+        -webkit-mask-image: radial-gradient(circle, white, black);
+    }
+}
+
+/* دعم للوضع الداكن */
+@media (prefers-color-scheme: dark) {
+    link[rel="icon"] {
+        background-color: #1e293b;
+    }
+}
+
+/* تنسيق للأجهزة المختلفة */
+@media (max-width: 768px) {
+    link[rel="icon"] {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    link[rel="icon"] {
+        width: 24px;
+        height: 24px;
+    }
+}
