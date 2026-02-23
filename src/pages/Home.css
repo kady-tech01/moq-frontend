@@ -310,7 +310,7 @@
         margin: 0 auto;
     }
     
-    /* ===== تحسينات قسم HIGHLIGHTS (الأنشطة) ===== */
+    /* ===== تحسينات قسم HIGHLIGHTS (الأنشطة) مع زيادة padding ===== */
     .latest-activities {
         padding: 0 20px 0 20px;
         margin-top: 1.5rem;
@@ -355,18 +355,20 @@
         object-fit: cover;
     }
     
+    /* ===== زيادة padding في activity-info للموبايل ===== */
     .activity-info {
-        padding: 1.2rem;
+        padding: 1.8rem 1.5rem; /* زيادة من 1.2rem إلى 1.8rem */
         width: 100%;
     }
     
     .activity-info h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.6rem;
+        font-size: 1.3rem; /* زيادة حجم الخط قليلاً */
+        margin-bottom: 0.8rem; /* زيادة المسافة تحت العنوان */
     }
     
     .activity-info p {
-        font-size: 0.95rem;
+        font-size: 1rem; /* زيادة حجم الخط قليلاً */
+        line-height: 1.6;
     }
     
     /* ===== توسيع هوامش COLLABORATION (قسم التواصل) مع حواف دائرية ===== */
@@ -496,9 +498,9 @@
         font-size: 0.9rem;
     }
     
-    /* تحسينات إضافية لقسم الأنشطة للشاشات الصغيرة جداً */
+    /* تحسينات إضافية لقسم الأنشطة للشاشات الصغيرة جداً مع زيادة padding */
     .latest-activities {
-        padding: 0 15px 0 15px;
+        padding: 0 12px 0 12px;
     }
     
     .latest-activities .section-title {
@@ -517,15 +519,17 @@
     }
     
     .activity-info {
-        padding: 1.5rem;
+        padding: 1.5rem 1.2rem; /* زيادة padding */
     }
     
     .activity-info h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.7rem;
     }
     
     .activity-info p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
     
     /* توسيع إضافي لهوامش COLLABORATION مع حواف دائرية */
