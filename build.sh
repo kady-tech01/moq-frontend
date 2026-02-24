@@ -21,6 +21,6 @@ else:
     print("✅ Superuser already exists.")
 EOF
 
-python manage.py loaddata data.json || echo "No data.json file found, skipping..."
-
-python manage.py loaddata full_data.json || echo "No full_data.json found, skipping..."
+# ✅ تم تعطيل تحميل البيانات القديمة - نستخدم قاعدة البيانات مباشرة
+# python manage.py loaddata data.json || echo "No data.json file found, skipping..."
+# python manage.py loaddata full_data.json || echo "No full_data.json found, skipping..."
