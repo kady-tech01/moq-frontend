@@ -1,6 +1,9 @@
 from django.http import JsonResponse
+from django.views.decorators.cache import never_cache
+from django.utils.decorators import method_decorator
 from .models import HomeContent, HomeActivity
 
+@never_cache
 def HomeAPIView(request):
     content = HomeContent.objects.first()
     activities = HomeActivity.objects.all().order_by('order')[:3]
@@ -33,9 +36,17 @@ def HomeAPIView(request):
         'location': content.contact_location if content else 'ESM, Tlemcen, Algeria'
     }
     
-    return JsonResponse({
+    # إنشاء الاستجابة مع منع التخزين المؤقت
+    response = JsonResponse({
         'hero': hero_data,
         'about': about_data,
         'activities': activities_data,
         'contact': contact_data
     })
+    
+    # إضافة هيدر منع التخزين المؤقت
+    response['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0, private'
+    response['Pragma'] = 'no-cache'
+    response['Expires'] = '0'
+    
+    return response
