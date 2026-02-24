@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
 import './Activities.css';
 
 // استيراد الصور كـ FALLBACK فقط
@@ -24,29 +25,46 @@ const fallbackImages = {
   public1, public2, media1, media2
 };
 
+// دالة جلب البيانات من API
+const fetchActivitiesData = async () => {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/activities/`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch activities data');
+  }
+  return response.json();
+};
+
 const Activities = () => {
-  const [activities, setActivities] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // استخدام TanStack Query
+  const { 
+    data: activities = [], 
+    isLoading, 
+    error,
+    isError 
+  } = useQuery({
+    queryKey: ['activitiesData'],
+    queryFn: fetchActivitiesData,
+    staleTime: 5 * 60 * 1000, // البيانات تعتبر حديثة لمدة 5 دقائق
+    gcTime: 10 * 60 * 1000,   // وقت الاحتفاظ بالبيانات في الكاش (10 دقائق)
+    retry: 1,                  // إعادة المحاولة مرة واحدة فقط عند الفشل
+    refetchOnWindowFocus: false, // لا تعيد جلب البيانات عند التركيز على النافذة
+  });
 
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/activities/`)
-      .then(res => res.json())
-      .then(data => {
-        setActivities(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.log('Using fallback content');
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
+  // عرض حالة التحميل
+  if (isLoading) {
     return (
       <div className="activities-page">
-        <div style={{ textAlign: 'center', padding: '50px' }}>Loading activities...</div>
+        <div style={{ textAlign: 'center', padding: '50px' }}>
+          <div className="loading-spinner"></div>
+          <p>Loading activities...</p>
+        </div>
       </div>
     );
+  }
+
+  // عرض حالة الخطأ (مع استخدام المحتوى الاحتياطي)
+  if (isError) {
+    console.log('Using fallback content due to error:', error);
   }
 
   // Use API data if available, otherwise use fallback static data

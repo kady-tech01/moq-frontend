@@ -1,34 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useQuery } from '@tanstack/react-query';
 import "./Home.css"; 
 
 // استيراد الصور بصيغة WebP - FALLBACK ONLY
 import collectiveHero from "../assets/home/collectiveHero.webp";
 import logo from "../assets/styles/logo.webp"; // استيراد شعار النادي
 
+// دالة جلب البيانات من API
+const fetchHomeData = async () => {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/home/`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch home data');
+  }
+  return response.json();
+};
+
 const Home = () => {
-  const [content, setContent] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // استخدام TanStack Query
+  const { 
+    data: content, 
+    isLoading, 
+    error,
+    isError 
+  } = useQuery({
+    queryKey: ['homeData'],
+    queryFn: fetchHomeData,
+    staleTime: 5 * 60 * 1000, // البيانات تعتبر حديثة لمدة 5 دقائق
+    gcTime: 10 * 60 * 1000,   // وقت الاحتفاظ بالبيانات في الكاش (10 دقائق)
+    retry: 1,                  // إعادة المحاولة مرة واحدة فقط عند الفشل
+    refetchOnWindowFocus: false, // لا تعيد جلب البيانات عند التركيز على النافذة
+  });
 
-  useEffect(() => {
-    // جلب البيانات من Django
-    fetch(`${import.meta.env.VITE_API_URL}/api/home/`)
-      .then(res => res.json())
-      .then(data => {
-        setContent(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.log('Using fallback content');
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
+  // عرض حالة التحميل
+  if (isLoading) {
     return (
       <div className="page-content active" id="home">
-        <div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>
+        <div style={{ textAlign: 'center', padding: '50px' }}>
+          <div className="loading-spinner"></div>
+          <p>Loading...</p>
+        </div>
       </div>
     );
+  }
+
+  // عرض حالة الخطأ (مع استخدام المحتوى الاحتياطي)
+  if (isError) {
+    console.log('Using fallback content due to error:', error);
   }
 
   return (

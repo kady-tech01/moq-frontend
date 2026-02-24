@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './Departements.css';
 
 import hrImg from '../assets/departements/RH.webp';
@@ -10,7 +10,8 @@ import designImg from '../assets/departements/design.webp';
 import scientificImg from '../assets/departements/activities.webp';
 
 const Departements = () => {
-  const departmentsData = [
+  // استخدام useMemo لتخزين البيانات في الذاكرة (تحسين الأداء)
+  const departmentsData = useMemo(() => [
     {
       id: 5,
       name: "Media",
@@ -67,7 +68,7 @@ const Departements = () => {
       image: planImg,
       imgStyle: { transform: 'scale(2) translateX(5%)' }
     }
-  ];
+  ], []); // المصفوفة الفارغة تعني أن البيانات لن تتغير أبداً
 
   return (
     <div className="page-content active" id="departments">

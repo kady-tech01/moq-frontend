@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
 import './Sponsors.css';
 
 // استيراد الصور القديمة كـ FALLBACK فقط
@@ -33,29 +34,46 @@ const fallbackImages = {
   ig1, ig2, ig3, ig4, ig5, ig6, ig7, ig8, ig9, ig10, ig11
 };
 
+// دالة جلب البيانات من API
+const fetchSponsorsData = async () => {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/sponsors/`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch sponsors data');
+  }
+  return response.json();
+};
+
 const Sponsors = () => {
-  const [sponsors, setSponsors] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // استخدام TanStack Query
+  const { 
+    data: sponsors = [], 
+    isLoading, 
+    error,
+    isError 
+  } = useQuery({
+    queryKey: ['sponsorsData'],
+    queryFn: fetchSponsorsData,
+    staleTime: 5 * 60 * 1000, // البيانات تعتبر حديثة لمدة 5 دقائق
+    gcTime: 10 * 60 * 1000,   // وقت الاحتفاظ بالبيانات في الكاش (10 دقائق)
+    retry: 1,                  // إعادة المحاولة مرة واحدة فقط عند الفشل
+    refetchOnWindowFocus: false, // لا تعيد جلب البيانات عند التركيز على النافذة
+  });
 
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/sponsors \/`)
-      .then(res => res.json())
-      .then(data => {
-        setSponsors(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.log('Using fallback content');
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
+  // عرض حالة التحميل
+  if (isLoading) {
     return (
       <div className="sponsors-page">
-        <div style={{ textAlign: 'center', padding: '50px' }}>Loading sponsors...</div>
+        <div style={{ textAlign: 'center', padding: '50px' }}>
+          <div className="loading-spinner"></div>
+          <p>Loading sponsors...</p>
+        </div>
       </div>
     );
+  }
+
+  // عرض حالة الخطأ (مع استخدام المحتوى الاحتياطي)
+  if (isError) {
+    console.log('Using fallback content due to error:', error);
   }
 
   // Use API data if available, otherwise use fallback static data
@@ -94,6 +112,7 @@ const Sponsors = () => {
                 src={item.image_url || fallbackImages[`${item.type}${item.id}`] || vip1} 
                 alt={item.name} 
                 style={item.imgStyle || { transform: 'scale(1.0)', objectPosition: 'center' }}
+                loading="lazy"
               />
             </div>
             <div className="card-overlay">

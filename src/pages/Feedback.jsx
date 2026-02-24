@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useMutation } from '@tanstack/react-query';
 import './Feedback.css';
 
 const FeedbackForm = () => {
@@ -11,7 +12,39 @@ const FeedbackForm = () => {
 
   const [successVisible, setSuccessVisible] = useState(false);
   const [errorVisible, setErrorVisible] = useState(false);
-  const [loading, setLoading] = useState(false);
+
+  // دالة إرسال الفيدباك
+  const submitFeedback = async (feedbackData) => {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/feedback/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(feedbackData),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to submit feedback');
+    }
+
+    return response.json();
+  };
+
+  // استخدام useMutation من TanStack Query
+  const mutation = useMutation({
+    mutationFn: submitFeedback,
+    onSuccess: () => {
+      setSuccessVisible(true);
+      setForm({ name: "", email: "", type: "", message: "" });
+      setErrorVisible(false);
+      setTimeout(() => setSuccessVisible(false), 5000);
+    },
+    onError: (error) => {
+      console.error('Error:', error);
+      setErrorVisible(true);
+      setTimeout(() => setErrorVisible(false), 5000);
+    },
+  });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -19,33 +52,7 @@ const FeedbackForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/feedback/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(form),
-      });
-
-      if (response.ok) {
-        setSuccessVisible(true);
-        setForm({ name: "", email: "", type: "", message: "" });
-        setErrorVisible(false);
-        setTimeout(() => setSuccessVisible(false), 5000);
-      } else {
-        setErrorVisible(true);
-        setTimeout(() => setErrorVisible(false), 5000);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setErrorVisible(true);
-      setTimeout(() => setErrorVisible(false), 5000);
-    } finally {
-      setLoading(false);
-    }
+    mutation.mutate(form);
   };
 
   return (
@@ -59,6 +66,7 @@ const FeedbackForm = () => {
             onChange={handleChange} 
             placeholder="Enter your name" 
             required 
+            disabled={mutation.isPending}
           />
         </div>
 
@@ -71,12 +79,19 @@ const FeedbackForm = () => {
             placeholder="Enter your email" 
             type="email" 
             required 
+            disabled={mutation.isPending}
           />
         </div>
 
         <div className="form-group">
           <label>Feedback Type</label>
-          <select name="type" value={form.type} onChange={handleChange} required>
+          <select 
+            name="type" 
+            value={form.type} 
+            onChange={handleChange} 
+            required
+            disabled={mutation.isPending}
+          >
             <option value="" disabled>Select a type...</option>
             <option value="General">General</option>
             <option value="Bug">Bug Report</option>
@@ -95,12 +110,17 @@ const FeedbackForm = () => {
             placeholder="Share your thoughts with us..." 
             rows="5"
             required 
+            disabled={mutation.isPending}
           />
         </div>
 
-        <button type="submit" className="submit-btn" disabled={loading}>
+        <button 
+          type="submit" 
+          className="submit-btn" 
+          disabled={mutation.isPending}
+        >
           <i className="fas fa-paper-plane"></i> 
-          {loading ? ' Sending...' : ' Send Feedback'}
+          {mutation.isPending ? ' Sending...' : ' Send Feedback'}
         </button>
       </form>
 

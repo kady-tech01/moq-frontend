@@ -1,14 +1,47 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './ESM.css';
 import esmLogo from '../assets/esm/esmlogo.webp'; 
 
 const ESM = () => {
+  // استخدام useMemo لتخزين البيانات الثابتة (تحسين الأداء)
+  const contactInfo = useMemo(() => ({
+    address: "01, Rue Barka Ahmed Bouhannak, Tlemcen 13000, Algeria",
+    phone: "+213 43 21 16 47",
+    email: "esm.tlemcen13000@gmail.com",
+    website: "http://www.esm-tlemcen.dz"
+  }), []);
+
+  const socialLinks = useMemo(() => [
+    { name: "ESM Official Page", url: "https://www.facebook.com/ESMTlem13" },
+    { name: "1st Cycle (DCP) Page", url: "https://www.facebook.com/ESMTlemDCP13" },
+    { name: "2nd Cycle (DSC) Page", url: "https://www.facebook.com/ESMTlemDSC13" }
+  ], []);
+
+  const firstCycleSubjects = useMemo(() => [
+    "Mathematics & Statistics",
+    "Microeconomics & Macroeconomics",
+    "Accounting",
+    "Management fundamentals",
+    "Law",
+    "Computer science",
+    "Foreign languages (French & English)"
+  ], []);
+
+  const secondCycleSpecialities = useMemo(() => [
+    "Management et stratégies d’entreprises.",
+    "Management financier.",
+    "Marketing",
+    "Management des services de santé",
+    "Marketing Agroalimentaire.",
+    "Management des établissements touristiques."
+  ], []);
+
   return (
     <div className="esm-page">
       {/* Introduction Section */}
       <section className="esm-intro">
         <div className="esm-intro-content">
-          <img src={esmLogo} alt="ESM Tlemcen Logo" className="esm-logo-large" />
+          <img src={esmLogo} alt="ESM Tlemcen Logo" className="esm-logo-large" loading="lazy" />
           <h1>المدرسة العليا لإدارة الأعمال – تلمسان</h1>
           <h2>École Supérieure de Management – Tlemcen</h2>
           <div className="intro-divider"></div>
@@ -39,13 +72,9 @@ const ESM = () => {
               <div className="subjects-box">
                 <h4>Main subjects include:</h4>
                 <ul>
-                  <li>Mathematics & Statistics</li>
-                  <li>Microeconomics & Macroeconomics</li>
-                  <li>Accounting</li>
-                  <li>Management fundamentals</li>
-                  <li>Law</li>
-                  <li>Computer science</li>
-                  <li>Foreign languages (French & English)</li>
+                  {firstCycleSubjects.map((subject, index) => (
+                    <li key={index}>{subject}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -63,13 +92,9 @@ const ESM = () => {
               <div className="subjects-box">
                 <h4>specialities:</h4>
                 <ul>
-                  <li>Management et stratégies d’entreprises.</li>
-                  <li>Management financier.</li>
-                  <li>Marketing</li>
-                  <li>Management des services de santé</li>
-                  <li>Marketing Agroalimentaire.</li>
-                  <li>Management des établissements touristiques. </li>
-                 
+                  {secondCycleSpecialities.map((speciality, index) => (
+                    <li key={index}>{speciality}</li>
+                  ))}
                 </ul>
                 <p className="card-footer-text">This cycle prepares students for high-level managerial and leadership roles.</p>
               </div>
@@ -86,21 +111,21 @@ const ESM = () => {
             <div className="contact-main-info">
                 <div className="contact-info-row">
                     <span>📍</span>
-                    <p>01, Rue Barka Ahmed Bouhannak, Tlemcen 13000, Algeria</p>
+                    <p>{contactInfo.address}</p>
                 </div>
                 <div className="contact-info-row">
                     <span>📞</span>
-                    <p>+213 43 21 16 47</p>
+                    <p>{contactInfo.phone}</p>
                 </div>
                 <div className="contact-info-row">
                     <span>📧</span>
-                    <p><a href="mailto:esm.tlemcen13000@gmail.com">esm.tlemcen13000@gmail.com</a></p>
+                    <p><a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
                 </div>
                 <div className="contact-info-row">
                     <span>🌐</span>
                     <p>
-                        <a href="http://www.esm-tlemcen.dz" target="_blank" rel="noreferrer">
-                            www.esm-tlemcen.dz
+                        <a href={contactInfo.website} target="_blank" rel="noreferrer">
+                            {contactInfo.website.replace('http://', '')}
                         </a>
                     </p>
                 </div>
@@ -108,20 +133,22 @@ const ESM = () => {
 
             <div className="contact-social-links">
                 <h3>Our Facebook Pages</h3>
-                <a href="https://www.facebook.com/ESMTlem13" target="_blank" rel="noreferrer" className="fb-link-btn">
-                   ESM Official Page
-                </a>
-                <a href="https://www.facebook.com/ESMTlemDCP13" target="_blank" rel="noreferrer" className="fb-link-btn">
-                   1st Cycle (DCP) Page
-                </a>
-                <a href="https://www.facebook.com/ESMTlemDSC13" target="_blank" rel="noreferrer" className="fb-link-btn">
-                   2nd Cycle (DSC) Page
-                </a>
+                {socialLinks.map((link, index) => (
+                  <a 
+                    key={index}
+                    href={link.url} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="fb-link-btn"
+                  >
+                    {link.name}
+                  </a>
+                ))}
             </div>
           </div>
 
           <div className="contact-footer-btn">
-            <a href="http://www.esm-tlemcen.dz" target="_blank" rel="noreferrer" className="contact-btn-link">
+            <a href={contactInfo.website} target="_blank" rel="noreferrer" className="contact-btn-link">
                 Visit Official Website
             </a>
           </div>
