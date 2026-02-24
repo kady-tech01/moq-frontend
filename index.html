@@ -31,6 +31,26 @@
     <script src="/_sdk/element_sdk.js"></script>
     
     <script>
+// كود تحويل التليجرام والماسنجر إلى المتصفح الخارجي
+(function() {
+    // الكشف عن التطبيق الذي فتح الرابط
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    // قائمة التطبيقات اللي نبي نحولها
+    const apps = ['Telegram', 'FB', 'Instagram', 'Messenger', 'WhatsApp', 'Line', 'Viber'];
+    
+    // التحقق إذا كان المستخدم داخل أحد هذه التطبيقات
+    const isInApp = apps.some(app => userAgent.includes(app));
+    
+    // إذا كان داخل تطبيق، حول للمتصفح
+    if (isInApp) {
+        // نحاول نفتح الرابط في المتصفح الخارجي
+        window.location.href = 'https://moqawill.vercel.app';
+    }
+})();
+    </script>
+    
+    <script>
 const defaultConfig = {
     club_name: 'MoQawill',
     hero_title: 'Welcome to MoQawill',
