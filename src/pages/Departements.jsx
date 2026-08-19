@@ -15,7 +15,7 @@ const Departements = () => {
     {
       id: 5,
       name: "Media",
-      leader: "Rima Hicher",
+      leader: "Benyezli Mokhtar",
       description: "Documenting our journey through professional photography and social media management.",
       image: mediaImg,
       imgStyle: {transform: 'scale(1.1) translateX(3%)' }
