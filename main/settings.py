@@ -117,7 +117,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://*.vercel.app',
     'https://*.railway.app',
-    'https://moqawill.vercel.app/',
+    'https://moqawill.vercel.app',
 ]
 
 # Render settings
