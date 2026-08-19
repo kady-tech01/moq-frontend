@@ -125,13 +125,13 @@ RENDER = os.environ.get('RENDER', False)
 
 if RENDER:
     ALLOWED_HOSTS = [
-        os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moqawill-api.onrender.com'),  # ✅ تم التعديل هنا
+        os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'https://moq-frontend.onrender.com'),  # ✅ تم التعديل هنا
         'localhost',
         '127.0.0.1'
     ]
     
     CSRF_TRUSTED_ORIGINS = [
-        'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moqawill-api.onrender.com'),  # ✅ تم التعديل هنا
+        'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'https://moq-frontend.onrender.com'),  # ✅ تم التعديل هنا
         'https://*.onrender.com',
         'https://moqawill.vercel.app',
     ]
