@@ -133,7 +133,7 @@ if RENDER:
     CSRF_TRUSTED_ORIGINS = [
         'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moqawill-api.onrender.com'),  # ✅ تم التعديل هنا
         'https://*.onrender.com',
-        'https://moqawill.vercel.app/',
+        'https://moqawill.vercel.app',
     ]
     
     # في الإنتاج، DEBUG = False
