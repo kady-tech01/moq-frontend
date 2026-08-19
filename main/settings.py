@@ -117,7 +117,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://*.vercel.app',
     'https://*.railway.app',
-    'https://moq-ashy.vercel.app',
+    'https://moqawill.vercel.app/',
 ]
 
 # Render settings
@@ -133,7 +133,7 @@ if RENDER:
     CSRF_TRUSTED_ORIGINS = [
         'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'moqawill-api.onrender.com'),  # ✅ تم التعديل هنا
         'https://*.onrender.com',
-        'https://moq-ashy.vercel.app',
+        'https://moqawill.vercel.app/',
     ]
     
     # في الإنتاج، DEBUG = False
