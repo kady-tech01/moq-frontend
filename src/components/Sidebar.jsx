@@ -30,16 +30,12 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         <div className="page-link" onClick={() => handleLinkClick("/")}>
           <i className="fas fa-home"></i> Home
         </div>
-        <div className="page-link" onClick={() => handleLinkClick("/about")}>
-          <i className="fas fa-info-circle"></i> About
-        </div>
+       
         <div className="page-link" onClick={() => handleLinkClick("/announces")}>
           <i className="fas fa-bullhorn"></i> Announcements 
         </div>
         
-        <div className="page-link" onClick={() => handleLinkClick("/activities")}>
-          <i className="fas fa-running"></i> Activities
-        </div>
+        
         <div className="page-link" onClick={() => handleLinkClick("/events")}>
           <i className="fas fa-calendar-alt"></i> Events
         </div>
